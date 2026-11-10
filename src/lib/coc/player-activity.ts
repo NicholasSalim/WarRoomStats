@@ -4,7 +4,7 @@
 // player out of those. Pure functions, no API calls.
 
 import type { CapitalRaidSeason, War, WarClan, WarMember } from "./schemas";
-import { warOutcome, type WarOutcome } from "./stats";
+import { warOutcome, type WarOutcome } from "./war-outcome";
 
 export interface PlayerWarAttack {
   /** The other side's player: the defender for attacks, the attacker for defenses. */

@@ -6,15 +6,13 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NativeSelect } from "@/components/native-select";
+import { MAX_LABELS } from "@/lib/coc/clan-search";
 import type { ApiResult } from "@/lib/coc/errors";
 import { BadgeImage } from "@/components/badge-image";
 import type { Label, Location } from "@/lib/coc/schemas";
 import { cn } from "@/lib/utils";
 
 type Mode = "clan" | "player";
-
-/** The API matches clans carrying every chosen label; a clan has at most 3. */
-export const MAX_LABELS = 3;
 
 export function SearchPanel({
   locations,

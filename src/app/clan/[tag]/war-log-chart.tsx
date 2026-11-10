@@ -1,23 +1,17 @@
 "use client";
 
+import { RESULT_STYLE, type WarOutcome } from "@/lib/coc/war-outcome";
 import { Bar, BarChart, CartesianGrid, Cell, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export interface WarMarginPoint {
   key: string;
   label: string;
   opponent: string;
-  result: "win" | "lose" | "tie";
+  result: WarOutcome;
   margin: number;
   ours: number;
   theirs: number;
 }
-
-// Status colours (reserved for outcome, never reused as series colours).
-const RESULT = {
-  win: { color: "#0ca30c", label: "Win" },
-  lose: { color: "#d03b3b", label: "Loss" },
-  tie: { color: "#737373", label: "Tie" },
-} as const;
 
 /** Bar with a 4px rounded data end and a square end on the zero baseline. */
 function MarginBar(props: { x?: number; y?: number; width?: number; height?: number; fill?: string; payload?: WarMarginPoint }) {
@@ -49,8 +43,8 @@ function ChartTooltip({ active, payload }: { active?: boolean; payload?: { paylo
         {p.margin} stars
       </p>
       <p className="text-muted-foreground">
-        <span className="mr-1.5 inline-block h-0.5 w-3 align-middle" style={{ background: RESULT[p.result].color }} />
-        {RESULT[p.result].label} vs {p.opponent}
+        <span className="mr-1.5 inline-block h-0.5 w-3 align-middle" style={{ background: RESULT_STYLE[p.result].color }} />
+        {RESULT_STYLE[p.result].label} vs {p.opponent}
       </p>
       <p className="text-muted-foreground tabular">
         {p.ours} – {p.theirs} · {p.label}
@@ -59,8 +53,10 @@ function ChartTooltip({ active, payload }: { active?: boolean; payload?: { paylo
   );
 }
 
+const OUTCOMES: WarOutcome[] = ["win", "lose", "tie"];
+
 export function WarLogChart({ data }: { data: WarMarginPoint[] }) {
-  const present = (Object.keys(RESULT) as (keyof typeof RESULT)[]).filter((k) => data.some((d) => d.result === k));
+  const present = OUTCOMES.filter((k) => data.some((d) => d.result === k));
   return (
     <figure className="rounded-lg border border-border bg-card p-4">
       <figcaption className="mb-3 flex flex-wrap items-center justify-between gap-2">
@@ -68,8 +64,8 @@ export function WarLogChart({ data }: { data: WarMarginPoint[] }) {
         <ul className="flex gap-3 text-xs text-muted-foreground" aria-label="Legend">
           {present.map((k) => (
             <li key={k} className="flex items-center gap-1.5">
-              <span className="inline-block size-2.5 rounded-sm" style={{ background: RESULT[k].color }} />
-              {RESULT[k].label}
+              <span className="inline-block size-2.5 rounded-sm" style={{ background: RESULT_STYLE[k].color }} />
+              {RESULT_STYLE[k].label}
             </li>
           ))}
         </ul>
@@ -77,20 +73,20 @@ export function WarLogChart({ data }: { data: WarMarginPoint[] }) {
       <div className="h-48" role="img" aria-label="Star margin for each recent regular war; the war list below has the same numbers.">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} margin={{ top: 4, right: 4, bottom: 0, left: -20 }}>
-            <CartesianGrid vertical={false} stroke="#262626" />
+            <CartesianGrid vertical={false} stroke="var(--border)" />
             <XAxis dataKey="key" hide />
             <YAxis
               allowDecimals={false}
               tickLine={false}
               axisLine={false}
-              tick={{ fill: "#a1a1a1", fontSize: 11 }}
+              tick={{ fill: "var(--muted-foreground)", fontSize: 11 }}
               width={44}
             />
-            <ReferenceLine y={0} stroke="#525252" />
+            <ReferenceLine y={0} stroke="var(--ring)" />
             <Tooltip content={<ChartTooltip />} cursor={{ fill: "rgba(255,255,255,0.04)" }} />
             <Bar dataKey="margin" shape={<MarginBar />} isAnimationActive={false}>
               {data.map((d) => (
-                <Cell key={d.key} fill={RESULT[d.result].color} />
+                <Cell key={d.key} fill={RESULT_STYLE[d.result].color} />
               ))}
             </Bar>
           </BarChart>

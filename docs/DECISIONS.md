@@ -58,21 +58,27 @@ Agreed in a planning session on 2026-11-07. Change this file when a decision cha
 ## Architecture
 - Next.js App Router. Pages are Server Components that call a **server-only** typed CoC client. The browser never talks to the CoC API.
 - The client is a hand-written wrapper around `fetch`, with responses validated by `zod`. No third-party CoC library.
-- Caching uses `'use cache: remote'` + `cacheLife` per endpoint (this Next.js has Cache Components on, which replaces `fetch` revalidate): about 60 s for war and CWL, about 5 min for profiles, about 1 h for leaderboards, and 1 day for locations. Profiles are named in `next.config.ts`. Failed calls are only cached for about 1 min.
+- Module layout (decided 2026-11-10, after an architecture review):
+  - `src/lib/coc/endpoints.ts` declares every endpoint: path, input validation, schema, error remapping (`notInWar`, 404 → `cwlNotActive`) and cache lifetime. It has no Next.js imports and is unit-tested through the fixture fetch.
+  - `client.ts` adds one shared `'use cache: remote'` boundary on top. Tags and search parameters are normalised *before* it, so "2pp", "#2PP" and the URL slug share one cache entry and one upstream call.
+  - Combined loads live in pure modules that take their fetchers as arguments (`cwl-season.ts`, `ranked-season.ts`), bound to the client in `loaders.ts`. A CWL round war that fails to load is left out and counted (`missingWars`), and both the clan's CWL tab and the player's Wars tab say the data is incomplete. `rankedMode` alone decides between Legend I (daily, no group), a weekly tournament and unranked.
+  - Clan and player tabs share `src/components/entity-tab.tsx`. The layout shows invalid-tag and not-found errors for the whole page; for data looked up by the page's own tag, a tab shows only the other errors (`TabError`). Data about another entity (the player's clan, a ranked group) shows every error, since "not found" there is news.
+  - War results are decided, labelled and coloured in one place (`war-outcome.ts`): Win, Loss, Tie, plus CWL rows and "–" for a result the API didn't give, which is left out of the chart.
+- Caching uses `'use cache: remote'` + `cacheLife` per endpoint (this Next.js has Cache Components on, which replaces `fetch` revalidate): about 60 s for war and CWL, about 5 min for profiles, about 1 h for leaderboards, and 1 day for locations. Finished Legend seasons never change, so their archive pages are kept as long as locations. Profiles are named in `next.config.ts`. Failed calls are only cached for about 1 min.
   - `remote` (decided 2026-11-10): plain `'use cache'` is in-memory per instance, and on serverless hosts its entries "typically don't persist across requests" (Next docs), so most visits would still call the API. The remote cache is shared across instances (Vercel provides it; locally it falls back to memory). Every visitor shares one API token, so this protects its quota.
   - Clan search fetches every match once (up to 832 clans, about 1.4 MB, measured at roughly the same time as fetching 50) and pages it from the cache, so pages 2 onwards cost nothing and the total is known. Searches are cached under a normalised key (`normalizeClanSearch`): the API ignores case and repeated spaces in names (checked live), so "War Machine" and "war  machine" share one entry.
 - Security:
   - The API key is server-side only.
-  - Tags are checked against `^#?[0289PYLQGRJCUV]+$` and normalised to uppercase with a `#` before any API call.
+  - Tags are checked against `^#?[0289PYLQGRJCUV]+$` and normalised to uppercase with a `#` before any API call. The letter O is read as 0 (a common typo), and tags must be 2 to 16 characters.
   - Upstash `@upstash/ratelimit`, enforced in `src/proxy.ts` (Next 16 renamed middleware to proxy), per IP per minute: 30 page views, plus 15 searches (`/search*`), and a separate 120 for static link prefetches.
-  - Only static prefetches (`rsc: 1` with `next-router-prefetch` 1 or 3) count as prefetches (decided 2026-11-10, after a review). A forged `next-router-prefetch` header alone renders the full page, and `next-router-prefetch: 2` (runtime prefetch) renders URL data, so both count as page views. Checked against a production build; see `src/lib/rate-limit.ts`.
+  - Only static prefetches (`rsc: 1` with `next-router-prefetch` 1 or 3) count as prefetches (decided 2026-11-10, after a review). A forged `next-router-prefetch` header alone renders the full page, and `next-router-prefetch: 2` (runtime prefetch) renders URL data, so both count as page views. Checked against a production build; see `src/lib/rate-limit.ts`, which holds the whole policy (budgets, precedence, Retry-After) behind a limiter port; `proxy.ts` only binds it to Upstash.
   - Rate limiting is skipped when the Upstash variables are unset (local development), but a Vercel production build fails without them (`next.config.ts`).
   - Security headers are set in `next.config`.
 - Error states each get a specific message: private war log, not in war, CWL not active, 404 not found, 503 maintenance, 429 rate-limited. A generic error boundary catches anything else.
 
 ## UI
 - Tailwind with shadcn/ui and the Geist font. Mobile-first.
-- Theme: pitch black `#000` background, white text, dark grey hovers and surfaces (around `#1a1a1a`), subtle borders (around `#262626`), muted grey secondary text. Same palette as the Vercel dashboard, but our own layout.
+- Theme: pitch black `#000` background, white text, dark grey hovers and surfaces (around `#1a1a1a`), subtle borders (around `#262626`), muted grey secondary text. Same palette as the Vercel dashboard, but our own layout. Colours are theme tokens in `globals.css`, including the status colours `win`, `loss` and `tie` (war outcomes, rank changes), which are never used as chart series colours.
 - Icons: clan badges and league icons come from the API. Troops, heroes and spells on the profile are shown as text with level bars.
 - Battle log armies (decided 2026-11-07) use official Fan Kit icons for troops, spells, heroes, pets and equipment. The owner puts the images in `public/{troops,siege-machines,spells,heroes,hero-pets,hero-equipments}` (each under 1 MB); `scripts/build-unit-icons.mjs` links them to unit names, and `next/image` serves resized copies. Anything without an image falls back to its name. Third-party icon hosts are not used.
 - Battle history stays live-only for v1 (decided 2026-11-07): longer history, like tracker sites keep, needs a database plus an always-on poller and is a v2 topic.
@@ -83,7 +89,7 @@ Agreed in a planning session on 2026-11-07. Change this file when a decision cha
 - Environment variables: `COC_API_TOKEN`, `COC_API_BASE_URL`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` (required in Vercel production; the Vercel Upstash integration's `KV_REST_API_URL`/`KV_REST_API_TOKEN` also work), and optionally `SITE_URL` (defaults to the Vercel production domain).
 - SEO (decided 2026-11-10): `robots.txt`, `sitemap.xml` (home, leaderboards, the global top 200 clans and players), `metadataBase`, and link-preview cards (clan badge, player league icon, stats in the description) on clan and player overviews. Every crawled clan or player page costs a live API call, so crawlers are kept off tabs, searches and deep leaderboard pages (robots.txt), and tabs and searches are `noindex`.
 - Tests:
-  - Vitest unit tests for the client, schemas and stat calculations, run against JSON fixtures.
+  - Vitest unit tests for the endpoints, the client's cache keys, loaders, rate-limit policy, schemas and stat calculations, run against JSON fixtures.
   - A Playwright smoke test per page.
   - The Playwright MCP for manual checks of the dev or live site.
   - Without an API token, `COC_API_MOCK=1` serves the fixtures in `src/lib/coc/fixtures/` (generated by `scripts/generate-fixtures.mjs`). It is ignored in production builds. Reserved tag prefixes simulate errors: `#888` not found, `#999` maintenance, `#22` private war log, `#28` not in war / no CWL.

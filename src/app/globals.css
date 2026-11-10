@@ -27,6 +27,11 @@
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
+  --color-win: var(--win);
+  --color-win-foreground: var(--win-foreground);
+  --color-loss: var(--loss);
+  --color-loss-foreground: var(--loss-foreground);
+  --color-tie: var(--tie);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -67,6 +72,12 @@
   --accent-foreground: #ededed;
   --destructive: #ff6166;
   --border: #262626;
+  /* Status colours for war outcomes and rank changes; never series colours. */
+  --win: #0ca30c;
+  --win-foreground: #4ade80;
+  --loss: #d03b3b;
+  --loss-foreground: #f87171;
+  --tie: #737373;
   --input: #262626;
   --ring: #525252;
   --chart-1: #ededed;

@@ -1,12 +1,11 @@
 import { Suspense } from "react";
-import { ErrorState } from "@/components/error-state";
 import { Skeleton } from "@/components/ui/skeleton";
 import { WarView } from "@/components/war-view";
 import { getCurrentWar } from "@/lib/coc/client";
-import { clanTabMetadata } from "../clan-data";
+import { TabError, tabMetadata } from "@/components/entity-tab";
 
 export function generateMetadata({ params }: PageProps<"/clan/[tag]/war">) {
-  return clanTabMetadata(params, "Current war");
+  return tabMetadata("clan", params, "Current war");
 }
 
 export default function CurrentWarPage({ params }: PageProps<"/clan/[tag]/war">) {
@@ -20,10 +19,7 @@ export default function CurrentWarPage({ params }: PageProps<"/clan/[tag]/war">)
 async function CurrentWar({ params }: Pick<PageProps<"/clan/[tag]/war">, "params">) {
   const { tag } = await params;
   const result = await getCurrentWar(tag);
-  if (!result.ok) {
-    if (result.error.kind === "notFound" || result.error.kind === "invalidTag") return null; // Shown by the layout.
-    return <ErrorState error={result.error} />;
-  }
+  if (!result.ok) return <TabError error={result.error} />;
   return <WarView war={result.data} />;
 }
 

@@ -1,14 +1,14 @@
 import { Suspense } from "react";
-import { SectionSkeleton, loadPlayer, tabMetadata } from "../player-data";
+import { TabSkeleton, loadPlayer, tabMetadata } from "@/components/entity-tab";
 import { RankedSection } from "../ranked-section";
 
 export function generateMetadata({ params }: PageProps<"/player/[tag]/ranked">) {
-  return tabMetadata(params, "Ranked");
+  return tabMetadata("player", params, "Ranked");
 }
 
 export default function PlayerRankedPage({ params }: PageProps<"/player/[tag]/ranked">) {
   return (
-    <Suspense fallback={<SectionSkeleton />}>
+    <Suspense fallback={<TabSkeleton />}>
       <Ranked params={params} />
     </Suspense>
   );

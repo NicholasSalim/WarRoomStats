@@ -1,14 +1,12 @@
 import type { NextConfig } from "next";
+import { hasRedisEnv } from "./src/lib/rate-limit";
 
 const isDev = process.env.NODE_ENV === "development";
 
 // Rate limiting (src/proxy.ts) protects the shared API token's quota and is
 // skipped when Upstash isn't configured. Never let a production deploy go out
 // without it. Local builds and Vercel previews are unaffected.
-const hasRedis =
-  (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) ||
-  (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
-if (process.env.VERCEL_ENV === "production" && !hasRedis) {
+if (process.env.VERCEL_ENV === "production" && !hasRedisEnv(process.env)) {
   throw new Error(
     "Upstash Redis must be configured for production (UPSTASH_REDIS_REST_URL/TOKEN, or KV_REST_API_URL/TOKEN from the Vercel integration): it enables rate limiting.",
   );

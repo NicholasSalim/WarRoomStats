@@ -1,20 +1,20 @@
 import { Suspense } from "react";
-import { ErrorState } from "@/components/error-state";
 import { Section } from "@/components/stat";
 import { copyArmyLink, parseArmyCode } from "@/lib/coc/army";
-import { getBattleLog, getRankedGroup } from "@/lib/coc/client";
+import { getBattleLog } from "@/lib/coc/client";
+import { loadRankedGroup } from "@/lib/coc/loaders";
 import type { Player } from "@/lib/coc/schemas";
 import { legendTrophies, parseApiTime, rankedTrophiesForBattles } from "@/lib/coc/stats";
 import { BattleLog, type BattleRow } from "../battle-log";
-import { SectionSkeleton, loadPlayer, tabMetadata } from "../player-data";
+import { TabError, TabSkeleton, loadPlayer, tabMetadata } from "@/components/entity-tab";
 
 export function generateMetadata({ params }: PageProps<"/player/[tag]/battles">) {
-  return tabMetadata(params, "Battle log");
+  return tabMetadata("player", params, "Battle log");
 }
 
 export default function PlayerBattlesPage({ params }: PageProps<"/player/[tag]/battles">) {
   return (
-    <Suspense fallback={<SectionSkeleton />}>
+    <Suspense fallback={<TabSkeleton />}>
       <Battles params={params} />
     </Suspense>
   );
@@ -27,19 +27,12 @@ async function Battles({ params }: Pick<PageProps<"/player/[tag]/battles">, "par
 }
 
 async function BattleLogSection({ player }: { player: Player }) {
-  const hasGroup = !!player.currentLeagueGroupTag && player.currentLeagueGroupTag !== "#0" && !!player.currentLeagueSeasonId;
   const [result, group] = await Promise.all([
     getBattleLog(player.tag),
     // Same cached call as the Ranked tab; used for per-battle trophies.
-    hasGroup ? getRankedGroup(player.currentLeagueGroupTag!, player.currentLeagueSeasonId!, player.tag) : null,
+    loadRankedGroup(player),
   ]);
-  if (!result.ok) {
-    return (
-      <Section id="battle-log" title="Battle log">
-        <ErrorState error={result.error} compact />
-      </Section>
-    );
-  }
+  if (!result.ok) return <TabError error={result.error} section={{ id: "battle-log", title: "Battle log" }} />;
   const entries = result.data;
   const trophies = group?.ok
     ? rankedTrophiesForBattles(entries, group.data.attackLogs, group.data.defenseLogs)

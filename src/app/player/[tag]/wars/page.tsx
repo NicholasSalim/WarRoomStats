@@ -1,19 +1,22 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { BadgeImage } from "@/components/badge-image";
-import { ErrorState } from "@/components/error-state";
 import { Section, Stat, StatGrid } from "@/components/stat";
 import { Stars } from "@/components/stars";
-import { getCurrentWar, getCwlWar, getLeagueGroup } from "@/lib/coc/client";
+import { getCurrentWar } from "@/lib/coc/client";
+import { roundOf, type CwlSeason } from "@/lib/coc/cwl-season";
+import { loadCwlSeason } from "@/lib/coc/loaders";
 import { playerWar, warTotals, type PlayerWar, type PlayerWarAttack } from "@/lib/coc/player-activity";
-import { parseApiTime, warForClan } from "@/lib/coc/stats";
+import { parseApiTime } from "@/lib/coc/stats";
 import { clanHref, playerHref } from "@/lib/coc/tag";
+import { RESULT_STYLE } from "@/lib/coc/war-outcome";
 import { fmtDate, fmtPct, seasonLabel, warStateLabel } from "@/lib/format";
 import { cn } from "@/lib/utils";
-import { SectionSkeleton, loadPlayer, tabMetadata } from "../player-data";
+import { ErrorState } from "@/components/error-state";
+import { TabSkeleton, loadPlayer, tabMetadata } from "@/components/entity-tab";
 
 export function generateMetadata({ params }: PageProps<"/player/[tag]/wars">) {
-  return tabMetadata(params, "Wars");
+  return tabMetadata("player", params, "Wars");
 }
 
 // The player's clan war and CWL attacks and defenses. The API keeps these only
@@ -22,10 +25,17 @@ export function generateMetadata({ params }: PageProps<"/player/[tag]/wars">) {
 
 export default function PlayerWarsPage({ params }: PageProps<"/player/[tag]/wars">) {
   return (
-    <Suspense fallback={<SectionSkeleton />}>
+    <Suspense fallback={<TabSkeleton />}>
       <Wars params={params} />
     </Suspense>
   );
+}
+
+function cwlDescription(season: CwlSeason): string {
+  const { group, missingWars } = season;
+  const state = group.state === "ended" ? "ended" : warStateLabel(group.state);
+  const missing = missingWars > 0 ? ` · ${missingWars} war${missingWars === 1 ? "" : "s"} couldn't be loaded, so this list may be incomplete` : "";
+  return `${seasonLabel(group.season)} season · ${state}${missing}`;
 }
 
 function Note({ children }: { children: React.ReactNode }) {
@@ -43,29 +53,22 @@ async function Wars({ params }: Pick<PageProps<"/player/[tag]/wars">, "params">)
     );
   }
   const clanTag = p.clan.tag;
-  const [current, group] = await Promise.all([getCurrentWar(clanTag), getLeagueGroup(clanTag)]);
+  const [current, season] = await Promise.all([getCurrentWar(clanTag), loadCwlSeason(clanTag)]);
 
-  // CWL: the clan's war in each started round (each round's wars are fetched to find it).
-  const cwl: PlayerWar[] = [];
-  if (group.ok) {
-    const rounds = await Promise.all(
-      group.data.rounds.map(async (r) => {
-        const results = await Promise.all(r.warTags.filter((t) => t && t !== "#0").map((t) => getCwlWar(t)));
-        return results.flatMap((res) => (res.ok ? [res.data] : []));
-      }),
-    );
-    rounds.forEach((wars, i) => {
-      const ours = warForClan(wars, clanTag);
-      if (!ours) return;
-      const entry = playerWar(ours, p.tag, `Round ${i + 1}`, true);
-      if (entry) cwl.push(entry);
-    });
-  }
+  // CWL: the player's part in the clan's war of each started round.
+  const rounds = season.ok
+    ? season.data.ourWars.flatMap(({ round, war }) => {
+        const entry = war && playerWar(war, p.tag, `Round ${round}`, true);
+        return entry ? [{ round, entry }] : [];
+      })
+    : [];
+  const cwl: PlayerWar[] = rounds.map((r) => r.entry);
 
-  const regular = current.ok ? playerWar(current.data, p.tag, "Current war", false) : null;
-  // During CWL the current war can be the same war as a CWL round.
-  const isCwlRound = regular && cwl.some((w) => w.opponent.tag === regular.opponent.tag && w.startTime === regular.startTime);
-  const currentWar = isCwlRound ? null : regular;
+  // During CWL the current war can be one of the rounds. It's then listed
+  // under CWL, if the player was in that round's line-up.
+  const currentRound = current.ok && season.ok ? roundOf(current.data, season.data) : null;
+  const inCurrentRound = currentRound !== null && rounds.some((r) => r.round === currentRound);
+  const currentWar = current.ok && currentRound === null ? playerWar(current.data, p.tag, "Current war", false) : null;
   const all = [...(currentWar ? [currentWar] : []), ...cwl];
   const totals = warTotals(all);
 
@@ -102,8 +105,8 @@ async function Wars({ params }: Pick<PageProps<"/player/[tag]/wars">, "params">)
           ) : (
             <ErrorState error={current.error} compact />
           )
-        ) : isCwlRound ? (
-          <Note>The current war is a Clan War League round; it&apos;s listed below.</Note>
+        ) : inCurrentRound ? (
+          <Note>The current war is Clan War League round {currentRound}, shown under Clan War League below.</Note>
         ) : currentWar ? (
           <WarCard war={currentWar} />
         ) : (
@@ -113,20 +116,20 @@ async function Wars({ params }: Pick<PageProps<"/player/[tag]/wars">, "params">)
 
       <Section
         title="Clan War League"
-        description={group.ok ? `${seasonLabel(group.data.season)} season · ${group.data.state === "ended" ? "ended" : warStateLabel(group.data.state)}` : undefined}
+        description={season.ok ? cwlDescription(season.data) : undefined}
         action={
-          group.ok ? (
+          season.ok ? (
             <Link href={`${clanHref(clanTag)}/cwl`} className="text-sm text-muted-foreground hover:text-foreground hover:underline">
               Clan&apos;s CWL page
             </Link>
           ) : null
         }
       >
-        {!group.ok ? (
-          group.error.kind === "cwlNotActive" ? (
+        {!season.ok ? (
+          season.error.kind === "cwlNotActive" ? (
             <Note>{p.clan.name} has no Clan War League season right now.</Note>
           ) : (
-            <ErrorState error={group.error} compact />
+            <ErrorState error={season.error} compact />
           )
         ) : cwl.length === 0 ? (
           <Note>{p.name} wasn&apos;t in {p.clan.name}&apos;s line-up for any round this season.</Note>
@@ -142,14 +145,8 @@ async function Wars({ params }: Pick<PageProps<"/player/[tag]/wars">, "params">)
   );
 }
 
-const OUTCOME: Record<string, { label: string; className: string }> = {
-  win: { label: "Win", className: "bg-[#0ca30c]/15 text-[#4ade80]" },
-  lose: { label: "Loss", className: "bg-[#d03b3b]/15 text-[#f87171]" },
-  tie: { label: "Tie", className: "bg-muted text-muted-foreground" },
-};
-
 function WarCard({ war }: { war: PlayerWar }) {
-  const outcome = war.outcome ? OUTCOME[war.outcome] : null;
+  const outcome = war.outcome ? RESULT_STYLE[war.outcome] : null;
   const open = war.state === "inWar" || war.state === "warEnded";
   const unused = open ? Math.max(0, war.attacksAllowed - war.attacks.length) : 0;
   const when = parseApiTime(war.startTime);
@@ -168,7 +165,7 @@ function WarCard({ war }: { war: PlayerWar }) {
             <span className="truncate">{war.opponent.name}</span>
           )}
         </span>
-        <span className={cn("rounded px-1.5 py-0.5 text-xs", outcome ? outcome.className : "bg-muted text-muted-foreground")}>
+        <span className={cn("rounded px-1.5 py-0.5 text-xs", outcome ? outcome.badge : RESULT_STYLE.unknown.badge)}>
           {outcome ? outcome.label : warStateLabel(war.state)}
         </span>
         <span className="ml-auto text-xs text-muted-foreground">

@@ -1,78 +1,63 @@
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
 import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
-import { clientIp, isStaticPrefetch } from "@/lib/rate-limit";
+import { LIMITS, decide, hasRedisEnv, type Budget, type Limiters } from "@/lib/rate-limit";
 
 // Per-IP rate limits for pages that call the game API (docs/DECISIONS.md >
 // Security). Every visitor shares one API token, so these protect its quota.
-// Skipped when Upstash isn't configured, e.g. in local development; production
-// builds on Vercel refuse to build without it (see next.config.ts).
+// The policy lives in src/lib/rate-limit.ts; this file connects it to Upstash
+// and turns its decisions into responses. Skipped when Upstash isn't
+// configured, e.g. in local development; production builds on Vercel refuse
+// to build without it (see next.config.ts).
 
-// Redis.fromEnv() reads UPSTASH_REDIS_REST_* or, as set by Vercel's Upstash
-// integration, KV_REST_API_*.
-const redis =
-  (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) ||
-  (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN)
-    ? Redis.fromEnv()
-    : null;
+const PREFIXES: Record<Budget, string> = { pages: "wrs:rl", prefetches: "wrs:rl:pf", searches: "wrs:rl:search" };
 
-function limiter(prefix: string, requests: number) {
-  if (!redis) return null;
-  return new Ratelimit({
-    redis,
-    limiter: Ratelimit.slidingWindow(requests, "60 s"),
-    prefix,
-    analytics: false,
-    timeout: 1000, // Fail open if Redis is slow.
-  });
+function upstashLimiters(): Limiters | null {
+  if (!hasRedisEnv(process.env)) return null;
+  // Redis.fromEnv() reads UPSTASH_REDIS_REST_* or, as set by Vercel's Upstash
+  // integration, KV_REST_API_*.
+  const redis = Redis.fromEnv();
+  const limiter = (budget: Budget) =>
+    new Ratelimit({
+      redis,
+      limiter: Ratelimit.slidingWindow(LIMITS[budget], "60 s"),
+      prefix: PREFIXES[budget],
+      analytics: false,
+      timeout: 1000, // Fail open if Redis is slow.
+    });
+  return { pages: limiter("pages"), prefetches: limiter("prefetches"), searches: limiter("searches") };
 }
 
-/** Page views: about 30 a minute per IP. */
-const pages = limiter("wrs:rl", 30);
-/**
- * Static link prefetches (see isStaticPrefetch). They don't call the API,
- * but they get their own generous budget rather than a free pass, so a
- * future Next.js change can't turn them into an unlimited back door.
- */
-const prefetches = limiter("wrs:rl:pf", 120);
-/**
- * Searches, on top of the page limit. A new clan search downloads up to 832
- * clans, so it's the most expensive request; paging through one search is
- * served from the cache but still counts here.
- */
-const searches = limiter("wrs:rl:search", 15);
+const limiters = upstashLimiters();
 
-if (!redis && process.env.NODE_ENV === "production") {
+if (!limiters && process.env.NODE_ENV === "production") {
   console.warn("[proxy] Upstash Redis URL/token not set: rate limiting is disabled");
 }
 
 export async function proxy(request: NextRequest, event: NextFetchEvent) {
-  if (!pages || !prefetches || !searches) return NextResponse.next();
-  const ip = clientIp(request.headers);
+  if (!limiters) return NextResponse.next();
+  const { decision, pending } = await decide(
+    { headers: request.headers, pathname: request.nextUrl.pathname },
+    limiters,
+    Date.now(),
+  );
+  event.waitUntil(pending);
 
-  if (isStaticPrefetch(request.headers)) {
-    const { success, pending } = await prefetches.limit(ip);
-    event.waitUntil(pending);
-    // A refused prefetch just means the page loads on click instead.
-    return success ? NextResponse.next() : new NextResponse(null, { status: 429 });
+  switch (decision.action) {
+    case "allow": {
+      const res = NextResponse.next();
+      if (decision.limit != null) res.headers.set("X-RateLimit-Limit", String(decision.limit));
+      if (decision.remaining != null) res.headers.set("X-RateLimit-Remaining", String(decision.remaining));
+      return res;
+    }
+    case "refusePrefetch":
+      return new NextResponse(null, { status: 429 });
+    case "refusePage":
+      return NextResponse.rewrite(new URL("/rate-limited", request.url), {
+        status: 429,
+        headers: { "Retry-After": String(decision.retryAfter) },
+      });
   }
-
-  const isSearch = request.nextUrl.pathname.startsWith("/search");
-  const [page, search] = await Promise.all([pages.limit(ip), isSearch ? searches.limit(ip) : null]);
-  event.waitUntil(Promise.all([page.pending, search?.pending]));
-
-  const refused = !page.success ? page : search && !search.success ? search : null;
-  if (!refused) {
-    const res = NextResponse.next();
-    res.headers.set("X-RateLimit-Limit", String(page.limit));
-    res.headers.set("X-RateLimit-Remaining", String(page.remaining));
-    return res;
-  }
-  const retryAfter = Math.max(1, Math.ceil((refused.reset - Date.now()) / 1000));
-  return NextResponse.rewrite(new URL("/rate-limited", request.url), {
-    status: 429,
-    headers: { "Retry-After": String(retryAfter) },
-  });
 }
 
 export const config = {

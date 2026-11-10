@@ -29,7 +29,6 @@ import {
   unitProgress,
   warForClan,
   warMemberRows,
-  warOutcome,
   warSideSummary,
   type CwlRound,
 } from "./stats";
@@ -55,14 +54,6 @@ describe("parseApiTime", () => {
   it("returns null for garbage", () => {
     expect(parseApiTime("2026-11-07")).toBeNull();
     expect(parseApiTime(undefined)).toBeNull();
-  });
-});
-
-describe("warOutcome", () => {
-  it("compares stars, then destruction", () => {
-    expect(warOutcome({ stars: 30 }, { stars: 29 })).toBe("win");
-    expect(warOutcome({ stars: 30, destructionPercentage: 90 }, { stars: 30, destructionPercentage: 91 })).toBe("lose");
-    expect(warOutcome({ stars: 30, destructionPercentage: 90 }, { stars: 30, destructionPercentage: 90 })).toBe("tie");
   });
 });
 

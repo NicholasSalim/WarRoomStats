@@ -3,10 +3,11 @@ import { ChevronRight } from "lucide-react";
 import { BadgeImage } from "@/components/badge-image";
 import { ErrorState } from "@/components/error-state";
 import { Section, Stat, StatGrid } from "@/components/stat";
-import { getLeagueHistory, getLeagueTiers, getRankedGroup } from "@/lib/coc/client";
+import { getLeagueHistory, getLeagueTiers } from "@/lib/coc/client";
+import { loadRankedGroup } from "@/lib/coc/loaders";
 import type { LeagueTier, Player } from "@/lib/coc/schemas";
 import { legendSeasonLabel } from "@/lib/coc/rankings";
-import { rankedAllowance } from "@/lib/coc/stats";
+import { rankedMode } from "@/lib/coc/ranked-season";
 import { playerHref } from "@/lib/coc/tag";
 import { fmtDate, fmtInt } from "@/lib/format";
 
@@ -17,11 +18,11 @@ import { fmtDate, fmtInt } from "@/lib/format";
  */
 export async function RankedSection({ player }: { player: Player }) {
   const tier = player.leagueTier;
-  const allowance = rankedAllowance(tier?.id);
-  const daily = allowance?.period === "day";
-  const hasGroup = !!player.currentLeagueGroupTag && player.currentLeagueGroupTag !== "#0" && !!player.currentLeagueSeasonId;
+  const mode = rankedMode(player);
+  const allowance = mode.kind === "unranked" ? null : mode.allowance;
+  const daily = mode.kind === "legend";
   const [group, history, tiers] = await Promise.all([
-    hasGroup ? getRankedGroup(player.currentLeagueGroupTag!, player.currentLeagueSeasonId!, player.tag) : null,
+    loadRankedGroup(player),
     getLeagueHistory(player.tag),
     getLeagueTiers(),
   ]);
@@ -31,11 +32,12 @@ export async function RankedSection({ player }: { player: Player }) {
   const me = group?.ok ? group.data.members.findIndex((m) => m.playerTag === player.tag) : -1;
   const member = group?.ok && me >= 0 ? group.data.members[me] : undefined;
 
-  const description = daily
-    ? "Legend I: 8 attacks and 8 defenses per league day (05:00 to 05:00 UTC)."
-    : allowance
-      ? `${tier?.name}: ${allowance.attacks} attacks for the weekly tournament.`
-      : "Not in a ranked league right now.";
+  const description =
+    mode.kind === "legend"
+      ? `Legend I: ${mode.allowance.attacks} attacks and ${mode.allowance.defenses} defenses per league day (05:00 to 05:00 UTC).`
+      : mode.kind === "weekly"
+        ? `${tier?.name}: ${mode.allowance.attacks} attacks for the weekly tournament.`
+        : "Not in a ranked league right now.";
 
   return (
     <Section
@@ -71,7 +73,7 @@ export async function RankedSection({ player }: { player: Player }) {
       </StatGrid>
 
       {group && !group.ok && <ErrorState error={group.error} compact />}
-      {!daily && allowance && !hasGroup && (
+      {mode.kind === "weekly" && !mode.group && (
         <p className="text-sm text-muted-foreground">Not in this week&apos;s tournament group yet. Their battles are in the battle log below.</p>
       )}
 

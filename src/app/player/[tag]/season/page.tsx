@@ -1,40 +1,32 @@
-import type { Metadata } from "next";
 import { connection } from "next/server";
 import { Suspense } from "react";
 import { BadgeImage } from "@/components/badge-image";
-import { ErrorState } from "@/components/error-state";
 import { Stars } from "@/components/stars";
 import { Section, Stat, StatGrid } from "@/components/stat";
 import { Skeleton } from "@/components/ui/skeleton";
 import { copyArmyLink, parseArmyCode } from "@/lib/coc/army";
-import { getBattleLog, getLeagueHistory, getLegendSnapshot, getPlayer, getRankedGroup } from "@/lib/coc/client";
+import { ErrorState } from "@/components/error-state";
+import { loadPlayer, tabMetadata } from "@/components/entity-tab";
+import { loadRankedSeason } from "@/lib/coc/loaders";
 import type { Player } from "@/lib/coc/schemas";
 import {
   LEGEND_SEASON_DAYS,
-  attachArmies,
-  legendSeason,
-  legendSeasonWindow,
   summarizeBattles,
-  weeklySeason,
   type RankedSeason,
   type SeasonBattle,
   type SeasonDay,
 } from "@/lib/coc/season";
-import { rankedAllowance } from "@/lib/coc/stats";
 import { fmtDate, fmtInt, fmtPct } from "@/lib/format";
 import { BattleTiles, type TileBattle } from "./battle-tiles";
-import { TAB_SEO } from "@/lib/site";
 import { TrophyChart, type TrophyPoint } from "./trophy-chart";
 
-export async function generateMetadata({ params }: PageProps<"/player/[tag]/season">): Promise<Metadata> {
-  const { tag } = await params;
-  const result = await getPlayer(tag);
-  if (!result.ok) return { title: "Ranked season", ...TAB_SEO };
-  return {
-    title: `${result.data.name} (${result.data.tag}) · Ranked season`,
-    description: `Day-by-day ranked attacks, defenses and trophies for ${result.data.name} this season.`,
-    ...TAB_SEO,
-  };
+export function generateMetadata({ params }: PageProps<"/player/[tag]/season">) {
+  return tabMetadata(
+    "player",
+    params,
+    "Ranked season",
+    (name) => `Day-by-day ranked attacks, defenses and trophies for ${name} this season.`,
+  );
 }
 
 export default function SeasonPage({ params }: PageProps<"/player/[tag]/season">) {
@@ -58,31 +50,13 @@ async function requestTime(): Promise<number> {
 }
 
 async function Season({ params }: Pick<PageProps<"/player/[tag]/season">, "params">) {
-  const { tag } = await params;
   const now = await requestTime();
-
-  const result = await getPlayer(tag);
-  if (!result.ok) return <ErrorState error={result.error} />;
-  const p = result.data;
-  const allowance = rankedAllowance(p.leagueTier?.id);
-  const hasGroup = !!p.currentLeagueGroupTag && p.currentLeagueGroupTag !== "#0" && !!p.currentLeagueSeasonId;
-
-  let season: RankedSeason | null = null;
-  let error = null;
-  if (allowance?.period === "day") {
-    // Trophies and battles from the same moment (see getLegendSnapshot).
-    const [snap, history] = await Promise.all([getLegendSnapshot(p.tag), getLeagueHistory(p.tag)]);
-    if (!snap.ok) error = snap.error;
-    else season = legendSeason(snap.data.battles, snap.data.trophies, legendSeasonWindow(history.ok ? history.data : [], now), now);
-  } else if (allowance && hasGroup) {
-    const [group, log] = await Promise.all([getRankedGroup(p.currentLeagueGroupTag!, p.currentLeagueSeasonId!, p.tag), getBattleLog(p.tag)]);
-    if (!group.ok) error = group.error;
-    else {
-      season = weeklySeason(group.data.attackLogs, group.data.defenseLogs, p.currentLeagueSeasonId!, now);
-      // Armies only exist in the battle log; match recent battles to it.
-      if (log.ok) season = attachArmies(season, log.data);
-    }
-  }
+  const p = await loadPlayer(params);
+  if (!p) return null;
+  const ranked = await loadRankedSeason(p, now);
+  const allowance = ranked.kind === "unranked" ? null : ranked.allowance;
+  const season = ranked.kind === "season" ? ranked.season : null;
+  const error = ranked.kind === "error" ? ranked.error : null;
 
   return (
     <div className="space-y-10">

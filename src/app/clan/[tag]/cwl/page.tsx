@@ -1,20 +1,20 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { BadgeImage } from "@/components/badge-image";
-import { ErrorState } from "@/components/error-state";
 import { Section } from "@/components/stat";
 import { Skeleton } from "@/components/ui/skeleton";
 import { WarView } from "@/components/war-view";
-import { getCwlWar, getLeagueGroup } from "@/lib/coc/client";
+import { loadCwlSeason } from "@/lib/coc/loaders";
 import type { War } from "@/lib/coc/schemas";
-import { cwlPlayerStats, cwlStandings, warForClan, warOutcome, type CwlRound } from "@/lib/coc/stats";
-import { clanHref, normalizeTag, playerHref } from "@/lib/coc/tag";
+import { cwlPlayerStats, cwlStandings } from "@/lib/coc/stats";
+import { RESULT_STYLE, warOutcome } from "@/lib/coc/war-outcome";
+import { clanHref, playerHref } from "@/lib/coc/tag";
 import { fmtInt, fmtPct, seasonLabel, warStateLabel } from "@/lib/format";
 import { cn } from "@/lib/utils";
-import { clanTabMetadata } from "../clan-data";
+import { TabError, tabMetadata } from "@/components/entity-tab";
 
 export function generateMetadata({ params }: PageProps<"/clan/[tag]/cwl">) {
-  return clanTabMetadata(params, "Clan War League");
+  return tabMetadata("clan", params, "Clan War League");
 }
 
 type Params = PageProps<"/clan/[tag]/cwl">["params"];
@@ -29,23 +29,9 @@ export default function CwlPage({ params, searchParams }: PageProps<"/clan/[tag]
 
 async function Cwl({ params, searchParams }: { params: Params; searchParams: PageProps<"/clan/[tag]/cwl">["searchParams"] }) {
   const [{ tag: slug }, sp] = await Promise.all([params, searchParams]);
-  const clanTag = normalizeTag(slug);
-  const groupResult = await getLeagueGroup(slug);
-  if (!clanTag || !groupResult.ok) {
-    if (!groupResult.ok && (groupResult.error.kind === "notFound" || groupResult.error.kind === "invalidTag")) return null;
-    return groupResult.ok ? null : <ErrorState error={groupResult.error} />;
-  }
-  const group = groupResult.data;
-
-  // Every war of every started round: needed for the full group standings.
-  const rounds: CwlRound[] = await Promise.all(
-    group.rounds.map(async (r, i) => {
-      const tags = r.warTags.filter((t) => t && t !== "#0");
-      const results = await Promise.all(tags.map((t) => getCwlWar(t)));
-      return { round: i + 1, wars: results.flatMap((res) => (res.ok ? [res.data] : [])) };
-    }),
-  );
-  const ourWars = rounds.map((r) => ({ round: r.round, war: warForClan(r.wars, clanTag) }));
+  const season = await loadCwlSeason(slug);
+  if (!season.ok) return <TabError error={season.error} />;
+  const { clanTag, group, rounds, ourWars, missingWars } = season.data;
   const standings = cwlStandings(group, rounds);
   const players = cwlPlayerStats(clanTag, rounds);
 
@@ -63,7 +49,12 @@ async function Cwl({ params, searchParams }: { params: Params; searchParams: Pag
         <span className="text-sm text-muted-foreground">{group.state === "ended" ? "Season ended" : warStateLabel(group.state)}</span>
       </div>
 
-      <Section title="Group standings" description="Stars plus 10 for each war won. Ties go to total destruction.">
+      <Section
+        title="Group standings"
+        description={`Stars plus 10 for each war won. Ties go to total destruction.${
+          missingWars > 0 ? ` ${missingWars} war${missingWars === 1 ? "" : "s"} couldn't be loaded, so these totals are incomplete.` : ""
+        }`}
+      >
         <div className="overflow-x-auto rounded-lg border border-border">
           <table className="w-full text-sm">
             <thead className="border-b border-border bg-card text-xs text-muted-foreground">
@@ -200,8 +191,7 @@ function RoundCard({ round, war, slug, selected }: { round: number; war: War | n
 }
 
 function resultLabel(war: War): string {
-  const o = warOutcome(war.clan, war.opponent);
-  return o === "win" ? "Won" : o === "lose" ? "Lost" : "Draw";
+  return RESULT_STYLE[warOutcome(war.clan, war.opponent)].label;
 }
 
 function CwlSkeleton() {

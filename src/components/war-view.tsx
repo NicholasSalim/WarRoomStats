@@ -3,7 +3,8 @@ import { BadgeImage } from "@/components/badge-image";
 import { RelativeTime } from "@/components/relative-time";
 import { Stars } from "@/components/stars";
 import type { War, WarClan } from "@/lib/coc/schemas";
-import { parseApiTime, warMemberRows, warOutcome, warSideSummary, type WarMemberRow } from "@/lib/coc/stats";
+import { parseApiTime, warMemberRows, warSideSummary, type WarMemberRow } from "@/lib/coc/stats";
+import { RESULT_STYLE, warOutcome } from "@/lib/coc/war-outcome";
 import { clanHref, playerHref } from "@/lib/coc/tag";
 import { fmtPct, warStateLabel } from "@/lib/format";
 import { cn } from "@/lib/utils";
@@ -53,7 +54,7 @@ export function WarView({ war, linkClans = true }: { war: War; linkClans?: boole
             </div>
             <div className="text-xs text-muted-foreground">
               {war.teamSize} v {war.teamSize}
-              {outcome && ` · ${outcome === "win" ? "Victory" : outcome === "lose" ? "Defeat" : "Draw"}`}
+              {outcome && ` · ${RESULT_STYLE[outcome].label}`}
             </div>
           </div>
           <ClanSide side={war.opponent} align="right" link={linkClans} />

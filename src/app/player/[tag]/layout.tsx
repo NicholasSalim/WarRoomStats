@@ -7,7 +7,7 @@ import { ErrorState } from "@/components/error-state";
 import { RecordVisit } from "@/components/recent-searches";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getPlayer } from "@/lib/coc/client";
-import { clanHref, normalizeTag, playerHref } from "@/lib/coc/tag";
+import { clanHref, playerHref, tagToSlug } from "@/lib/coc/tag";
 import { fmtInt, roleLabel } from "@/lib/format";
 import { PlayerNav } from "./player-nav";
 
@@ -54,7 +54,7 @@ async function PlayerShell({ params, children }: { params: LayoutProps<"/player/
   const result = await getPlayer(slug);
   if (!result.ok) return <ErrorState error={result.error} />;
   const p = result.data;
-  const urlSlug = normalizeTag(slug)!.slice(1);
+  const urlSlug = tagToSlug(p.tag);
   // Prefer the ranked tier from the 2025 league rework; fall back to the legacy league.
   const league = p.leagueTier ?? p.league;
   return (

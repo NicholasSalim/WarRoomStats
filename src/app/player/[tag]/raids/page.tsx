@@ -8,10 +8,10 @@ import { playerRaids, type PlayerRaidWeekend } from "@/lib/coc/player-activity";
 import { parseApiTime } from "@/lib/coc/stats";
 import { clanHref } from "@/lib/coc/tag";
 import { fmtDate, fmtInt, fmtPct } from "@/lib/format";
-import { SectionSkeleton, loadPlayer, tabMetadata } from "../player-data";
+import { TabSkeleton, loadPlayer, tabMetadata } from "@/components/entity-tab";
 
 export function generateMetadata({ params }: PageProps<"/player/[tag]/raids">) {
-  return tabMetadata(params, "Raids");
+  return tabMetadata("player", params, "Raids");
 }
 
 // The player's Clan Capital raids, from their current clan's raid weekends.
@@ -22,7 +22,7 @@ export function generateMetadata({ params }: PageProps<"/player/[tag]/raids">) {
 
 export default function PlayerRaidsPage({ params }: PageProps<"/player/[tag]/raids">) {
   return (
-    <Suspense fallback={<SectionSkeleton />}>
+    <Suspense fallback={<TabSkeleton />}>
       <Raids params={params} />
     </Suspense>
   );

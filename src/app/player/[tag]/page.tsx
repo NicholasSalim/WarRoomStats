@@ -4,14 +4,14 @@ import type { PlayerUnit } from "@/lib/coc/schemas";
 import { byVillage, donationRatio, unitProgress } from "@/lib/coc/stats";
 import { groupTroops } from "@/lib/coc/units";
 import { fmtInt, fmtPct, fmtRatio } from "@/lib/format";
-import { SectionSkeleton, loadPlayer } from "./player-data";
+import { TabSkeleton, loadPlayer } from "@/components/entity-tab";
 
 // Overview tab. The header and tabs live in layout.tsx; ranked, battle log,
 // progress and achievements each have their own tab page.
 
 export default function PlayerOverviewPage({ params }: PageProps<"/player/[tag]">) {
   return (
-    <Suspense fallback={<SectionSkeleton />}>
+    <Suspense fallback={<TabSkeleton />}>
       <Overview params={params} />
     </Suspense>
   );

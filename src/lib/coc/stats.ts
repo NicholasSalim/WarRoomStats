@@ -8,9 +8,9 @@ import type {
   RankedLogEntry,
   War,
   WarAttack,
-  WarClan,
   WarLogEntry,
 } from "./schemas";
+import { warOutcome } from "./war-outcome";
 
 /** Parses the API's compact timestamp format, e.g. "20261107T120000.000Z". */
 export function parseApiTime(value: string | undefined): Date | null {
@@ -21,18 +21,7 @@ export function parseApiTime(value: string | undefined): Date | null {
   return new Date(Date.UTC(+y, +mo - 1, +d, +h, +mi, +s, ms ? +ms : 0));
 }
 
-export type WarOutcome = "win" | "lose" | "tie";
 
-/** Outcome from `side`'s point of view: stars first, then destruction. */
-export function warOutcome(side: WarClan | undefined, other: WarClan | undefined): WarOutcome {
-  const a = side?.stars ?? 0;
-  const b = other?.stars ?? 0;
-  if (a !== b) return a > b ? "win" : "lose";
-  const da = side?.destructionPercentage ?? 0;
-  const db = other?.destructionPercentage ?? 0;
-  if (da !== db) return da > db ? "win" : "lose";
-  return "tie";
-}
 
 // ---------- Current war ----------
 
@@ -150,9 +139,6 @@ export function summarizeWarLog(items: WarLogEntry[]): WarLogSummary {
   };
 }
 
-export function isCwlLogEntry(entry: WarLogEntry): boolean {
-  return !entry.opponent.tag;
-}
 
 // ---------- CWL ----------
 

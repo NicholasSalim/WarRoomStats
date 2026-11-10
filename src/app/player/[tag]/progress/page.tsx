@@ -5,17 +5,17 @@ import type { PlayerUnit } from "@/lib/coc/schemas";
 import { byVillage, unitProgress } from "@/lib/coc/stats";
 import { groupTroops } from "@/lib/coc/units";
 import { fmtPct } from "@/lib/format";
-import { SectionSkeleton, loadPlayer, tabMetadata } from "../player-data";
+import { TabSkeleton, loadPlayer, tabMetadata } from "@/components/entity-tab";
 
 export function generateMetadata({ params }: PageProps<"/player/[tag]/progress">) {
-  return tabMetadata(params, "Progress");
+  return tabMetadata("player", params, "Progress");
 }
 
 // Upgrade progress: every unit's level against its max for this Town Hall.
 
 export default function PlayerProgressPage({ params }: PageProps<"/player/[tag]/progress">) {
   return (
-    <Suspense fallback={<SectionSkeleton />}>
+    <Suspense fallback={<TabSkeleton />}>
       <Progress params={params} />
     </Suspense>
   );

@@ -144,7 +144,7 @@ function RankMove({ rank, previous }: { rank: number; previous?: number }) {
   const up = previous > rank;
   return (
     <span
-      className={cn("inline-flex items-center text-[10px]", up ? "text-[#4ade80]" : "text-[#f87171]")}
+      className={cn("inline-flex items-center text-[10px]", up ? "text-win-foreground" : "text-loss-foreground")}
       title={`Previously #${previous}`}
     >
       {up ? <ArrowUp className="size-3" aria-label="up" /> : <ArrowDown className="size-3" aria-label="down" />}

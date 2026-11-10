@@ -1,11 +1,10 @@
 import { Suspense } from "react";
 import { SeasonCountdown } from "@/components/season-countdown";
 import { Section, Stat, StatGrid } from "@/components/stat";
-import { getClan } from "@/lib/coc/client";
 import type { Clan } from "@/lib/coc/schemas";
 import { clanTypeLabel, fmtInt, warFrequencyLabel } from "@/lib/format";
 import { MembersTable } from "./members-table";
-import { SectionSkeleton } from "./clan-data";
+import { TabSkeleton, loadClan } from "@/components/entity-tab";
 
 type Params = PageProps<"/clan/[tag]">["params"];
 
@@ -14,17 +13,15 @@ type Params = PageProps<"/clan/[tag]">["params"];
 
 export default function ClanPage({ params }: PageProps<"/clan/[tag]">) {
   return (
-    <Suspense fallback={<SectionSkeleton rows={8} />}>
+    <Suspense fallback={<TabSkeleton rows={8} />}>
       <Overview params={params} />
     </Suspense>
   );
 }
 
 async function Overview({ params }: { params: Params }) {
-  const { tag } = await params;
-  const result = await getClan(tag);
-  if (!result.ok) return null; // The layout already shows the error.
-  const clan = result.data;
+  const clan = await loadClan(params);
+  if (!clan) return null;
   return (
     <div className="space-y-12">
       <Section title="Overview">

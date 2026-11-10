@@ -1,21 +1,21 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { BadgeImage } from "@/components/badge-image";
-import { ErrorState } from "@/components/error-state";
 import { Pager } from "@/components/pager";
 import { Section, Stat, StatGrid } from "@/components/stat";
 import { getWarLog } from "@/lib/coc/client";
 import type { WarLogEntry } from "@/lib/coc/schemas";
 import { pageCount, pageSlice, parsePage } from "@/lib/coc/rankings";
-import { isCwlLogEntry, parseApiTime, summarizeWarLog } from "@/lib/coc/stats";
+import { parseApiTime, summarizeWarLog } from "@/lib/coc/stats";
+import { RESULT_STYLE, isCwlLogEntry, isOutcome, warLogResult } from "@/lib/coc/war-outcome";
 import { clanHref, normalizeTag } from "@/lib/coc/tag";
 import { fmtDate, fmtInt, fmtPct } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import { WarLogChart, type WarMarginPoint } from "../war-log-chart";
-import { SectionSkeleton, clanTabMetadata } from "../clan-data";
+import { TabError, TabSkeleton, tabMetadata } from "@/components/entity-tab";
 
 export function generateMetadata({ params }: PageProps<"/clan/[tag]/warlog">) {
-  return clanTabMetadata(params, "War log");
+  return tabMetadata("clan", params, "War log");
 }
 
 type Params = PageProps<"/clan/[tag]/warlog">["params"];
@@ -29,7 +29,7 @@ export default function ClanWarLogPage({
   searchParams,
 }: PageProps<"/clan/[tag]/warlog">) {
   return (
-    <Suspense fallback={<SectionSkeleton rows={6} />}>
+    <Suspense fallback={<TabSkeleton rows={6} />}>
       <WarLogSection params={params} searchParams={searchParams} />
     </Suspense>
   );
@@ -46,15 +46,7 @@ async function WarLogSection({
 }) {
   const [{ tag }, sp] = await Promise.all([params, searchParams]);
   const result = await getWarLog(tag);
-  if (!result.ok) {
-    if (result.error.kind === "notFound" || result.error.kind === "invalidTag")
-      return null;
-    return (
-      <Section id="war-log" title="War log">
-        <ErrorState error={result.error} compact />
-      </Section>
-    );
-  }
+  if (!result.ok) return <TabError error={result.error} section={{ id: "war-log", title: "War log" }} />;
   const items = result.data.items;
   const summary = summarizeWarLog(items);
   const totalPages = pageCount(items.length, WARS_PER_PAGE);
@@ -72,14 +64,15 @@ async function WarLogSection({
   );
   const oldest = parseApiTime(items.at(-1)?.endTime);
   const chartData: WarMarginPoint[] = items
-    .filter((w) => !isCwlLogEntry(w) && w.result)
-    .map((w) => ({
+    .flatMap((w) => {
+      const result = warLogResult(w);
+      return isOutcome(result) ? [{ war: w, result }] : [];
+    })
+    .map(({ war: w, result }) => ({
       key: w.endTime,
       label: fmtDate(parseApiTime(w.endTime)),
       opponent: w.opponent.name ?? "Unknown",
-      result: (w.result === "win" || w.result === "lose"
-        ? w.result
-        : "tie") as WarMarginPoint["result"],
+      result,
       margin: (w.clan.stars ?? 0) - (w.opponent.stars ?? 0),
       ours: w.clan.stars ?? 0,
       theirs: w.opponent.stars ?? 0,
@@ -141,23 +134,15 @@ async function WarLogSection({
   );
 }
 
-const RESULT_STYLE: Record<string, { label: string; className: string }> = {
-  win: { label: "Win", className: "bg-[#0ca30c]/15 text-[#4ade80]" },
-  lose: { label: "Loss", className: "bg-[#d03b3b]/15 text-[#f87171]" },
-  tie: { label: "Tie", className: "bg-muted text-muted-foreground" },
-};
-
 function WarLogRow({ war }: { war: WarLogEntry }) {
   const cwl = isCwlLogEntry(war);
-  const style = cwl
-    ? { label: "CWL", className: "bg-muted text-muted-foreground" }
-    : RESULT_STYLE[war.result ?? "tie"];
+  const style = RESULT_STYLE[warLogResult(war)];
   return (
     <li className="flex items-center gap-3 px-4 py-3 text-sm">
       <span
         className={cn(
           "w-12 shrink-0 rounded px-1.5 py-0.5 text-center text-xs font-medium",
-          style.className,
+          style.badge,
         )}
       >
         {style.label}

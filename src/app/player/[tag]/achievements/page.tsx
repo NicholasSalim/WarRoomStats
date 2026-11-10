@@ -3,10 +3,10 @@ import { Stars } from "@/components/stars";
 import { Section } from "@/components/stat";
 import type { Player } from "@/lib/coc/schemas";
 import { fmtInt } from "@/lib/format";
-import { SectionSkeleton, loadPlayer, tabMetadata } from "../player-data";
+import { TabSkeleton, loadPlayer, tabMetadata } from "@/components/entity-tab";
 
 export function generateMetadata({ params }: PageProps<"/player/[tag]/achievements">) {
-  return tabMetadata(params, "Achievements");
+  return tabMetadata("player", params, "Achievements");
 }
 
 const VILLAGE_LABEL: Record<string, string> = {
@@ -17,7 +17,7 @@ const VILLAGE_LABEL: Record<string, string> = {
 
 export default function PlayerAchievementsPage({ params }: PageProps<"/player/[tag]/achievements">) {
   return (
-    <Suspense fallback={<SectionSkeleton />}>
+    <Suspense fallback={<TabSkeleton />}>
       <AchievementsTab params={params} />
     </Suspense>
   );

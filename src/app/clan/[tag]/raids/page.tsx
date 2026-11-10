@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import { ErrorState } from "@/components/error-state";
 import { Section } from "@/components/stat";
 import { getCapitalRaids } from "@/lib/coc/client";
 import { parseApiTime } from "@/lib/coc/stats";
@@ -8,10 +7,10 @@ import { normalizeTag } from "@/lib/coc/tag";
 import { cn } from "@/lib/utils";
 import { fmtDate, fmtInt } from "@/lib/format";
 import { RaidDetails } from "../raid-details";
-import { SectionSkeleton, clanTabMetadata } from "../clan-data";
+import { TabError, TabSkeleton, tabMetadata } from "@/components/entity-tab";
 
 export function generateMetadata({ params }: PageProps<"/clan/[tag]/raids">) {
-  return clanTabMetadata(params, "Raid weekends");
+  return tabMetadata("clan", params, "Raid weekends");
 }
 
 type Params = PageProps<"/clan/[tag]/raids">["params"];
@@ -22,7 +21,7 @@ export default function ClanRaidsPage({
   searchParams,
 }: PageProps<"/clan/[tag]/raids">) {
   return (
-    <Suspense fallback={<SectionSkeleton rows={4} />}>
+    <Suspense fallback={<TabSkeleton rows={4} />}>
       <RaidsSection params={params} searchParams={searchParams} />
     </Suspense>
   );
@@ -39,15 +38,7 @@ async function RaidsSection({
 }) {
   const [{ tag }, sp] = await Promise.all([params, searchParams]);
   const result = await getCapitalRaids(tag);
-  if (!result.ok) {
-    if (result.error.kind === "notFound" || result.error.kind === "invalidTag")
-      return null;
-    return (
-      <Section id="raids" title="Raid weekends">
-        <ErrorState error={result.error} compact />
-      </Section>
-    );
-  }
+  if (!result.ok) return <TabError error={result.error} section={{ id: "raids", title: "Raid weekends" }} />;
   const seasons = result.data;
   if (seasons.length === 0) {
     return (
