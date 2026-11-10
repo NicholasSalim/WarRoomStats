@@ -53,6 +53,11 @@ const nextConfig: NextConfig = {
   // Unit images in public/ are up to 1 MB; next/image serves small resized copies.
   // Only these folders may be optimised.
   images: {
+    // Only the widths the unit icons use (21, 28 and 44 px at 1x and 2x round
+    // up to these). /_next/image isn't rate-limited, so every allowed width is
+    // another resize a bot could force per image; Next's defaults allow 15.
+    imageSizes: [32, 48, 64, 96],
+    deviceSizes: [128],
     localPatterns: ["troops", "siege-machines", "spells", "heroes", "hero-pets", "hero-equipments"].map((folder) => ({
       pathname: `/${folder}/**`,
       search: "",
