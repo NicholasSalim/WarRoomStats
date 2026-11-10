@@ -1,0 +1,760 @@
+{
+  "state": "inWar",
+  "season": "2026-11",
+  "clans": [
+    {
+      "tag": "#2PRGP0L22",
+      "name": "Night Owls",
+      "clanLevel": 27,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "members": [
+        {
+          "tag": "#PRU0LUY9J",
+          "name": "Sagewood",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#QQLY0U0PP",
+          "name": "Onyxstorm",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#LUV0888UU",
+          "name": "Umberstone76",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#9CQUJLGPV",
+          "name": "Irissong",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#V92LGRQ8Q",
+          "name": "Kitelight",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#GJQPL0LC2",
+          "name": "Quillwing",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#Q02YRCYRC",
+          "name": "Valewood",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#L899VGLVY",
+          "name": "Ashwood",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#Y9QQJC9RR",
+          "name": "Jadelight",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#9Q0929VGU",
+          "name": "Dusklight",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#2YJGJ9QLL",
+          "name": "Irisstorm45",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#UR89G8QGP",
+          "name": "Onyxstone",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#0YGCVLQ9R",
+          "name": "Umberfall",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#P8J0GLP9V",
+          "name": "Ashwing",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#8RRJ9UVUL",
+          "name": "Cinderbrand27",
+          "townHallLevel": 13
+        }
+      ]
+    },
+    {
+      "tag": "#C89LVC02V",
+      "name": "Copper Kites",
+      "clanLevel": 24,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "members": [
+        {
+          "tag": "#RJ29RL0CU",
+          "name": "Emberstorm3",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#JCQ2CQYGU",
+          "name": "Wrenlight",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#GYCVVCLYY",
+          "name": "Galesong",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#Q8QUC0UL0",
+          "name": "Tideshade55",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#VGP9JR2QQ",
+          "name": "Tidestone40",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#UGYVV28GP",
+          "name": "Brookshade",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#VQY98PUV2",
+          "name": "Runewood",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#PC8JRPCG2",
+          "name": "Frostcrest9",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#J0YCYPR90",
+          "name": "Duskbrand52",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#GR2U2RLQL",
+          "name": "Valelight",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#9P98Q80UY",
+          "name": "Runecrest79",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#2P2YVG0Q8",
+          "name": "Sagestorm",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#8LJRQJ82L",
+          "name": "Pikewood",
+          "townHallLevel": 12
+        },
+        {
+          "tag": "#PRULGV0LJ",
+          "name": "Wrenwing44",
+          "townHallLevel": 12
+        },
+        {
+          "tag": "#GJVY0LLYU",
+          "name": "Ashwood72",
+          "townHallLevel": 13
+        }
+      ]
+    },
+    {
+      "tag": "#PJRGJYL8Y",
+      "name": "Moonhollow",
+      "clanLevel": 16,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "members": [
+        {
+          "tag": "#L8C0QJG20",
+          "name": "Wrenbrand4",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#G9G8VU00Q",
+          "name": "Valewing",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#VCV8LCUYR",
+          "name": "Larksong",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#G8CY2V2YY",
+          "name": "Novacrest41",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#0PGJVVVG8",
+          "name": "Embersong84",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#LQP008CVJ",
+          "name": "Umberwood",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#Q0GL8GJ9J",
+          "name": "Quilllight",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#GLQJCGQ20",
+          "name": "Kitesong96",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#9GPLPRCG9",
+          "name": "Hazestorm",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#YL0G0V99V",
+          "name": "Duskstorm",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#QUY0LLRQJ",
+          "name": "Yarrowstone34",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#9JYJQYVRP",
+          "name": "Sagesong54",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#JJ88JL20V",
+          "name": "Runewing",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#YLJUPVPU0",
+          "name": "Irisshade",
+          "townHallLevel": 12
+        },
+        {
+          "tag": "#JPUVC8GQ8",
+          "name": "Zephyrstorm",
+          "townHallLevel": 13
+        }
+      ]
+    },
+    {
+      "tag": "#RLU20UQ9R",
+      "name": "Grey Harbor",
+      "clanLevel": 21,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "members": [
+        {
+          "tag": "#LYJP289VL",
+          "name": "Galebrand",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#882C0YRLY",
+          "name": "Runebrand40",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#9RQJJJ22G",
+          "name": "Yarrowsong",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#Q2PCGUPG9",
+          "name": "Brooklight",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#LLRRYPC0U",
+          "name": "Embercrest",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#GLC8QVV80",
+          "name": "Zephyrstorm42",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#G8LCYJY9V",
+          "name": "Kitewood",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#2U899LJ8R",
+          "name": "Pikestorm3",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#VV8RY2QUU",
+          "name": "Brookwing",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#J2JY09CJC",
+          "name": "Ashcrest",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#89828UL8C",
+          "name": "Wrenstone",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#8URG0GVVJ",
+          "name": "Irisstone",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#9C8U0J2JG",
+          "name": "Pikebrand",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#QQUR2RJRY",
+          "name": "Valebrand91",
+          "townHallLevel": 12
+        },
+        {
+          "tag": "#2JRC8YCVC",
+          "name": "Novastone",
+          "townHallLevel": 13
+        }
+      ]
+    },
+    {
+      "tag": "#8J9C0RYP8",
+      "name": "Velvet Storm",
+      "clanLevel": 25,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "members": [
+        {
+          "tag": "#2LGQVLPGJ",
+          "name": "Novafall41",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#Q8PUC9GC9",
+          "name": "Larksong64",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#GJ00CUCGV",
+          "name": "Yarrowcrest",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#VURRLJ98J",
+          "name": "Ashlight",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#PV2CVGVRQ",
+          "name": "Larklight",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#Q8UYGY2V8",
+          "name": "Kitebrand23",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#GCRL0G2CC",
+          "name": "Mosswing93",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#2P90VVGJV",
+          "name": "Jadecrest",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#L2CGR92JR",
+          "name": "Galewood",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#0Q8YVGL8P",
+          "name": "Frostlight",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#VYGQLLVLR",
+          "name": "Novashade",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#PLU8LLYV9",
+          "name": "Cinderfall",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#PP2QGU2LU",
+          "name": "Sagestone",
+          "townHallLevel": 12
+        },
+        {
+          "tag": "#LYC92R922",
+          "name": "Umberbrand30",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#YP8Y0UYLP",
+          "name": "Froststorm",
+          "townHallLevel": 13
+        }
+      ]
+    },
+    {
+      "tag": "#GQVCGJ0RL",
+      "name": "Northbound",
+      "clanLevel": 24,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "members": [
+        {
+          "tag": "#0R29VC08G",
+          "name": "Larkbrand",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#PV8YYV8QY",
+          "name": "Ashlight67",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#0YJLCGP9G",
+          "name": "Iriswing",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#YC9RUG980",
+          "name": "Jadewing",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#C0PJY9GPL",
+          "name": "Onyxcrest",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#00JY0VCQJ",
+          "name": "Zephyrfall",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#GC8URQP9V",
+          "name": "Larkstone",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#CVPQGGQU9",
+          "name": "Umberstorm",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#VPPU9Q82J",
+          "name": "Yarrowfall",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#LYQY890YL",
+          "name": "Irisstorm",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#2JGPU2PRU",
+          "name": "Galecrest",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#0JY8PGCPG",
+          "name": "Wrenstone64",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#QV28CYLY0",
+          "name": "Brookcrest",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#28LGGU0LU",
+          "name": "Emberfall",
+          "townHallLevel": 12
+        },
+        {
+          "tag": "#8YULPRL8C",
+          "name": "Onyxbrand",
+          "townHallLevel": 13
+        }
+      ]
+    },
+    {
+      "tag": "#Y92URLQRJ",
+      "name": "Static Bloom",
+      "clanLevel": 23,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "members": [
+        {
+          "tag": "#R89GQJQQY",
+          "name": "Mosslight",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#JCURPV2JQ",
+          "name": "Jadefall",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#V822JL8P0",
+          "name": "Ashstone",
+          "townHallLevel": 17
+        },
+        {
+          "tag": "#90QQR89UV",
+          "name": "Jadecrest20",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#GV9CVLVYP",
+          "name": "Runebrand",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#L08PLQY00",
+          "name": "Larkshade",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#YJU9VCP9V",
+          "name": "Emberbrand",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#8JJVCVPPV",
+          "name": "Hazecrest",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#VCPUR2RRU",
+          "name": "Zephyrsong",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#2LYY8PCQU",
+          "name": "Galewing37",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#Q0JCGVRL8",
+          "name": "Tidelight",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#LP8QPG998",
+          "name": "Mossfall",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#YGP80PRQ8",
+          "name": "Galestorm",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#0CU0PR282",
+          "name": "Embershade",
+          "townHallLevel": 12
+        },
+        {
+          "tag": "#YG0LLCPR9",
+          "name": "Hazestone",
+          "townHallLevel": 12
+        }
+      ]
+    },
+    {
+      "tag": "#QRPUP808C",
+      "name": "Red Thread",
+      "clanLevel": 22,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "members": [
+        {
+          "tag": "#VPQ0YRCLU",
+          "name": "Runewing37",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#CGQUVLLUG",
+          "name": "Zephyrcrest20",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#VG2G8980V",
+          "name": "Quillcrest29",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#RYPQ9GV2J",
+          "name": "Novabrand",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#0RQYJ2C0C",
+          "name": "Zephyrshade",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#2CLRR2YYJ",
+          "name": "Brookwood35",
+          "townHallLevel": 16
+        },
+        {
+          "tag": "#L98G9L9CP",
+          "name": "Zephyrbrand",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#PJGUC8P8G",
+          "name": "Froststone",
+          "townHallLevel": 14
+        },
+        {
+          "tag": "#J8LR8RGCJ",
+          "name": "Cinderstorm80",
+          "townHallLevel": 15
+        },
+        {
+          "tag": "#JG899UQ99",
+          "name": "Kitesong51",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#LY0L999UV",
+          "name": "Wrenstorm77",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#PR0RJ8CV8",
+          "name": "Yarrowstone",
+          "townHallLevel": 13
+        },
+        {
+          "tag": "#YLG2CPG0L",
+          "name": "Yarrowwing",
+          "townHallLevel": 12
+        },
+        {
+          "tag": "#8PGJQLC0R",
+          "name": "Duskshade",
+          "townHallLevel": 12
+        },
+        {
+          "tag": "#P8JUQURC0",
+          "name": "Runestorm",
+          "townHallLevel": 13
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    {
+      "warTags": [
+        "#Q8CJ0L8QP8",
+        "#RVLG0Q2YRG",
+        "#URQJ8Q8PCJ",
+        "#90GY02J0JP"
+      ]
+    },
+    {
+      "warTags": [
+        "#PPQVQPGJYU",
+        "#02028GL8VJ",
+        "#C2Q999C9YL",
+        "#9V8P0GY89J"
+      ]
+    },
+    {
+      "warTags": [
+        "#UL9RGG2GP0",
+        "#UYG2G9C220",
+        "#G9U9RCU9U8",
+        "#PQYYVRP2CC"
+      ]
+    },
+    {
+      "warTags": [
+        "#0",
+        "#0",
+        "#0",
+        "#0"
+      ]
+    },
+    {
+      "warTags": [
+        "#0",
+        "#0",
+        "#0",
+        "#0"
+      ]
+    },
+    {
+      "warTags": [
+        "#0",
+        "#0",
+        "#0",
+        "#0"
+      ]
+    },
+    {
+      "warTags": [
+        "#0",
+        "#0",
+        "#0",
+        "#0"
+      ]
+    }
+  ]
+}

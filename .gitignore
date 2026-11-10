@@ -30,8 +30,12 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# Secrets: every env file except the template (which holds no real values)
 .env*
+!.env.example
+*.key
+*.p12
+*.pfx
 
 # vercel
 .vercel
@@ -39,3 +43,25 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Playwright MCP output (screenshots and snapshots of live player data)
+.playwright-mcp/
+# Playwright test output
+/test-results/
+/playwright-report/
+
+# Local tooling output, not needed to build or deploy
+/graphify-out/
+/.claude/
+*.log
+
+# Local-only scripts that call the live API with your token (debugging and
+# ID research). The deploy doesn't use them.
+/scripts/inspect-player.mjs
+/scripts/probe-*.mjs
+
+# Editors and OS files
+/.vscode/
+/.idea/
+Thumbs.db
+desktop.ini

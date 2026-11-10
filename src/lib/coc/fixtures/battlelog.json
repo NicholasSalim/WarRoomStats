@@ -1,0 +1,1044 @@
+{
+  "items": [
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#UUJ9PJRQJ",
+      "opponentName": "Galestorm67",
+      "opponentTownHallLevel": 17,
+      "stars": 2,
+      "destructionPercentage": 65,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 155941
+        },
+        {
+          "name": "Elixir",
+          "amount": 199870
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 8592
+        }
+      ],
+      "battleTime": 142,
+      "battleTimestamp": "20261105T084000.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#GVL0YRQQR",
+      "opponentName": "Valefall",
+      "opponentTownHallLevel": 14,
+      "stars": 3,
+      "destructionPercentage": 100,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 498140
+        },
+        {
+          "name": "Elixir",
+          "amount": 464961
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 3526
+        }
+      ],
+      "battleTime": 36,
+      "battleTimestamp": "20261104T142700.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#LJPLJVQR9",
+      "opponentName": "Kitestorm3",
+      "opponentTownHallLevel": 17,
+      "stars": 1,
+      "destructionPercentage": 22,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 692047
+        },
+        {
+          "name": "Elixir",
+          "amount": 34959
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 3711
+        }
+      ],
+      "battleTime": 153,
+      "battleTimestamp": "20261105T061000.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#JJPPR88L9",
+      "opponentName": "Jadewood11",
+      "opponentTownHallLevel": 14,
+      "stars": 3,
+      "destructionPercentage": 100,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 482817
+        },
+        {
+          "name": "Elixir",
+          "amount": 490420
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 6175
+        }
+      ],
+      "battleTime": 59,
+      "battleTimestamp": "20261105T084900.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#82JLG9QPQ",
+      "opponentName": "Pikestone",
+      "opponentTownHallLevel": 16,
+      "stars": 2,
+      "destructionPercentage": 78,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 381860
+        },
+        {
+          "name": "Elixir",
+          "amount": 768538
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 7690
+        }
+      ],
+      "battleTime": 59,
+      "battleTimestamp": "20261105T093600.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#RJUU89C82",
+      "opponentName": "Dusksong",
+      "opponentTownHallLevel": 17,
+      "stars": 1,
+      "destructionPercentage": 23,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 702569
+        },
+        {
+          "name": "Elixir",
+          "amount": 326001
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 4562
+        }
+      ],
+      "battleTime": 180,
+      "battleTimestamp": "20261105T124500.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#URLQ8R0QC",
+      "opponentName": "Pikelight",
+      "opponentTownHallLevel": 17,
+      "stars": 3,
+      "destructionPercentage": 100,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 577962
+        },
+        {
+          "name": "Elixir",
+          "amount": 825459
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 2903
+        }
+      ],
+      "battleTime": 28,
+      "battleTimestamp": "20261105T183800.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#2JGVCLLL9",
+      "opponentName": "Quillwood6",
+      "opponentTownHallLevel": 15,
+      "stars": 1,
+      "destructionPercentage": 66,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 519918
+        },
+        {
+          "name": "Elixir",
+          "amount": 261394
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 8970
+        }
+      ],
+      "battleTime": 59,
+      "battleTimestamp": "20261105T213000.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#CRJ9C9LLQ",
+      "opponentName": "Jadesong",
+      "opponentTownHallLevel": 16,
+      "stars": 2,
+      "destructionPercentage": 52,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 381520
+        },
+        {
+          "name": "Elixir",
+          "amount": 352745
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 8965
+        }
+      ],
+      "battleTime": 178,
+      "battleTimestamp": "20261106T043200.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#Q8P8LL8QR",
+      "opponentName": "Larkshade75",
+      "opponentTownHallLevel": 16,
+      "stars": 0,
+      "destructionPercentage": 97,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 663357
+        },
+        {
+          "name": "Elixir",
+          "amount": 233124
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 2336
+        }
+      ],
+      "battleTime": 38,
+      "battleTimestamp": "20261105T153400.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#8Y9V2LU82",
+      "opponentName": "Ashlight85",
+      "opponentTownHallLevel": 16,
+      "stars": 0,
+      "destructionPercentage": 47,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 503551
+        },
+        {
+          "name": "Elixir",
+          "amount": 734458
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 3653
+        }
+      ],
+      "battleTime": 52,
+      "battleTimestamp": "20261105T213000.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#C2PLYPYP2",
+      "opponentName": "Zephyrcrest",
+      "opponentTownHallLevel": 15,
+      "stars": 3,
+      "destructionPercentage": 100,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 172851
+        },
+        {
+          "name": "Elixir",
+          "amount": 705655
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 6702
+        }
+      ],
+      "battleTime": 164,
+      "battleTimestamp": "20261105T234500.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#L0R0CYU88",
+      "opponentName": "Quillwood",
+      "opponentTownHallLevel": 15,
+      "stars": 0,
+      "destructionPercentage": 70,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 190008
+        },
+        {
+          "name": "Elixir",
+          "amount": 465606
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 327
+        }
+      ],
+      "battleTime": 131,
+      "battleTimestamp": "20261105T154000.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#QU008QUYP",
+      "opponentName": "Runecrest91",
+      "opponentTownHallLevel": 15,
+      "stars": 2,
+      "destructionPercentage": 62,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 652170
+        },
+        {
+          "name": "Elixir",
+          "amount": 35755
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 2261
+        }
+      ],
+      "battleTime": 141,
+      "battleTimestamp": "20261106T021500.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#QLVCPPUJR",
+      "opponentName": "Zephyrfall91",
+      "opponentTownHallLevel": 15,
+      "stars": 2,
+      "destructionPercentage": 88,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 493051
+        },
+        {
+          "name": "Elixir",
+          "amount": 719060
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 7400
+        }
+      ],
+      "battleTime": 82,
+      "battleTimestamp": "20261105T164000.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#PQGUU9L8Y",
+      "opponentName": "Pikeshade9",
+      "opponentTownHallLevel": 17,
+      "stars": 1,
+      "destructionPercentage": 66,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 700816
+        },
+        {
+          "name": "Elixir",
+          "amount": 499743
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 5768
+        }
+      ],
+      "battleTime": 121,
+      "battleTimestamp": "20261105T211500.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#CRCRLVYYJ",
+      "opponentName": "Tidesong",
+      "opponentTownHallLevel": 14,
+      "stars": 1,
+      "destructionPercentage": 22,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 701253
+        },
+        {
+          "name": "Elixir",
+          "amount": 859278
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 4785
+        }
+      ],
+      "battleTime": 94,
+      "battleTimestamp": "20261106T033600.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#YR9Q0G9PY",
+      "opponentName": "Umberwing3",
+      "opponentTownHallLevel": 17,
+      "stars": 0,
+      "destructionPercentage": 63,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 612331
+        },
+        {
+          "name": "Elixir",
+          "amount": 620391
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 7299
+        }
+      ],
+      "battleTime": 149,
+      "battleTimestamp": "20261106T143200.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#2VJGYCVYY",
+      "opponentName": "Jadebrand",
+      "opponentTownHallLevel": 16,
+      "stars": 1,
+      "destructionPercentage": 72,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 275985
+        },
+        {
+          "name": "Elixir",
+          "amount": 493587
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 788
+        }
+      ],
+      "battleTime": 105,
+      "battleTimestamp": "20261105T200200.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#G8C8UV808",
+      "opponentName": "Onyxfall",
+      "opponentTownHallLevel": 17,
+      "stars": 1,
+      "destructionPercentage": 91,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 560535
+        },
+        {
+          "name": "Elixir",
+          "amount": 196560
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 7400
+        }
+      ],
+      "battleTime": 49,
+      "battleTimestamp": "20261106T022400.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#RY92PRQYJ",
+      "opponentName": "Yarrowlight",
+      "opponentTownHallLevel": 16,
+      "stars": 3,
+      "destructionPercentage": 100,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 817423
+        },
+        {
+          "name": "Elixir",
+          "amount": 407600
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 7849
+        }
+      ],
+      "battleTime": 113,
+      "battleTimestamp": "20261106T092000.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#PVQ82VJ8P",
+      "opponentName": "Pikewood96",
+      "opponentTownHallLevel": 15,
+      "stars": 0,
+      "destructionPercentage": 77,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 657318
+        },
+        {
+          "name": "Elixir",
+          "amount": 486585
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 6596
+        }
+      ],
+      "battleTime": 67,
+      "battleTimestamp": "20261106T053600.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#YL0V28QV9",
+      "opponentName": "Cindersong",
+      "opponentTownHallLevel": 17,
+      "stars": 2,
+      "destructionPercentage": 65,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 375247
+        },
+        {
+          "name": "Elixir",
+          "amount": 146804
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 5525
+        }
+      ],
+      "battleTime": 70,
+      "battleTimestamp": "20261106T052400.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#LGY2G8GG9",
+      "opponentName": "Yarrowlight84",
+      "opponentTownHallLevel": 14,
+      "stars": 2,
+      "destructionPercentage": 87,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 668992
+        },
+        {
+          "name": "Elixir",
+          "amount": 658128
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 3791
+        }
+      ],
+      "battleTime": 100,
+      "battleTimestamp": "20261106T200800.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#Y09CR988J",
+      "opponentName": "Cinderwood94",
+      "opponentTownHallLevel": 15,
+      "stars": 1,
+      "destructionPercentage": 58,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 633223
+        },
+        {
+          "name": "Elixir",
+          "amount": 505502
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 6370
+        }
+      ],
+      "battleTime": 130,
+      "battleTimestamp": "20261106T095200.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#0Y09CLVRY",
+      "opponentName": "Valebrand",
+      "opponentTownHallLevel": 17,
+      "stars": 3,
+      "destructionPercentage": 100,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 544448
+        },
+        {
+          "name": "Elixir",
+          "amount": 568593
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 462
+        }
+      ],
+      "battleTime": 33,
+      "battleTimestamp": "20261106T160000.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#9YJYVGU8J",
+      "opponentName": "Brookstorm",
+      "opponentTownHallLevel": 17,
+      "stars": 0,
+      "destructionPercentage": 51,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 732476
+        },
+        {
+          "name": "Elixir",
+          "amount": 704005
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 2409
+        }
+      ],
+      "battleTime": 82,
+      "battleTimestamp": "20261106T200800.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#2R90C9UL9",
+      "opponentName": "Frostsong67",
+      "opponentTownHallLevel": 16,
+      "stars": 1,
+      "destructionPercentage": 39,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 373647
+        },
+        {
+          "name": "Elixir",
+          "amount": 325957
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 1430
+        }
+      ],
+      "battleTime": 33,
+      "battleTimestamp": "20261106T205000.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#PRRCRYGYQ",
+      "opponentName": "Tidewood",
+      "opponentTownHallLevel": 14,
+      "stars": 3,
+      "destructionPercentage": 100,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 629602
+        },
+        {
+          "name": "Elixir",
+          "amount": 335287
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 2930
+        }
+      ],
+      "battleTime": 127,
+      "battleTimestamp": "20261106T204800.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#LQCJ2UVRR",
+      "opponentName": "Yarrowbrand",
+      "opponentTownHallLevel": 16,
+      "stars": 2,
+      "destructionPercentage": 38,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 587592
+        },
+        {
+          "name": "Elixir",
+          "amount": 410113
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 3994
+        }
+      ],
+      "battleTime": 52,
+      "battleTimestamp": "20261107T014400.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#9VUCLL8J8",
+      "opponentName": "Pikestone80",
+      "opponentTownHallLevel": 15,
+      "stars": 1,
+      "destructionPercentage": 37,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 349940
+        },
+        {
+          "name": "Elixir",
+          "amount": 506866
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 7407
+        }
+      ],
+      "battleTime": 21,
+      "battleTimestamp": "20261107T033000.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#QPYJYCY8R",
+      "opponentName": "Jadeshade",
+      "opponentTownHallLevel": 15,
+      "stars": 2,
+      "destructionPercentage": 66,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 47829
+        },
+        {
+          "name": "Elixir",
+          "amount": 665550
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 5392
+        }
+      ],
+      "battleTime": 94,
+      "battleTimestamp": "20261107T004500.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#VGPV8GVQQ",
+      "opponentName": "Galestone",
+      "opponentTownHallLevel": 15,
+      "stars": 0,
+      "destructionPercentage": 28,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 848891
+        },
+        {
+          "name": "Elixir",
+          "amount": 103247
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 1495
+        }
+      ],
+      "battleTime": 81,
+      "battleTimestamp": "20261107T014400.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#U29GLLQ08",
+      "opponentName": "Mossstorm",
+      "opponentTownHallLevel": 17,
+      "stars": 0,
+      "destructionPercentage": 90,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 486000
+        },
+        {
+          "name": "Elixir",
+          "amount": 84108
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 5598
+        }
+      ],
+      "battleTime": 53,
+      "battleTimestamp": "20261107T021900.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#PQ2QRRQUG",
+      "opponentName": "Wrenwood68",
+      "opponentTownHallLevel": 17,
+      "stars": 1,
+      "destructionPercentage": 75,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 851353
+        },
+        {
+          "name": "Elixir",
+          "amount": 863048
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 4665
+        }
+      ],
+      "battleTime": 46,
+      "battleTimestamp": "20261107T063000.000Z"
+    },
+    {
+      "battleType": "homeVillage",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#8J22JQ28Q",
+      "opponentName": "Kitewing44",
+      "opponentTownHallLevel": 14,
+      "stars": 2,
+      "destructionPercentage": 84,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 643397
+        },
+        {
+          "name": "Elixir",
+          "amount": 452614
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 8176
+        }
+      ],
+      "battleTime": 167,
+      "battleTimestamp": "20261107T064000.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#JJQGPYCQP",
+      "opponentName": "Brookwood",
+      "opponentTownHallLevel": 14,
+      "stars": 0,
+      "destructionPercentage": 66,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 786998
+        },
+        {
+          "name": "Elixir",
+          "amount": 605188
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 8344
+        }
+      ],
+      "battleTime": 28,
+      "battleTimestamp": "20261107T080800.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#U9CJ8C8GV",
+      "opponentName": "Yarrowstorm",
+      "opponentTownHallLevel": 14,
+      "stars": 2,
+      "destructionPercentage": 94,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 48388
+        },
+        {
+          "name": "Elixir",
+          "amount": 33137
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 1412
+        }
+      ],
+      "battleTime": 110,
+      "battleTimestamp": "20261107T064200.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": true,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#UL999JL2R",
+      "opponentName": "Ashlight71",
+      "opponentTownHallLevel": 14,
+      "stars": 2,
+      "destructionPercentage": 60,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 208123
+        },
+        {
+          "name": "Elixir",
+          "amount": 671455
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 6412
+        }
+      ],
+      "battleTime": 167,
+      "battleTimestamp": "20261107T084800.000Z"
+    },
+    {
+      "battleType": "ranked",
+      "attack": false,
+      "armyShareCode": "h4p10e40_13-7e52_53u94x55",
+      "opponentPlayerTag": "#UYJU20J0P",
+      "opponentName": "Cinderwood",
+      "opponentTownHallLevel": 15,
+      "stars": 3,
+      "destructionPercentage": 100,
+      "lootedResources": [
+        {
+          "name": "Gold",
+          "amount": 521645
+        },
+        {
+          "name": "Elixir",
+          "amount": 613816
+        },
+        {
+          "name": "DarkElixir",
+          "amount": 5437
+        }
+      ],
+      "battleTime": 140,
+      "battleTimestamp": "20261107T101900.000Z"
+    }
+  ]
+}

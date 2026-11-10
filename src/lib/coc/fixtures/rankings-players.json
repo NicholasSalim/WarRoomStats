@@ -1,0 +1,1371 @@
+{
+  "items": [
+    {
+      "tag": "#JCRY9PCC0",
+      "name": "Frostcrest35",
+      "expLevel": 250,
+      "trophies": 6600,
+      "attackWins": 199,
+      "defenseWins": 6,
+      "rank": 1,
+      "previousRank": 1,
+      "clan": {
+        "tag": "#9JCP2J22G",
+        "name": "Moonhollow",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#JYJ2YUJ9J",
+      "name": "Pikestone63",
+      "expLevel": 270,
+      "trophies": 6594,
+      "attackWins": 253,
+      "defenseWins": 0,
+      "rank": 2,
+      "previousRank": 1,
+      "clan": {
+        "tag": "#RYJ9C8YR9",
+        "name": "Iron Lanterns",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#0Y2RLYRPQ",
+      "name": "Tidestone73",
+      "expLevel": 429,
+      "trophies": 6584,
+      "attackWins": 129,
+      "defenseWins": 13,
+      "rank": 3,
+      "previousRank": 1,
+      "clan": {
+        "tag": "#29PQY08CC",
+        "name": "Grey Harbor",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#Q8V0808QG",
+      "name": "Novasong96",
+      "expLevel": 472,
+      "trophies": 6588,
+      "attackWins": 176,
+      "defenseWins": 13,
+      "rank": 4,
+      "previousRank": 8,
+      "clan": {
+        "tag": "#2CYQ8JPJV",
+        "name": "Paper Tigers",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#8R2VLYU2Q",
+      "name": "Galelight",
+      "expLevel": 473,
+      "trophies": 6568,
+      "attackWins": 271,
+      "defenseWins": 19,
+      "rank": 5,
+      "previousRank": 1,
+      "clan": {
+        "tag": "#0PURPGCQ0",
+        "name": "Static Bloom",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#QGV2CQ9JC",
+      "name": "Cinderfall2",
+      "expLevel": 261,
+      "trophies": 6560,
+      "attackWins": 167,
+      "defenseWins": 5,
+      "rank": 6,
+      "previousRank": 3,
+      "clan": {
+        "tag": "#R82ULY2VG",
+        "name": "Grey Harbor",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#0GU0CGL80",
+      "name": "Runefall",
+      "expLevel": 438,
+      "trophies": 6558,
+      "attackWins": 49,
+      "defenseWins": 16,
+      "rank": 7,
+      "previousRank": 9,
+      "clan": {
+        "tag": "#Q9J9Y2Q9Y",
+        "name": "Last Light",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#QLGL8RYCC",
+      "name": "Valesong81",
+      "expLevel": 360,
+      "trophies": 6544,
+      "attackWins": 81,
+      "defenseWins": 10,
+      "rank": 8,
+      "previousRank": 12,
+      "clan": {
+        "tag": "#20QUJ0YL9",
+        "name": "Paper Tigers",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#UCU92PCL9",
+      "name": "Wrenfall",
+      "expLevel": 215,
+      "trophies": 6576,
+      "attackWins": 44,
+      "defenseWins": 6,
+      "rank": 9,
+      "previousRank": 10,
+      "clan": {
+        "tag": "#09UJ9QGCJ",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#YJYY22VG2",
+      "name": "Brookstone",
+      "expLevel": 335,
+      "trophies": 6528,
+      "attackWins": 111,
+      "defenseWins": 13,
+      "rank": 10,
+      "previousRank": 13,
+      "clan": {
+        "tag": "#QVPRUY8UY",
+        "name": "Salt & Ember",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#QQG2J9RVC",
+      "name": "Zephyrshade22",
+      "expLevel": 497,
+      "trophies": 6560,
+      "attackWins": 231,
+      "defenseWins": 6,
+      "rank": 11,
+      "previousRank": 12,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#Q2QUUQ0V8",
+      "name": "Kitewing",
+      "expLevel": 252,
+      "trophies": 6523,
+      "attackWins": 122,
+      "defenseWins": 14,
+      "rank": 12,
+      "previousRank": 10,
+      "clan": {
+        "tag": "#2U0GJ2CPV",
+        "name": "Iron Lanterns",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#C2UVR8LUP",
+      "name": "Wrenshade23",
+      "expLevel": 233,
+      "trophies": 6528,
+      "attackWins": 80,
+      "defenseWins": 5,
+      "rank": 13,
+      "previousRank": 15,
+      "clan": {
+        "tag": "#JJLV8CYPQ",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#VRC8V0PGR",
+      "name": "Yarrowbrand43",
+      "expLevel": 426,
+      "trophies": 6483,
+      "attackWins": 76,
+      "defenseWins": 9,
+      "rank": 14,
+      "previousRank": 16,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#QV0Q9LG2R",
+      "name": "Irislight",
+      "expLevel": 271,
+      "trophies": 6530,
+      "attackWins": 154,
+      "defenseWins": 15,
+      "rank": 15,
+      "previousRank": 13,
+      "clan": {
+        "tag": "#Q9PRC9VJG",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#0Y9G99P2J",
+      "name": "Sagefall",
+      "expLevel": 448,
+      "trophies": 6510,
+      "attackWins": 87,
+      "defenseWins": 2,
+      "rank": 16,
+      "previousRank": 12,
+      "clan": {
+        "tag": "#YPYU0VYRP",
+        "name": "Paper Tigers",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#9Y8C9JQGG",
+      "name": "Tidestorm",
+      "expLevel": 427,
+      "trophies": 6536,
+      "attackWins": 284,
+      "defenseWins": 6,
+      "rank": 17,
+      "previousRank": 19,
+      "clan": {
+        "tag": "#J9C89VVQV",
+        "name": "Red Thread",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#GRCJRRRQG",
+      "name": "Embersong",
+      "expLevel": 492,
+      "trophies": 6549,
+      "attackWins": 136,
+      "defenseWins": 4,
+      "rank": 18,
+      "previousRank": 15,
+      "clan": {
+        "tag": "#QVQPJYRQC",
+        "name": "Salt & Ember",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#VG8RJG90Q",
+      "name": "Umbersong",
+      "expLevel": 324,
+      "trophies": 6528,
+      "attackWins": 64,
+      "defenseWins": 10,
+      "rank": 19,
+      "previousRank": 18,
+      "clan": {
+        "tag": "#UVGVYL8R9",
+        "name": "Grey Harbor",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#V0LPPVUCP",
+      "name": "Quillsong",
+      "expLevel": 411,
+      "trophies": 6524,
+      "attackWins": 182,
+      "defenseWins": 10,
+      "rank": 20,
+      "previousRank": 22,
+      "clan": {
+        "tag": "#2ULRQQLC8",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#9QLVP90VR",
+      "name": "Novalight",
+      "expLevel": 256,
+      "trophies": 6520,
+      "attackWins": 118,
+      "defenseWins": 18,
+      "rank": 21,
+      "previousRank": 19,
+      "clan": {
+        "tag": "#0C999YRPQ",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#0GYC0LUJ9",
+      "name": "Brookstone63",
+      "expLevel": 256,
+      "trophies": 6516,
+      "attackWins": 133,
+      "defenseWins": 17,
+      "rank": 22,
+      "previousRank": 21,
+      "clan": {
+        "tag": "#U29QUUY9U",
+        "name": "Iron Lanterns",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#88V0GC0LY",
+      "name": "Onyxshade",
+      "expLevel": 380,
+      "trophies": 6424,
+      "attackWins": 272,
+      "defenseWins": 16,
+      "rank": 23,
+      "previousRank": 27,
+      "clan": {
+        "tag": "#CCRLY80L0",
+        "name": "Northbound",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#JYP0YCUU0",
+      "name": "Jadewood75",
+      "expLevel": 288,
+      "trophies": 6462,
+      "attackWins": 235,
+      "defenseWins": 12,
+      "rank": 24,
+      "previousRank": 20,
+      "clan": {
+        "tag": "#8GJ8URVVG",
+        "name": "Velvet Storm",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#VGPGGJULL",
+      "name": "Novastone25",
+      "expLevel": 436,
+      "trophies": 6384,
+      "attackWins": 178,
+      "defenseWins": 4,
+      "rank": 25,
+      "previousRank": 29,
+      "clan": {
+        "tag": "#QYYJ2R9CR",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#L8YQQCV90",
+      "name": "Runeshade",
+      "expLevel": 212,
+      "trophies": 6375,
+      "attackWins": 213,
+      "defenseWins": 15,
+      "rank": 26,
+      "previousRank": 30,
+      "clan": {
+        "tag": "#YQGJ9LV2Y",
+        "name": "Copper Kites",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#RCUGUJRVJ",
+      "name": "Sagebrand88",
+      "expLevel": 486,
+      "trophies": 6366,
+      "attackWins": 232,
+      "defenseWins": 19,
+      "rank": 27,
+      "previousRank": 30,
+      "clan": {
+        "tag": "#GJ8LGG08V",
+        "name": "Paper Tigers",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#RJ00U9PVC",
+      "name": "Novastorm",
+      "expLevel": 413,
+      "trophies": 6492,
+      "attackWins": 166,
+      "defenseWins": 12,
+      "rank": 28,
+      "previousRank": 27,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#00YPQJ8LU",
+      "name": "Tideshade37",
+      "expLevel": 277,
+      "trophies": 6348,
+      "attackWins": 245,
+      "defenseWins": 10,
+      "rank": 29,
+      "previousRank": 32,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#Y2LUQCU0G",
+      "name": "Cindershade",
+      "expLevel": 233,
+      "trophies": 6397,
+      "attackWins": 184,
+      "defenseWins": 6,
+      "rank": 30,
+      "previousRank": 28,
+      "clan": {
+        "tag": "#Y2UVJUP0P",
+        "name": "Copper Kites",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#PV0PP2UU8",
+      "name": "Cinderstorm",
+      "expLevel": 489,
+      "trophies": 6330,
+      "attackWins": 93,
+      "defenseWins": 11,
+      "rank": 31,
+      "previousRank": 29,
+      "clan": {
+        "tag": "#LQG22JQV8",
+        "name": "Moonhollow",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#029LU2VQ2",
+      "name": "Froststorm3",
+      "expLevel": 343,
+      "trophies": 6352,
+      "attackWins": 214,
+      "defenseWins": 10,
+      "rank": 32,
+      "previousRank": 31,
+      "clan": {
+        "tag": "#QU0RVQR9L",
+        "name": "Iron Lanterns",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#YUP2YU202",
+      "name": "Onyxstone86",
+      "expLevel": 270,
+      "trophies": 6408,
+      "attackWins": 246,
+      "defenseWins": 4,
+      "rank": 33,
+      "previousRank": 33,
+      "clan": {
+        "tag": "#2PVCQRJ98",
+        "name": "Salt & Ember",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#G8JUU82GY",
+      "name": "Galeshade",
+      "expLevel": 411,
+      "trophies": 6435,
+      "attackWins": 192,
+      "defenseWins": 5,
+      "rank": 34,
+      "previousRank": 33,
+      "clan": {
+        "tag": "#UP2902RL9",
+        "name": "Grey Harbor",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#RCVUQQPC0",
+      "name": "Pikesong12",
+      "expLevel": 285,
+      "trophies": 6430,
+      "attackWins": 179,
+      "defenseWins": 1,
+      "rank": 35,
+      "previousRank": 32,
+      "clan": {
+        "tag": "#PUV2CCQP0",
+        "name": "Copper Kites",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#P9VQPJUCY",
+      "name": "Brookwing81",
+      "expLevel": 358,
+      "trophies": 6495,
+      "attackWins": 91,
+      "defenseWins": 1,
+      "rank": 36,
+      "previousRank": 35,
+      "clan": {
+        "tag": "#QJLQ02GLP",
+        "name": "Static Bloom",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#RQRVJULYY",
+      "name": "Novasong",
+      "expLevel": 376,
+      "trophies": 6420,
+      "attackWins": 85,
+      "defenseWins": 8,
+      "rank": 37,
+      "previousRank": 39,
+      "clan": {
+        "tag": "#GLRQVV9V9",
+        "name": "Velvet Storm",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#00C9QPYUG",
+      "name": "Runesong",
+      "expLevel": 217,
+      "trophies": 6452,
+      "attackWins": 70,
+      "defenseWins": 3,
+      "rank": 38,
+      "previousRank": 34,
+      "clan": {
+        "tag": "#2QJ28C0YL",
+        "name": "Northbound",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#8QLVL98LU",
+      "name": "Zephyrfall3",
+      "expLevel": 482,
+      "trophies": 6448,
+      "attackWins": 211,
+      "defenseWins": 1,
+      "rank": 39,
+      "previousRank": 41,
+      "clan": {
+        "tag": "#2UJPVJLQQ",
+        "name": "Copper Kites",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#9VGVQJYYL",
+      "name": "Sagecrest",
+      "expLevel": 355,
+      "trophies": 6249,
+      "attackWins": 168,
+      "defenseWins": 18,
+      "rank": 40,
+      "previousRank": 42,
+      "clan": {
+        "tag": "#2VL8G9GGU",
+        "name": "Northbound",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#U8G2QJCQ0",
+      "name": "Duskshade84",
+      "expLevel": 238,
+      "trophies": 6400,
+      "attackWins": 210,
+      "defenseWins": 12,
+      "rank": 41,
+      "previousRank": 41,
+      "clan": {
+        "tag": "#2JG8RV0CY",
+        "name": "Static Bloom",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#22V9VCUCY",
+      "name": "Quillwood75",
+      "expLevel": 332,
+      "trophies": 6395,
+      "attackWins": 182,
+      "defenseWins": 13,
+      "rank": 42,
+      "previousRank": 46,
+      "clan": {
+        "tag": "#CR2U0CULQ",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#RPJUPVJL9",
+      "name": "Cinderlight",
+      "expLevel": 309,
+      "trophies": 6390,
+      "attackWins": 266,
+      "defenseWins": 16,
+      "rank": 43,
+      "previousRank": 41,
+      "clan": {
+        "tag": "#QQQ2Q2Y2J",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#98CJ0J2PG",
+      "name": "Dusklight48",
+      "expLevel": 388,
+      "trophies": 6256,
+      "attackWins": 249,
+      "defenseWins": 12,
+      "rank": 44,
+      "previousRank": 40,
+      "clan": {
+        "tag": "#GRGCYQCY0",
+        "name": "Last Light",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#2JLC0JV2Q",
+      "name": "Umbercrest29",
+      "expLevel": 294,
+      "trophies": 6336,
+      "attackWins": 97,
+      "defenseWins": 3,
+      "rank": 45,
+      "previousRank": 49,
+      "clan": {
+        "tag": "#R89GJYV28",
+        "name": "Last Light",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#90V29UP2J",
+      "name": "Emberbrand69",
+      "expLevel": 319,
+      "trophies": 6195,
+      "attackWins": 270,
+      "defenseWins": 20,
+      "rank": 46,
+      "previousRank": 46,
+      "clan": {
+        "tag": "#QU9JLVY28",
+        "name": "Red Thread",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#L9R8Q22CU",
+      "name": "Zephyrsong8",
+      "expLevel": 379,
+      "trophies": 6370,
+      "attackWins": 132,
+      "defenseWins": 19,
+      "rank": 47,
+      "previousRank": 43,
+      "clan": {
+        "tag": "#08YG2VQU2",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#LCP8R8LPG",
+      "name": "Ashwing52",
+      "expLevel": 374,
+      "trophies": 6318,
+      "attackWins": 50,
+      "defenseWins": 17,
+      "rank": 48,
+      "previousRank": 47,
+      "clan": {
+        "tag": "#LVRPRJUGC",
+        "name": "Moonhollow",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#PJ2PYYVRV",
+      "name": "Umbersong78",
+      "expLevel": 284,
+      "trophies": 6360,
+      "attackWins": 176,
+      "defenseWins": 9,
+      "rank": 49,
+      "previousRank": 49,
+      "clan": {
+        "tag": "#QVCV0RUPV",
+        "name": "Last Light",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    },
+    {
+      "tag": "#VCYVQC9G2",
+      "name": "Runesong32",
+      "expLevel": 311,
+      "trophies": 6257,
+      "attackWins": 56,
+      "defenseWins": 20,
+      "rank": 50,
+      "previousRank": 46,
+      "clan": {
+        "tag": "#R9GUVPQ0Q",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        }
+      },
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      }
+    }
+  ],
+  "paging": {
+    "cursors": {}
+  }
+}

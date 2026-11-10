@@ -1,0 +1,991 @@
+{
+  "items": [
+    {
+      "tag": "#V0PL9Q82V",
+      "name": "Paper Tigers",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 35,
+      "members": 46,
+      "clanPoints": 62000,
+      "rank": 1,
+      "previousRank": 1
+    },
+    {
+      "tag": "#PYJL0RQUQ",
+      "name": "Static Bloom",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 39,
+      "members": 50,
+      "clanPoints": 61943,
+      "rank": 2,
+      "previousRank": 5
+    },
+    {
+      "tag": "#C2YQ8CVPP",
+      "name": "Red Thread",
+      "location": {
+        "id": 32000122,
+        "name": "Japan",
+        "isCountry": true,
+        "countryCode": "JP"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 29,
+      "members": 50,
+      "clanPoints": 61888,
+      "rank": 3,
+      "previousRank": 1
+    },
+    {
+      "tag": "#RCYQQGC02",
+      "name": "Red Thread",
+      "location": {
+        "id": 32000249,
+        "name": "United States",
+        "isCountry": true,
+        "countryCode": "US"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 30,
+      "members": 49,
+      "clanPoints": 61775,
+      "rank": 4,
+      "previousRank": 3
+    },
+    {
+      "tag": "#2RGGUQCPP",
+      "name": "Red Thread",
+      "location": {
+        "id": 32000000,
+        "name": "Europe",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 25,
+      "members": 48,
+      "clanPoints": 61756,
+      "rank": 5,
+      "previousRank": 2
+    },
+    {
+      "tag": "#2YGJJCYJ8",
+      "name": "Northbound",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 32,
+      "members": 50,
+      "clanPoints": 61655,
+      "rank": 6,
+      "previousRank": 6
+    },
+    {
+      "tag": "#V09UG2VY9",
+      "name": "Iron Lanterns",
+      "location": {
+        "id": 32000022,
+        "name": "Australia",
+        "isCountry": true,
+        "countryCode": "AU"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 29,
+      "members": 50,
+      "clanPoints": 61436,
+      "rank": 7,
+      "previousRank": 10
+    },
+    {
+      "tag": "#2URUVRQG9",
+      "name": "The Quiet Ones",
+      "location": {
+        "id": 32000113,
+        "name": "India",
+        "isCountry": true,
+        "countryCode": "IN"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 30,
+      "members": 46,
+      "clanPoints": 61349,
+      "rank": 8,
+      "previousRank": 8
+    },
+    {
+      "tag": "#0QU0CU9LP",
+      "name": "Last Light",
+      "location": {
+        "id": 32000094,
+        "name": "Germany",
+        "isCountry": true,
+        "countryCode": "DE"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 29,
+      "members": 47,
+      "clanPoints": 61632,
+      "rank": 9,
+      "previousRank": 6
+    },
+    {
+      "tag": "#UR02LL20Q",
+      "name": "Grey Harbor",
+      "location": {
+        "id": 32000038,
+        "name": "Brazil",
+        "isCountry": true,
+        "countryCode": "BR"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 28,
+      "members": 46,
+      "clanPoints": 61253,
+      "rank": 10,
+      "previousRank": 9
+    },
+    {
+      "tag": "#UCVV9QCLG",
+      "name": "Paper Tigers",
+      "location": {
+        "id": 32000000,
+        "name": "Europe",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 35,
+      "members": 48,
+      "clanPoints": 61420,
+      "rank": 11,
+      "previousRank": 10
+    },
+    {
+      "tag": "#RP22YYUVJ",
+      "name": "Last Light",
+      "location": {
+        "id": 32000114,
+        "name": "Indonesia",
+        "isCountry": true,
+        "countryCode": "ID"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 32,
+      "members": 50,
+      "clanPoints": 60933,
+      "rank": 12,
+      "previousRank": 11
+    },
+    {
+      "tag": "#YL9URCPUQ",
+      "name": "Northbound 4",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 29,
+      "members": 47,
+      "clanPoints": 60704,
+      "rank": 13,
+      "previousRank": 14
+    },
+    {
+      "tag": "#R8C0YP8R9",
+      "name": "Velvet Storm 3",
+      "location": {
+        "id": 32000022,
+        "name": "Australia",
+        "isCountry": true,
+        "countryCode": "AU"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 34,
+      "members": 49,
+      "clanPoints": 60583,
+      "rank": 14,
+      "previousRank": 13
+    },
+    {
+      "tag": "#0Q9YLVVQV",
+      "name": "Moonhollow 6",
+      "location": {
+        "id": 32000122,
+        "name": "Japan",
+        "isCountry": true,
+        "countryCode": "JP"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 35,
+      "members": 50,
+      "clanPoints": 60908,
+      "rank": 15,
+      "previousRank": 15
+    },
+    {
+      "tag": "#Y8V0Q08YP",
+      "name": "Velvet Storm 2",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 31,
+      "members": 50,
+      "clanPoints": 60815,
+      "rank": 16,
+      "previousRank": 14
+    },
+    {
+      "tag": "#RQLCLY9VP",
+      "name": "The Quiet Ones 6",
+      "location": {
+        "id": 32000094,
+        "name": "Germany",
+        "isCountry": true,
+        "countryCode": "DE"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 40,
+      "members": 48,
+      "clanPoints": 60480,
+      "rank": 17,
+      "previousRank": 19
+    },
+    {
+      "tag": "#VP0P2RYV2",
+      "name": "Red Thread 7",
+      "location": {
+        "id": 32000001,
+        "name": "North America",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 32,
+      "members": 47,
+      "clanPoints": 60980,
+      "rank": 18,
+      "previousRank": 21
+    },
+    {
+      "tag": "#RUJQLUJGU",
+      "name": "Northbound 7",
+      "location": {
+        "id": 32000113,
+        "name": "India",
+        "isCountry": true,
+        "countryCode": "IN"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 29,
+      "members": 50,
+      "clanPoints": 61118,
+      "rank": 19,
+      "previousRank": 21
+    },
+    {
+      "tag": "#YRRVG9P0Y",
+      "name": "Salt & Ember 6",
+      "location": {
+        "id": 32000113,
+        "name": "India",
+        "isCountry": true,
+        "countryCode": "IN"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 38,
+      "members": 49,
+      "clanPoints": 60157,
+      "rank": 20,
+      "previousRank": 21
+    },
+    {
+      "tag": "#20UC09P9J",
+      "name": "Moonhollow 3",
+      "location": {
+        "id": 32000000,
+        "name": "Europe",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 40,
+      "members": 46,
+      "clanPoints": 59900,
+      "rank": 21,
+      "previousRank": 22
+    },
+    {
+      "tag": "#82QJ9UCRP",
+      "name": "Paper Tigers 3",
+      "location": {
+        "id": 32000000,
+        "name": "Europe",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 36,
+      "members": 46,
+      "clanPoints": 60194,
+      "rank": 22,
+      "previousRank": 24
+    },
+    {
+      "tag": "#LCVRQ99Q2",
+      "name": "Moonhollow 2",
+      "location": {
+        "id": 32000114,
+        "name": "Indonesia",
+        "isCountry": true,
+        "countryCode": "ID"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 34,
+      "members": 50,
+      "clanPoints": 60548,
+      "rank": 23,
+      "previousRank": 25
+    },
+    {
+      "tag": "#Y9QY0Q2UR",
+      "name": "Grey Harbor 5",
+      "location": {
+        "id": 32000113,
+        "name": "India",
+        "isCountry": true,
+        "countryCode": "IN"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 34,
+      "members": 46,
+      "clanPoints": 60735,
+      "rank": 24,
+      "previousRank": 24
+    },
+    {
+      "tag": "#CU2U0GY99",
+      "name": "Static Bloom 7",
+      "location": {
+        "id": 32000000,
+        "name": "Europe",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 26,
+      "members": 50,
+      "clanPoints": 60032,
+      "rank": 25,
+      "previousRank": 24
+    },
+    {
+      "tag": "#Q9GQR8VJR",
+      "name": "Velvet Storm 8",
+      "location": {
+        "id": 32000094,
+        "name": "Germany",
+        "isCountry": true,
+        "countryCode": "DE"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 27,
+      "members": 50,
+      "clanPoints": 59575,
+      "rank": 26,
+      "previousRank": 25
+    },
+    {
+      "tag": "#JRRPL0RPL",
+      "name": "Iron Lanterns 5",
+      "location": {
+        "id": 32000114,
+        "name": "Indonesia",
+        "isCountry": true,
+        "countryCode": "ID"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 33,
+      "members": 50,
+      "clanPoints": 59894,
+      "rank": 27,
+      "previousRank": 30
+    },
+    {
+      "tag": "#G9VYJGPP2",
+      "name": "Last Light 7",
+      "location": {
+        "id": 32000022,
+        "name": "Australia",
+        "isCountry": true,
+        "countryCode": "AU"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 33,
+      "members": 48,
+      "clanPoints": 59705,
+      "rank": 28,
+      "previousRank": 30
+    },
+    {
+      "tag": "#9P09L0GGU",
+      "name": "Paper Tigers 8",
+      "location": {
+        "id": 32000122,
+        "name": "Japan",
+        "isCountry": true,
+        "countryCode": "JP"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 29,
+      "members": 48,
+      "clanPoints": 60404,
+      "rank": 29,
+      "previousRank": 26
+    },
+    {
+      "tag": "#PJJ8QJGU2",
+      "name": "Copper Kites 7",
+      "location": {
+        "id": 32000001,
+        "name": "North America",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 39,
+      "members": 47,
+      "clanPoints": 59216,
+      "rank": 30,
+      "previousRank": 29
+    },
+    {
+      "tag": "#ULC9LP88U",
+      "name": "Grey Harbor 5",
+      "location": {
+        "id": 32000114,
+        "name": "Indonesia",
+        "isCountry": true,
+        "countryCode": "ID"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 27,
+      "members": 49,
+      "clanPoints": 60080,
+      "rank": 31,
+      "previousRank": 30
+    },
+    {
+      "tag": "#RPLU0PRCG",
+      "name": "Salt & Ember 6",
+      "location": {
+        "id": 32000001,
+        "name": "North America",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 39,
+      "members": 46,
+      "clanPoints": 60264,
+      "rank": 32,
+      "previousRank": 32
+    },
+    {
+      "tag": "#CJCPGPQ8J",
+      "name": "Moonhollow 4",
+      "location": {
+        "id": 32000000,
+        "name": "Europe",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 40,
+      "members": 48,
+      "clanPoints": 59440,
+      "rank": 33,
+      "previousRank": 32
+    },
+    {
+      "tag": "#PUGL08RLC",
+      "name": "The Quiet Ones 5",
+      "location": {
+        "id": 32000122,
+        "name": "Japan",
+        "isCountry": true,
+        "countryCode": "JP"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 29,
+      "members": 46,
+      "clanPoints": 58733,
+      "rank": 34,
+      "previousRank": 33
+    },
+    {
+      "tag": "#R8CQCQPRR",
+      "name": "Velvet Storm 4",
+      "location": {
+        "id": 32000122,
+        "name": "Japan",
+        "isCountry": true,
+        "countryCode": "JP"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 39,
+      "members": 50,
+      "clanPoints": 59518,
+      "rank": 35,
+      "previousRank": 32
+    },
+    {
+      "tag": "#YPUL8VPPG",
+      "name": "Paper Tigers 2",
+      "location": {
+        "id": 32000022,
+        "name": "Australia",
+        "isCountry": true,
+        "countryCode": "AU"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 27,
+      "members": 48,
+      "clanPoints": 59690,
+      "rank": 36,
+      "previousRank": 36
+    },
+    {
+      "tag": "#QCCJUYR08",
+      "name": "Moonhollow 6",
+      "location": {
+        "id": 32000038,
+        "name": "Brazil",
+        "isCountry": true,
+        "countryCode": "BR"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 33,
+      "members": 46,
+      "clanPoints": 59264,
+      "rank": 37,
+      "previousRank": 34
+    },
+    {
+      "tag": "#L28YJPLU9",
+      "name": "Northbound 7",
+      "location": {
+        "id": 32000122,
+        "name": "Japan",
+        "isCountry": true,
+        "countryCode": "JP"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 39,
+      "members": 50,
+      "clanPoints": 59299,
+      "rank": 38,
+      "previousRank": 40
+    },
+    {
+      "tag": "#020GP9VGY",
+      "name": "Grey Harbor 3",
+      "location": {
+        "id": 32000094,
+        "name": "Germany",
+        "isCountry": true,
+        "countryCode": "DE"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 32,
+      "members": 49,
+      "clanPoints": 60404,
+      "rank": 39,
+      "previousRank": 39
+    },
+    {
+      "tag": "#JYYGVVGUR",
+      "name": "Northbound 7",
+      "location": {
+        "id": 32000249,
+        "name": "United States",
+        "isCountry": true,
+        "countryCode": "US"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 26,
+      "members": 48,
+      "clanPoints": 58529,
+      "rank": 40,
+      "previousRank": 38
+    },
+    {
+      "tag": "#LLJQ8Q2JC",
+      "name": "Northbound 8",
+      "location": {
+        "id": 32000001,
+        "name": "North America",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 38,
+      "members": 49,
+      "clanPoints": 59640,
+      "rank": 41,
+      "previousRank": 39
+    },
+    {
+      "tag": "#C2R8GPYU2",
+      "name": "Copper Kites 6",
+      "location": {
+        "id": 32000038,
+        "name": "Brazil",
+        "isCountry": true,
+        "countryCode": "BR"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 34,
+      "members": 46,
+      "clanPoints": 59048,
+      "rank": 42,
+      "previousRank": 45
+    },
+    {
+      "tag": "#PCYURL8VJ",
+      "name": "Static Bloom 7",
+      "location": {
+        "id": 32000094,
+        "name": "Germany",
+        "isCountry": true,
+        "countryCode": "DE"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 37,
+      "members": 46,
+      "clanPoints": 59312,
+      "rank": 43,
+      "previousRank": 43
+    },
+    {
+      "tag": "#0U98PV2CR",
+      "name": "Copper Kites 7",
+      "location": {
+        "id": 32000122,
+        "name": "Japan",
+        "isCountry": true,
+        "countryCode": "JP"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 34,
+      "members": 48,
+      "clanPoints": 60065,
+      "rank": 44,
+      "previousRank": 46
+    },
+    {
+      "tag": "#VVQCLPCCG",
+      "name": "Salt & Ember 8",
+      "location": {
+        "id": 32000094,
+        "name": "Germany",
+        "isCountry": true,
+        "countryCode": "DE"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 39,
+      "members": 49,
+      "clanPoints": 59360,
+      "rank": 45,
+      "previousRank": 43
+    },
+    {
+      "tag": "#V0QYLY8YY",
+      "name": "Last Light 3",
+      "location": {
+        "id": 32000038,
+        "name": "Brazil",
+        "isCountry": true,
+        "countryCode": "BR"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 32,
+      "members": 46,
+      "clanPoints": 57725,
+      "rank": 46,
+      "previousRank": 45
+    },
+    {
+      "tag": "#V8CP2920C",
+      "name": "Iron Lanterns 7",
+      "location": {
+        "id": 32000249,
+        "name": "United States",
+        "isCountry": true,
+        "countryCode": "US"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 39,
+      "members": 46,
+      "clanPoints": 56940,
+      "rank": 47,
+      "previousRank": 50
+    },
+    {
+      "tag": "#CL2LYVRRG",
+      "name": "Copper Kites 5",
+      "location": {
+        "id": 32000022,
+        "name": "Australia",
+        "isCountry": true,
+        "countryCode": "AU"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 39,
+      "members": 47,
+      "clanPoints": 57958,
+      "rank": 48,
+      "previousRank": 48
+    },
+    {
+      "tag": "#GR82ULP9R",
+      "name": "Copper Kites 6",
+      "location": {
+        "id": 32000001,
+        "name": "North America",
+        "isCountry": false
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 40,
+      "members": 46,
+      "clanPoints": 59216,
+      "rank": 49,
+      "previousRank": 49
+    },
+    {
+      "tag": "#YVQJC8URP",
+      "name": "Static Bloom 9",
+      "location": {
+        "id": 32000113,
+        "name": "India",
+        "isCountry": true,
+        "countryCode": "IN"
+      },
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 38,
+      "members": 47,
+      "clanPoints": 57590,
+      "rank": 50,
+      "previousRank": 52
+    }
+  ],
+  "paging": {
+    "cursors": {}
+  }
+}

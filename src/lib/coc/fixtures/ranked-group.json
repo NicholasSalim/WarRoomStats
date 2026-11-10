@@ -1,0 +1,1508 @@
+{
+  "members": [
+    {
+      "playerTag": "#8G0GVQVRQ",
+      "playerName": "Jadelight30",
+      "clanTag": "#CJG9G98UL",
+      "clanName": "Salt & Ember",
+      "leagueTrophies": 1600,
+      "attackWinCount": 19,
+      "attackLoseCount": 2,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 10
+    },
+    {
+      "playerTag": "#RRV22GGY9",
+      "playerName": "Emberlight",
+      "clanTag": "#PR22VYUJU",
+      "clanName": "Grey Harbor",
+      "leagueTrophies": 1595,
+      "attackWinCount": 11,
+      "attackLoseCount": 1,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 11
+    },
+    {
+      "playerTag": "#2VCGRUGGC",
+      "playerName": "Ashsong",
+      "clanTag": "#LQG8GJ90C",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1588,
+      "attackWinCount": 25,
+      "attackLoseCount": 4,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 18
+    },
+    {
+      "playerTag": "#UV9UC8CVL",
+      "playerName": "Sagefall86",
+      "clanTag": "#0YQR0R0RR",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1576,
+      "attackWinCount": 30,
+      "attackLoseCount": 4,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 9
+    },
+    {
+      "playerTag": "#2GG2QULYQ",
+      "playerName": "Emberwood30",
+      "clanTag": "#YLGLV9PC8",
+      "clanName": "Last Light",
+      "leagueTrophies": 1570,
+      "attackWinCount": 28,
+      "attackLoseCount": 4,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 14
+    },
+    {
+      "playerTag": "#0QRP8JQPR",
+      "playerName": "Hazefall",
+      "clanTag": "#YJJLYGYG2",
+      "clanName": "Velvet Storm",
+      "leagueTrophies": 1552,
+      "attackWinCount": 29,
+      "attackLoseCount": 5,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 25
+    },
+    {
+      "playerTag": "#2P20U9Q2L",
+      "playerName": "Quillstone",
+      "clanTag": "#R9CGJ2LGP",
+      "clanName": "Northbound",
+      "leagueTrophies": 1537,
+      "attackWinCount": 20,
+      "attackLoseCount": 2,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 18
+    },
+    {
+      "playerTag": "#GR0Q8LJUU",
+      "playerName": "Wrenbrand",
+      "clanTag": "#CLJPUUUYJ",
+      "clanName": "Paper Tigers",
+      "leagueTrophies": 1528,
+      "attackWinCount": 20,
+      "attackLoseCount": 4,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 17
+    },
+    {
+      "playerTag": "#9RCJ2RCY0",
+      "playerName": "Mosswing67",
+      "clanTag": "#UU9RRP82R",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1528,
+      "attackWinCount": 21,
+      "attackLoseCount": 3,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 6
+    },
+    {
+      "playerTag": "#YC928J9QV",
+      "playerName": "Irisfall",
+      "clanTag": "#0UPRQG8YC",
+      "clanName": "Grey Harbor",
+      "leagueTrophies": 1523,
+      "attackWinCount": 24,
+      "attackLoseCount": 2,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 15
+    },
+    {
+      "playerTag": "#LCCRLU9JV",
+      "playerName": "Irisstone23",
+      "clanTag": "#VLGVJLP8L",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1520,
+      "attackWinCount": 27,
+      "attackLoseCount": 0,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 19
+    },
+    {
+      "playerTag": "#V2Q29LYRR",
+      "playerName": "Cinderwing",
+      "clanTag": "#Q9YVYPQ88",
+      "clanName": "Paper Tigers",
+      "leagueTrophies": 1505,
+      "attackWinCount": 29,
+      "attackLoseCount": 1,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 19
+    },
+    {
+      "playerTag": "#QGUVG89YV",
+      "playerName": "Larkfall",
+      "clanTag": "#9GQVJP0CC",
+      "clanName": "Salt & Ember",
+      "leagueTrophies": 1495,
+      "attackWinCount": 12,
+      "attackLoseCount": 5,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 25
+    },
+    {
+      "playerTag": "#CLRVGLJC8",
+      "playerName": "Pikesong",
+      "clanTag": "#2CVP828PU",
+      "clanName": "Velvet Storm",
+      "leagueTrophies": 1488,
+      "attackWinCount": 16,
+      "attackLoseCount": 1,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 21
+    },
+    {
+      "playerTag": "#VRGLYYP99",
+      "playerName": "Larkshade58",
+      "clanTag": "#09ULCV0J2",
+      "clanName": "Paper Tigers",
+      "leagueTrophies": 1485,
+      "attackWinCount": 26,
+      "attackLoseCount": 4,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 24
+    },
+    {
+      "playerTag": "#Q8UQCG8JG",
+      "playerName": "Wrenshade",
+      "clanTag": "#2R099QR0Q",
+      "clanName": "Static Bloom",
+      "leagueTrophies": 1480,
+      "attackWinCount": 29,
+      "attackLoseCount": 5,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 6
+    },
+    {
+      "playerTag": "#PLQ9PVQ98",
+      "playerName": "Runewing93",
+      "clanTag": "#CQQLP08PR",
+      "clanName": "Red Thread",
+      "leagueTrophies": 1470,
+      "attackWinCount": 12,
+      "attackLoseCount": 3,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 15
+    },
+    {
+      "playerTag": "#9PQQR8CRP",
+      "playerName": "Umbercrest77",
+      "clanTag": "#Y89CQPC88",
+      "clanName": "Copper Kites",
+      "leagueTrophies": 1468,
+      "attackWinCount": 20,
+      "attackLoseCount": 2,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 7
+    },
+    {
+      "playerTag": "#2UGLRQY8R",
+      "playerName": "Ashfall",
+      "clanTag": "#U2GR88VR0",
+      "clanName": "Velvet Storm",
+      "leagueTrophies": 1456,
+      "attackWinCount": 25,
+      "attackLoseCount": 3,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 22
+    },
+    {
+      "playerTag": "#R0CRRQRR8",
+      "playerName": "Jadeshade32",
+      "clanTag": "#JG0J9U8JP",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1447,
+      "attackWinCount": 13,
+      "attackLoseCount": 1,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 14
+    },
+    {
+      "playerTag": "#RYVLLR9C9",
+      "playerName": "Duskwood17",
+      "clanTag": "#VGC8YRPYY",
+      "clanName": "The Quiet Ones",
+      "leagueTrophies": 1440,
+      "attackWinCount": 17,
+      "attackLoseCount": 3,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 9
+    },
+    {
+      "playerTag": "#JCJRPCC2R",
+      "playerName": "Kitewing29",
+      "clanTag": "#P2U2CCQPC",
+      "clanName": "Northbound",
+      "leagueTrophies": 1435,
+      "attackWinCount": 12,
+      "attackLoseCount": 5,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 9
+    },
+    {
+      "playerTag": "#LGRGC2JYP",
+      "playerName": "Onyxwing",
+      "clanTag": "#RURUVR8CQ",
+      "clanName": "Static Bloom",
+      "leagueTrophies": 1424,
+      "attackWinCount": 20,
+      "attackLoseCount": 4,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 9
+    },
+    {
+      "playerTag": "#QPY099JG8",
+      "playerName": "Tidecrest",
+      "clanTag": "#RYCQ8890Y",
+      "clanName": "Copper Kites",
+      "leagueTrophies": 1424,
+      "attackWinCount": 21,
+      "attackLoseCount": 3,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 6
+    },
+    {
+      "playerTag": "#RJUC2R8GC",
+      "playerName": "Zephyrlight36",
+      "clanTag": "#RQVPJVQPV",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1402,
+      "attackWinCount": 25,
+      "attackLoseCount": 5,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 19
+    },
+    {
+      "playerTag": "#UCYYUYQ20",
+      "playerName": "Quillshade",
+      "clanTag": "#G0J0RRC9G",
+      "clanName": "Northbound",
+      "leagueTrophies": 1402,
+      "attackWinCount": 11,
+      "attackLoseCount": 4,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 24
+    },
+    {
+      "playerTag": "#2QYL99GQ8",
+      "playerName": "Tidewing",
+      "clanTag": "#L20PJC2YP",
+      "clanName": "Northbound",
+      "leagueTrophies": 1384,
+      "attackWinCount": 19,
+      "attackLoseCount": 4,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 25
+    },
+    {
+      "playerTag": "#298L2L2U9",
+      "playerName": "Sagestorm85",
+      "clanTag": "#0GR2LPQC8",
+      "clanName": "Grey Harbor",
+      "leagueTrophies": 1365,
+      "attackWinCount": 19,
+      "attackLoseCount": 1,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 17
+    },
+    {
+      "playerTag": "#29LJVPRVV",
+      "playerName": "Mossbrand1",
+      "clanTag": "#P2QUU88PV",
+      "clanName": "Paper Tigers",
+      "leagueTrophies": 1348,
+      "attackWinCount": 29,
+      "attackLoseCount": 0,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 22
+    },
+    {
+      "playerTag": "#GQ8UJPLUP",
+      "playerName": "Embersong86",
+      "clanTag": "#0VJL0PQPU",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1344,
+      "attackWinCount": 27,
+      "attackLoseCount": 5,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 5
+    },
+    {
+      "playerTag": "#Y9QQJC9RR",
+      "playerName": "Jadelight",
+      "clanTag": "#RL0UUVCJ2",
+      "clanName": "Paper Tigers",
+      "leagueTrophies": 1341,
+      "attackWinCount": 29,
+      "attackLoseCount": 5,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 10
+    },
+    {
+      "playerTag": "#P8VG9J2UR",
+      "playerName": "Jadestone",
+      "clanTag": "#VJGL0UJL0",
+      "clanName": "Last Light",
+      "leagueTrophies": 1330,
+      "attackWinCount": 16,
+      "attackLoseCount": 2,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 8
+    },
+    {
+      "playerTag": "#8YU0PRP22",
+      "playerName": "Galebrand85",
+      "clanTag": "#RVYRV2CY0",
+      "clanName": "Grey Harbor",
+      "leagueTrophies": 1324,
+      "attackWinCount": 24,
+      "attackLoseCount": 5,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 11
+    },
+    {
+      "playerTag": "#J82L8L0G9",
+      "playerName": "Novafall57",
+      "clanTag": "#LC2PCUVGU",
+      "clanName": "Copper Kites",
+      "leagueTrophies": 1320,
+      "attackWinCount": 22,
+      "attackLoseCount": 4,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 9
+    },
+    {
+      "playerTag": "#U0UV2LUL0",
+      "playerName": "Iriswing52",
+      "clanTag": "#PQCGPL9GY",
+      "clanName": "Paper Tigers",
+      "leagueTrophies": 1320,
+      "attackWinCount": 21,
+      "attackLoseCount": 2,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 23
+    },
+    {
+      "playerTag": "#YG0C9JR28",
+      "playerName": "Irislight89",
+      "clanTag": "#9C0P09PGG",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1310,
+      "attackWinCount": 12,
+      "attackLoseCount": 0,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 18
+    },
+    {
+      "playerTag": "#0CRC98CR0",
+      "playerName": "Mosswood",
+      "clanTag": "#JPJUCG908",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1306,
+      "attackWinCount": 21,
+      "attackLoseCount": 1,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 12
+    },
+    {
+      "playerTag": "#CV008JQ2C",
+      "playerName": "Galewing",
+      "clanTag": "#8PV0Y0Y9L",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1300,
+      "attackWinCount": 24,
+      "attackLoseCount": 3,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 15
+    },
+    {
+      "playerTag": "#R299YVPPU",
+      "playerName": "Brookstone25",
+      "clanTag": "#0CJG2LUGL",
+      "clanName": "Last Light",
+      "leagueTrophies": 1294,
+      "attackWinCount": 27,
+      "attackLoseCount": 2,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 9
+    },
+    {
+      "playerTag": "#JVQV8LUUU",
+      "playerName": "Cinderlight69",
+      "clanTag": "#9UPLUUJJY",
+      "clanName": "Northbound",
+      "leagueTrophies": 1288,
+      "attackWinCount": 10,
+      "attackLoseCount": 0,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 18
+    },
+    {
+      "playerTag": "#8JC9G288L",
+      "playerName": "Pikeshade",
+      "clanTag": "#GQ88J2RV9",
+      "clanName": "The Quiet Ones",
+      "leagueTrophies": 1280,
+      "attackWinCount": 18,
+      "attackLoseCount": 0,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 23
+    },
+    {
+      "playerTag": "#RY0VVCV2R",
+      "playerName": "Galestone77",
+      "clanTag": "#G9CC82YU0",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1276,
+      "attackWinCount": 17,
+      "attackLoseCount": 4,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 12
+    },
+    {
+      "playerTag": "#RJPJ2UQCJ",
+      "playerName": "Irisbrand",
+      "clanTag": "#QPRLQ0Y2Y",
+      "clanName": "Northbound",
+      "leagueTrophies": 1272,
+      "attackWinCount": 29,
+      "attackLoseCount": 2,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 19
+    },
+    {
+      "playerTag": "#L989UQGUL",
+      "playerName": "Ashstorm",
+      "clanTag": "#9YPGULYQC",
+      "clanName": "Grey Harbor",
+      "leagueTrophies": 1259,
+      "attackWinCount": 27,
+      "attackLoseCount": 4,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 11
+    },
+    {
+      "playerTag": "#JQJYPRCC2",
+      "playerName": "Runewing44",
+      "clanTag": "#J02LC08CL",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1249,
+      "attackWinCount": 13,
+      "attackLoseCount": 0,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 14
+    },
+    {
+      "playerTag": "#2VR99RLL0",
+      "playerName": "Umberlight",
+      "clanTag": "#ULQGU8PC2",
+      "clanName": "Velvet Storm",
+      "leagueTrophies": 1243,
+      "attackWinCount": 20,
+      "attackLoseCount": 2,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 5
+    },
+    {
+      "playerTag": "#RQYV9QCLP",
+      "playerName": "Sagewing82",
+      "clanTag": "#C0QGPCJVC",
+      "clanName": "Copper Kites",
+      "leagueTrophies": 1240,
+      "attackWinCount": 29,
+      "attackLoseCount": 1,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 19
+    },
+    {
+      "playerTag": "#8JP08YJJG",
+      "playerName": "Hazebrand",
+      "clanTag": "#0PV0R9QGJ",
+      "clanName": "Salt & Ember",
+      "leagueTrophies": 1240,
+      "attackWinCount": 28,
+      "attackLoseCount": 4,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 7
+    },
+    {
+      "playerTag": "#JPL0289LP",
+      "playerName": "Ashbrand",
+      "clanTag": "#Q8VL99092",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1240,
+      "attackWinCount": 29,
+      "attackLoseCount": 4,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 17
+    },
+    {
+      "playerTag": "#C0QVYJQG8",
+      "playerName": "Pikelight91",
+      "clanTag": "#0L9RGPULJ",
+      "clanName": "Salt & Ember",
+      "leagueTrophies": 1236,
+      "attackWinCount": 13,
+      "attackLoseCount": 5,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 6
+    },
+    {
+      "playerTag": "#G8UG80RR8",
+      "playerName": "Wrenwing46",
+      "clanTag": "#CVU89Q9J0",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1234,
+      "attackWinCount": 19,
+      "attackLoseCount": 5,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 19
+    },
+    {
+      "playerTag": "#0299GJJ00",
+      "playerName": "Pikefall",
+      "clanTag": "#R09G29PV9",
+      "clanName": "Northbound",
+      "leagueTrophies": 1225,
+      "attackWinCount": 18,
+      "attackLoseCount": 2,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 13
+    },
+    {
+      "playerTag": "#9828C9CV0",
+      "playerName": "Brooksong",
+      "clanTag": "#GJ8URQPQ2",
+      "clanName": "Red Thread",
+      "leagueTrophies": 1220,
+      "attackWinCount": 30,
+      "attackLoseCount": 0,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 23
+    },
+    {
+      "playerTag": "#Y0VC2UR2P",
+      "playerName": "Sagelight",
+      "clanTag": "#JJRCVGYJQ",
+      "clanName": "The Quiet Ones",
+      "leagueTrophies": 1220,
+      "attackWinCount": 17,
+      "attackLoseCount": 4,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 21
+    },
+    {
+      "playerTag": "#QG80C22JL",
+      "playerName": "Wrenfall82",
+      "clanTag": "#UJUPULLGY",
+      "clanName": "Static Bloom",
+      "leagueTrophies": 1210,
+      "attackWinCount": 30,
+      "attackLoseCount": 3,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 13
+    },
+    {
+      "playerTag": "#YJYCPLC9Q",
+      "playerName": "Larkcrest",
+      "clanTag": "#GLU8PP928",
+      "clanName": "Grey Harbor",
+      "leagueTrophies": 1200,
+      "attackWinCount": 21,
+      "attackLoseCount": 1,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 20
+    },
+    {
+      "playerTag": "#RU02UU8CJ",
+      "playerName": "Onyxstone79",
+      "clanTag": "#9VR8VVPPQ",
+      "clanName": "Paper Tigers",
+      "leagueTrophies": 1198,
+      "attackWinCount": 28,
+      "attackLoseCount": 3,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 5
+    },
+    {
+      "playerTag": "#YJQYURGUJ",
+      "playerName": "Iriswood56",
+      "clanTag": "#GCP8J9UQ8",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1174,
+      "attackWinCount": 21,
+      "attackLoseCount": 2,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 12
+    },
+    {
+      "playerTag": "#P28P9RJQL",
+      "playerName": "Cinderbrand",
+      "clanTag": "#J9V9QJGG0",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1166,
+      "attackWinCount": 13,
+      "attackLoseCount": 0,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 7
+    },
+    {
+      "playerTag": "#08C2Q8PRG",
+      "playerName": "Duskbrand25",
+      "clanTag": "#829UQCQYJ",
+      "clanName": "Copper Kites",
+      "leagueTrophies": 1165,
+      "attackWinCount": 29,
+      "attackLoseCount": 2,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 9
+    },
+    {
+      "playerTag": "#RY9U2UGPP",
+      "playerName": "Larkstorm",
+      "clanTag": "#L08CGP9YU",
+      "clanName": "Velvet Storm",
+      "leagueTrophies": 1160,
+      "attackWinCount": 21,
+      "attackLoseCount": 1,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 18
+    },
+    {
+      "playerTag": "#CC2LLG2CG",
+      "playerName": "Duskwing71",
+      "clanTag": "#2RUQQL2Q0",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 1150,
+      "attackWinCount": 20,
+      "attackLoseCount": 3,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 16
+    },
+    {
+      "playerTag": "#YP8VY2RQU",
+      "playerName": "Irissong50",
+      "clanTag": "#V9U2JVJQ0",
+      "clanName": "Copper Kites",
+      "leagueTrophies": 1128,
+      "attackWinCount": 29,
+      "attackLoseCount": 3,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 24
+    },
+    {
+      "playerTag": "#GYPJQLLQ2",
+      "playerName": "Yarrowsong75",
+      "clanTag": "#P220JC8CP",
+      "clanName": "Static Bloom",
+      "leagueTrophies": 1124,
+      "attackWinCount": 15,
+      "attackLoseCount": 3,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 5
+    },
+    {
+      "playerTag": "#G990Y0VQ0",
+      "playerName": "Zephyrwood",
+      "clanTag": "#P8PGLLQ29",
+      "clanName": "Last Light",
+      "leagueTrophies": 1123,
+      "attackWinCount": 23,
+      "attackLoseCount": 3,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 21
+    },
+    {
+      "playerTag": "#CPYQ8R8LP",
+      "playerName": "Kitesong80",
+      "clanTag": "#UPUVPUCR8",
+      "clanName": "Copper Kites",
+      "leagueTrophies": 1120,
+      "attackWinCount": 24,
+      "attackLoseCount": 3,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 5
+    },
+    {
+      "playerTag": "#0UQRGPVC2",
+      "playerName": "Valestorm53",
+      "clanTag": "#R282C9GQ9",
+      "clanName": "Northbound",
+      "leagueTrophies": 1117,
+      "attackWinCount": 15,
+      "attackLoseCount": 2,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 19
+    },
+    {
+      "playerTag": "#L9UJC9CPP",
+      "playerName": "Wrenlight56",
+      "clanTag": "#8QPYVGGL8",
+      "clanName": "The Quiet Ones",
+      "leagueTrophies": 1114,
+      "attackWinCount": 20,
+      "attackLoseCount": 1,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 7
+    },
+    {
+      "playerTag": "#QRC9C9Y2L",
+      "playerName": "Jadestorm",
+      "clanTag": "#VC28VV2RL",
+      "clanName": "Paper Tigers",
+      "leagueTrophies": 1110,
+      "attackWinCount": 17,
+      "attackLoseCount": 3,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 21
+    },
+    {
+      "playerTag": "#LLJULG9YQ",
+      "playerName": "Brookfall71",
+      "clanTag": "#8VG0R0R8V",
+      "clanName": "The Quiet Ones",
+      "leagueTrophies": 1105,
+      "attackWinCount": 25,
+      "attackLoseCount": 5,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 12
+    },
+    {
+      "playerTag": "#L2VLLV898",
+      "playerName": "Cinderwing81",
+      "clanTag": "#G8JCRCQGJ",
+      "clanName": "Grey Harbor",
+      "leagueTrophies": 1096,
+      "attackWinCount": 16,
+      "attackLoseCount": 5,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 14
+    },
+    {
+      "playerTag": "#2RGJJUYRV",
+      "playerName": "Larkstone90",
+      "clanTag": "#ULRLLCRLV",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1096,
+      "attackWinCount": 21,
+      "attackLoseCount": 2,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 5
+    },
+    {
+      "playerTag": "#VYJV2UJ8J",
+      "playerName": "Duskwing88",
+      "clanTag": "#0UQVGP2RP",
+      "clanName": "Northbound",
+      "leagueTrophies": 1089,
+      "attackWinCount": 28,
+      "attackLoseCount": 0,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 11
+    },
+    {
+      "playerTag": "#QUJVPCQ09",
+      "playerName": "Mosswood75",
+      "clanTag": "#L2RLJCP8L",
+      "clanName": "Static Bloom",
+      "leagueTrophies": 1084,
+      "attackWinCount": 25,
+      "attackLoseCount": 5,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 22
+    },
+    {
+      "playerTag": "#9GULJGC2Y",
+      "playerName": "Frostwing55",
+      "clanTag": "#V0PLQYQRU",
+      "clanName": "Last Light",
+      "leagueTrophies": 1082,
+      "attackWinCount": 23,
+      "attackLoseCount": 1,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 7
+    },
+    {
+      "playerTag": "#RU0QGG0PG",
+      "playerName": "Quillwing55",
+      "clanTag": "#CQU8G8YPU",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1050,
+      "attackWinCount": 13,
+      "attackLoseCount": 2,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 25
+    },
+    {
+      "playerTag": "#UUQLPJRLV",
+      "playerName": "Frostlight85",
+      "clanTag": "#YPY9CVU88",
+      "clanName": "Northbound",
+      "leagueTrophies": 1030,
+      "attackWinCount": 20,
+      "attackLoseCount": 0,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 20
+    },
+    {
+      "playerTag": "#PJ8Q0C9R0",
+      "playerName": "Umbercrest",
+      "clanTag": "#LC9V999Q0",
+      "clanName": "Salt & Ember",
+      "leagueTrophies": 1018,
+      "attackWinCount": 21,
+      "attackLoseCount": 3,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 12
+    },
+    {
+      "playerTag": "#QRLVQR98G",
+      "playerName": "Cinderfall31",
+      "clanTag": "#JYJVJURUR",
+      "clanName": "Salt & Ember",
+      "leagueTrophies": 1015,
+      "attackWinCount": 20,
+      "attackLoseCount": 0,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 13
+    },
+    {
+      "playerTag": "#9L9C0CUJU",
+      "playerName": "Pikewing34",
+      "clanTag": "#2RJVVY9QL",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 1012,
+      "attackWinCount": 10,
+      "attackLoseCount": 5,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 17
+    },
+    {
+      "playerTag": "#9YGRPV820",
+      "playerName": "Duskfall",
+      "clanTag": "#QUJ2VLCGG",
+      "clanName": "The Quiet Ones",
+      "leagueTrophies": 984,
+      "attackWinCount": 18,
+      "attackLoseCount": 5,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 24
+    },
+    {
+      "playerTag": "#RGCQQLJCC",
+      "playerName": "Kitecrest25",
+      "clanTag": "#GRVYJ022R",
+      "clanName": "Copper Kites",
+      "leagueTrophies": 962,
+      "attackWinCount": 23,
+      "attackLoseCount": 4,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 11
+    },
+    {
+      "playerTag": "#C02RU0YU2",
+      "playerName": "Cinderstone33",
+      "clanTag": "#JRYQ9Y2J0",
+      "clanName": "Grey Harbor",
+      "leagueTrophies": 942,
+      "attackWinCount": 18,
+      "attackLoseCount": 2,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 20
+    },
+    {
+      "playerTag": "#LVQP0JVCG",
+      "playerName": "Kitebrand",
+      "clanTag": "#8QRQ9CUCL",
+      "clanName": "The Quiet Ones",
+      "leagueTrophies": 936,
+      "attackWinCount": 30,
+      "attackLoseCount": 2,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 22
+    },
+    {
+      "playerTag": "#Y0Q0Q00YV",
+      "playerName": "Valeshade21",
+      "clanTag": "#LCV99LCVG",
+      "clanName": "Red Thread",
+      "leagueTrophies": 935,
+      "attackWinCount": 14,
+      "attackLoseCount": 3,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 6
+    },
+    {
+      "playerTag": "#V8RU082UG",
+      "playerName": "Dusklight18",
+      "clanTag": "#Q9QYP0JJU",
+      "clanName": "Last Light",
+      "leagueTrophies": 900,
+      "attackWinCount": 24,
+      "attackLoseCount": 1,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 7
+    },
+    {
+      "playerTag": "#9GCR8RPUC",
+      "playerName": "Pikelight54",
+      "clanTag": "#PU8QVQGPC",
+      "clanName": "Northbound",
+      "leagueTrophies": 874,
+      "attackWinCount": 16,
+      "attackLoseCount": 5,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 10
+    },
+    {
+      "playerTag": "#QUL9PY9R9",
+      "playerName": "Valefall40",
+      "clanTag": "#VU9GU989U",
+      "clanName": "Iron Lanterns",
+      "leagueTrophies": 871,
+      "attackWinCount": 22,
+      "attackLoseCount": 4,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 23
+    },
+    {
+      "playerTag": "#9YJLG9092",
+      "playerName": "Iriscrest",
+      "clanTag": "#QPY99RVUY",
+      "clanName": "The Quiet Ones",
+      "leagueTrophies": 799,
+      "attackWinCount": 21,
+      "attackLoseCount": 0,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 23
+    },
+    {
+      "playerTag": "#U9U9YJCU0",
+      "playerName": "Hazewood",
+      "clanTag": "#0QRPJQCG8",
+      "clanName": "Velvet Storm",
+      "leagueTrophies": 781,
+      "attackWinCount": 15,
+      "attackLoseCount": 0,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 16
+    },
+    {
+      "playerTag": "#820QCYRYJ",
+      "playerName": "Novalight3",
+      "clanTag": "#QVYU9RYC2",
+      "clanName": "Red Thread",
+      "leagueTrophies": 772,
+      "attackWinCount": 11,
+      "attackLoseCount": 3,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 5
+    },
+    {
+      "playerTag": "#VVVCUPVU8",
+      "playerName": "Hazebrand65",
+      "clanTag": "#RCV9UR2Y0",
+      "clanName": "Moonhollow",
+      "leagueTrophies": 698,
+      "attackWinCount": 15,
+      "attackLoseCount": 5,
+      "defenseWinCount": 1,
+      "defenseLoseCount": 14
+    },
+    {
+      "playerTag": "#992GQ82Y9",
+      "playerName": "Jadesong54",
+      "clanTag": "#P9CQCQR2Y",
+      "clanName": "Static Bloom",
+      "leagueTrophies": 676,
+      "attackWinCount": 11,
+      "attackLoseCount": 1,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 7
+    },
+    {
+      "playerTag": "#QRV9JL9YG",
+      "playerName": "Novacrest",
+      "clanTag": "#9009G9QR2",
+      "clanName": "Static Bloom",
+      "leagueTrophies": 670,
+      "attackWinCount": 13,
+      "attackLoseCount": 0,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 17
+    },
+    {
+      "playerTag": "#YYC8QVJ8R",
+      "playerName": "Sagesong37",
+      "clanTag": "#2P0UVQLC0",
+      "clanName": "Red Thread",
+      "leagueTrophies": 665,
+      "attackWinCount": 28,
+      "attackLoseCount": 2,
+      "defenseWinCount": 0,
+      "defenseLoseCount": 14
+    },
+    {
+      "playerTag": "#JCVLYPRYV",
+      "playerName": "Cinderlight47",
+      "clanTag": "#LU8YJ9QR0",
+      "clanName": "Salt & Ember",
+      "leagueTrophies": 652,
+      "attackWinCount": 18,
+      "attackLoseCount": 0,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 14
+    },
+    {
+      "playerTag": "#L0GRQUJ0Q",
+      "playerName": "Yarrowshade",
+      "clanTag": "#RYU80RYRY",
+      "clanName": "Salt & Ember",
+      "leagueTrophies": 640,
+      "attackWinCount": 26,
+      "attackLoseCount": 3,
+      "defenseWinCount": 5,
+      "defenseLoseCount": 13
+    },
+    {
+      "playerTag": "#YLRPUYRUU",
+      "playerName": "Galefall",
+      "clanTag": "#PU90VCJ0Y",
+      "clanName": "Last Light",
+      "leagueTrophies": 610,
+      "attackWinCount": 26,
+      "attackLoseCount": 5,
+      "defenseWinCount": 4,
+      "defenseLoseCount": 16
+    },
+    {
+      "playerTag": "#0L2VRL0Q0",
+      "playerName": "Pikestorm17",
+      "clanTag": "#0V0YU8Q8P",
+      "clanName": "Grey Harbor",
+      "leagueTrophies": 568,
+      "attackWinCount": 30,
+      "attackLoseCount": 2,
+      "defenseWinCount": 2,
+      "defenseLoseCount": 18
+    },
+    {
+      "playerTag": "#8YLJCQQQQ",
+      "playerName": "Onyxshade10",
+      "clanTag": "#9LY99L2R0",
+      "clanName": "Copper Kites",
+      "leagueTrophies": 544,
+      "attackWinCount": 10,
+      "attackLoseCount": 5,
+      "defenseWinCount": 3,
+      "defenseLoseCount": 23
+    }
+  ],
+  "attackLogs": [
+    {
+      "opponentPlayerTag": "#C9YYJUJ22",
+      "opponentName": "Valebrand92",
+      "stars": 2,
+      "destructionPercentage": 32,
+      "trophies": 16,
+      "creationTime": "2026-11-03T03:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#22VUJYG9Y",
+      "opponentName": "Larkshade84",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 31,
+      "creationTime": "2026-11-02T07:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#2RY802PGL",
+      "opponentName": "Kitesong",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 14,
+      "creationTime": "2026-11-02T21:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#G9JPQ0URL",
+      "opponentName": "Zephyrbrand94",
+      "stars": 1,
+      "destructionPercentage": 97,
+      "trophies": 11,
+      "creationTime": "2026-11-03T02:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#VY9VQVU9C",
+      "opponentName": "Ashlight53",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 15,
+      "creationTime": "2026-11-02T09:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#RP8J2LCQU",
+      "opponentName": "Zephyrwood50",
+      "stars": 0,
+      "destructionPercentage": 48,
+      "trophies": 5,
+      "creationTime": "2026-11-02T10:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#JC8YVV0PV",
+      "opponentName": "Wrenlight40",
+      "stars": 0,
+      "destructionPercentage": 89,
+      "trophies": 5,
+      "creationTime": "2026-11-03T16:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#CYRJ02QRQ",
+      "opponentName": "Yarrowwing57",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 5,
+      "creationTime": "2026-11-03T09:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#2UR0JCGV9",
+      "opponentName": "Kitestorm",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 18,
+      "creationTime": "2026-11-03T15:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#RYQJRV2CV",
+      "opponentName": "Duskshade60",
+      "stars": 1,
+      "destructionPercentage": 30,
+      "trophies": 7,
+      "creationTime": "2026-11-04T01:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#L2UQ8VCUL",
+      "opponentName": "Onyxwood",
+      "stars": 2,
+      "destructionPercentage": 39,
+      "trophies": 14,
+      "creationTime": "2026-11-03T14:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#QL8Q2JY0C",
+      "opponentName": "Umbershade",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 5,
+      "creationTime": "2026-11-03T23:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#2LUQVVGUJ",
+      "opponentName": "Mosswood96",
+      "stars": 0,
+      "destructionPercentage": 56,
+      "trophies": 4,
+      "creationTime": "2026-11-04T23:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#C08CJJQCQ",
+      "opponentName": "Onyxcrest90",
+      "stars": 1,
+      "destructionPercentage": 91,
+      "trophies": 9,
+      "creationTime": "2026-11-05T02:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#2UQ8P2RVC",
+      "opponentName": "Cindershade19",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 26,
+      "creationTime": "2026-11-04T07:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#G09P0LG29",
+      "opponentName": "Ashsong32",
+      "stars": 1,
+      "destructionPercentage": 73,
+      "trophies": 6,
+      "creationTime": "2026-11-04T13:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#RUPUUUPLR",
+      "opponentName": "Duskwood",
+      "stars": 1,
+      "destructionPercentage": 61,
+      "trophies": 39,
+      "creationTime": "2026-11-04T15:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#QUR9QQ9Y2",
+      "opponentName": "Valelight16",
+      "stars": 1,
+      "destructionPercentage": 54,
+      "trophies": 11,
+      "creationTime": "2026-11-04T06:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#P09QRJQGQ",
+      "opponentName": "Sagestone45",
+      "stars": 1,
+      "destructionPercentage": 67,
+      "trophies": 9,
+      "creationTime": "2026-11-06T03:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#VV289R0CU",
+      "opponentName": "Mosswood53",
+      "stars": 2,
+      "destructionPercentage": 45,
+      "trophies": 25,
+      "creationTime": "2026-11-05T14:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#YYYUV998R",
+      "opponentName": "Frostbrand",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 32,
+      "creationTime": "2026-11-05T14:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#0RY8G9RP0",
+      "opponentName": "Kitebrand65",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 28,
+      "creationTime": "2026-11-06T01:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#QUGCQRYUR",
+      "opponentName": "Pikebrand12",
+      "stars": 2,
+      "destructionPercentage": 68,
+      "trophies": 7,
+      "creationTime": "2026-11-05T07:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#R008YPRP9",
+      "opponentName": "Ashshade",
+      "stars": 2,
+      "destructionPercentage": 94,
+      "trophies": 21,
+      "creationTime": "2026-11-05T21:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#QQ0J998VP",
+      "opponentName": "Wrenwing10",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 17,
+      "creationTime": "2026-11-07T03:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#9RRUJ9QQP",
+      "opponentName": "Onyxwing44",
+      "stars": 1,
+      "destructionPercentage": 60,
+      "trophies": 23,
+      "creationTime": "2026-11-06T12:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#RUQR9YCR9",
+      "opponentName": "Duskfall27",
+      "stars": 1,
+      "destructionPercentage": 97,
+      "trophies": 16,
+      "creationTime": "2026-11-06T20:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#80GVRLRGR",
+      "opponentName": "Emberwood84",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 13,
+      "creationTime": "2026-11-06T23:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#GURLYPLPQ",
+      "opponentName": "Quillfall53",
+      "stars": 1,
+      "destructionPercentage": 71,
+      "trophies": 14,
+      "creationTime": "2026-11-06T08:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#QQULU8YY0",
+      "opponentName": "Onyxlight38",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 21,
+      "creationTime": "2026-11-07T00:00:00Z"
+    }
+  ],
+  "defenseLogs": [
+    {
+      "opponentPlayerTag": "#8UV2VY8C0",
+      "opponentName": "Wrencrest24",
+      "stars": 2,
+      "destructionPercentage": 60,
+      "trophies": 22,
+      "creationTime": "2026-11-03T03:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#GUC88908V",
+      "opponentName": "Pikebrand26",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 23,
+      "creationTime": "2026-11-02T21:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#J2PG90CQJ",
+      "opponentName": "Onyxsong29",
+      "stars": 1,
+      "destructionPercentage": 73,
+      "trophies": 30,
+      "creationTime": "2026-11-02T09:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#90QYGL9LJ",
+      "opponentName": "Kitefall",
+      "stars": 1,
+      "destructionPercentage": 49,
+      "trophies": 11,
+      "creationTime": "2026-11-02T21:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#9P2L00G0Y",
+      "opponentName": "Brookwing90",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 23,
+      "creationTime": "2026-11-03T22:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#P00CJUR0C",
+      "opponentName": "Mossshade",
+      "stars": 0,
+      "destructionPercentage": 31,
+      "trophies": 2,
+      "creationTime": "2026-11-03T17:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#9VY9JPVL9",
+      "opponentName": "Galebrand24",
+      "stars": 0,
+      "destructionPercentage": 47,
+      "trophies": 5,
+      "creationTime": "2026-11-03T17:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#8CRJPGU20",
+      "opponentName": "Sagewing",
+      "stars": 2,
+      "destructionPercentage": 77,
+      "trophies": 33,
+      "creationTime": "2026-11-03T10:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#2VV29UGU8",
+      "opponentName": "Mosssong87",
+      "stars": 0,
+      "destructionPercentage": 99,
+      "trophies": 4,
+      "creationTime": "2026-11-04T07:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#LJC0LVPJG",
+      "opponentName": "Yarrowlight69",
+      "stars": 0,
+      "destructionPercentage": 92,
+      "trophies": 2,
+      "creationTime": "2026-11-04T20:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#8CRLLPU0C",
+      "opponentName": "Cinderfall12",
+      "stars": 1,
+      "destructionPercentage": 92,
+      "trophies": 22,
+      "creationTime": "2026-11-04T16:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#9YL0GQVVL",
+      "opponentName": "Froststorm9",
+      "stars": 1,
+      "destructionPercentage": 70,
+      "trophies": 24,
+      "creationTime": "2026-11-04T22:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#8JQRGJYVG",
+      "opponentName": "Wrenstone18",
+      "stars": 1,
+      "destructionPercentage": 38,
+      "trophies": 12,
+      "creationTime": "2026-11-05T16:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#U9829998C",
+      "opponentName": "Sagefall22",
+      "stars": 1,
+      "destructionPercentage": 82,
+      "trophies": 19,
+      "creationTime": "2026-11-05T23:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#QLLUL2QC9",
+      "opponentName": "Galeshade10",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 36,
+      "creationTime": "2026-11-06T02:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#PPU0LJC9V",
+      "opponentName": "Frostshade7",
+      "stars": 2,
+      "destructionPercentage": 66,
+      "trophies": 39,
+      "creationTime": "2026-11-05T10:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#RRPLJ8QGV",
+      "opponentName": "Jadestone3",
+      "stars": 1,
+      "destructionPercentage": 45,
+      "trophies": 34,
+      "creationTime": "2026-11-06T13:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#22LURCQCJ",
+      "opponentName": "Onyxstorm79",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "trophies": 30,
+      "creationTime": "2026-11-06T15:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#9CRV0QCL2",
+      "opponentName": "Emberstone",
+      "stars": 1,
+      "destructionPercentage": 40,
+      "trophies": 12,
+      "creationTime": "2026-11-07T04:00:00Z"
+    },
+    {
+      "opponentPlayerTag": "#QJR0GCJ9Q",
+      "opponentName": "Umberbrand82",
+      "stars": 2,
+      "destructionPercentage": 66,
+      "trophies": 6,
+      "creationTime": "2026-11-06T23:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,787 @@
+{
+  "items": [
+    {
+      "tag": "#2PRGP0L22",
+      "name": "Night Owls",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 24,
+      "clanPoints": 48210,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000015,
+        "name": "Champion League II"
+      },
+      "members": 30,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#G8GUV0PPJ",
+      "name": "Night Owls II",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 13,
+      "clanPoints": 41073,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 17,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#0CCVVRRG8",
+      "name": "Night Owls III",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 14,
+      "clanPoints": 39736,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 24,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#G0L0CRP99",
+      "name": "Night Owls Academy",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 4,
+      "clanPoints": 46009,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 10,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#2LG8VG08U",
+      "name": "Night Owls Reborn",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 7,
+      "clanPoints": 29779,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 32,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#8LG09PU9P",
+      "name": "Night Owls Elite",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 20,
+      "clanPoints": 33064,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 40,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#2PVCYJG90",
+      "name": "Night Owls FWA",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 15,
+      "clanPoints": 34835,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 40,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#CRYQ8QJ0C",
+      "name": "Night Owls Farm",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 25,
+      "clanPoints": 16899,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": false,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 47,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#G2P828R9G",
+      "name": "Night Owls Legends",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 19,
+      "clanPoints": 32307,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": false,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 13,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#Q00UGQ2LY",
+      "name": "Night Owls Juniors",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 14,
+      "clanPoints": 16585,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 43,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#PVYV2CRCU",
+      "name": "Night Owls Classic",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 19,
+      "clanPoints": 26828,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 10,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    },
+    {
+      "tag": "#R0R89UUP8",
+      "name": "Night Owls Asia",
+      "type": "inviteOnly",
+      "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+      "location": {
+        "id": 32000006,
+        "name": "International",
+        "isCountry": false
+      },
+      "chatLanguage": {
+        "id": 75000000,
+        "name": "English"
+      },
+      "isFamilyFriendly": true,
+      "badgeUrls": {
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      },
+      "clanLevel": 12,
+      "clanPoints": 9629,
+      "clanBuilderBasePoints": 41022,
+      "clanCapitalPoints": 3610,
+      "capitalLeague": {
+        "id": 85000015,
+        "name": "Master League II"
+      },
+      "requiredTrophies": 2600,
+      "requiredTownhallLevel": 12,
+      "warFrequency": "always",
+      "warWinStreak": 4,
+      "warWins": 612,
+      "warTies": 21,
+      "warLosses": 188,
+      "isWarLogPublic": true,
+      "warLeague": {
+        "id": 48000010,
+        "name": "Gold League I"
+      },
+      "members": 44,
+      "labels": [
+        {
+          "id": 56000000,
+          "name": "Clan Wars",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        },
+        {
+          "id": 56000004,
+          "name": "Clan Capital",
+          "iconUrls": {
+            "tiny": "/mock-badge.svg",
+            "small": "/mock-badge.svg",
+            "medium": "/mock-badge.svg"
+          }
+        }
+      ],
+      "clanCapital": {
+        "capitalHallLevel": 9
+      }
+    }
+  ],
+  "paging": {
+    "cursors": {}
+  }
+}

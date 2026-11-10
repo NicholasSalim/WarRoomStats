@@ -1,0 +1,292 @@
+{
+  "items": [
+    {
+      "id": 105000000,
+      "name": "Unranked",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000001,
+      "name": "Skeleton III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000002,
+      "name": "Skeleton II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000003,
+      "name": "Skeleton I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000004,
+      "name": "Barbarian III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000005,
+      "name": "Barbarian II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000006,
+      "name": "Barbarian I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000007,
+      "name": "Archer III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000008,
+      "name": "Archer II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000009,
+      "name": "Archer I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000010,
+      "name": "Wizard III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000011,
+      "name": "Wizard II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000012,
+      "name": "Wizard I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000013,
+      "name": "Valkyrie III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000014,
+      "name": "Valkyrie II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000015,
+      "name": "Valkyrie I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000016,
+      "name": "Witch III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000017,
+      "name": "Witch II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000018,
+      "name": "Witch I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000019,
+      "name": "Golem III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000020,
+      "name": "Golem II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000021,
+      "name": "Golem I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000022,
+      "name": "P.E.K.K.A III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000023,
+      "name": "P.E.K.K.A II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000024,
+      "name": "P.E.K.K.A I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000025,
+      "name": "Titan III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000026,
+      "name": "Titan II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000027,
+      "name": "Titan I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000028,
+      "name": "Dragon III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000029,
+      "name": "Dragon II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000030,
+      "name": "Dragon I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000031,
+      "name": "Electro III",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000032,
+      "name": "Electro II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000033,
+      "name": "Electro I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000034,
+      "name": "Legend II",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 105000035,
+      "name": "Legend I",
+      "iconUrls": {
+        "small": "/mock-badge.svg",
+        "large": "/mock-badge.svg"
+      }
+    }
+  ]
+}

@@ -1,0 +1,851 @@
+{
+  "items": [
+    {
+      "state": "ongoing",
+      "startTime": "20261106T070000.000Z",
+      "endTime": "20261109T070000.000Z",
+      "capitalTotalLoot": 331646,
+      "raidsCompleted": 7,
+      "totalAttacks": 91,
+      "enemyDistrictsDestroyed": 39,
+      "offensiveReward": 0,
+      "defensiveReward": 0,
+      "members": [
+        {
+          "tag": "#Y9QQJC9RR",
+          "name": "Jadelight",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 3056
+        },
+        {
+          "tag": "#02UP8JQVU",
+          "name": "Frostbrand65",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 5932
+        },
+        {
+          "tag": "#99JLGPY0Y",
+          "name": "Mossfall25",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 9099
+        },
+        {
+          "tag": "#PRU0LUY9J",
+          "name": "Sagewood",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 25704
+        },
+        {
+          "tag": "#P8J0GLP9V",
+          "name": "Ashwing",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 22990
+        },
+        {
+          "tag": "#V92LGRQ8Q",
+          "name": "Kitelight",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 9510
+        },
+        {
+          "tag": "#UCRYCVYUY",
+          "name": "Quillfall",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 9132
+        },
+        {
+          "tag": "#2GVV9JJUR",
+          "name": "Kitewood58",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 16056
+        },
+        {
+          "tag": "#Q02YRCYRC",
+          "name": "Valewood",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 19068
+        },
+        {
+          "tag": "#8RRJ9UVUL",
+          "name": "Cinderbrand27",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 15102
+        },
+        {
+          "tag": "#08JCQYY0P",
+          "name": "Frostshade",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 2677
+        },
+        {
+          "tag": "#99JC892PV",
+          "name": "Frostsong",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7572
+        },
+        {
+          "tag": "#QQLY0U0PP",
+          "name": "Onyxstorm",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 15285
+        },
+        {
+          "tag": "#L899VGLVY",
+          "name": "Ashwood",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 2903
+        },
+        {
+          "tag": "#9Q0929VGU",
+          "name": "Dusklight",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 13292
+        },
+        {
+          "tag": "#0C90P8YPG",
+          "name": "Frostcrest",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7442
+        },
+        {
+          "tag": "#0VRRLY2CY",
+          "name": "Mosssong",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 10328
+        },
+        {
+          "tag": "#R89PL98PG",
+          "name": "Jadewood",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7256
+        },
+        {
+          "tag": "#YYRQUJ29J",
+          "name": "Duskstone",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 12951
+        },
+        {
+          "tag": "#GJQPL0LC2",
+          "name": "Quillwing",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 20875
+        },
+        {
+          "tag": "#QRUJ999C9",
+          "name": "Zephyrwing",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 19930
+        },
+        {
+          "tag": "#2YJGJ9QLL",
+          "name": "Irisstorm45",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 26340
+        },
+        {
+          "tag": "#9GP2Q800V",
+          "name": "Emberwood",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 3982
+        },
+        {
+          "tag": "#UR89G8QGP",
+          "name": "Onyxstone",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 12132
+        },
+        {
+          "tag": "#JRYL9R2GP",
+          "name": "Tidefall",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 18704
+        },
+        {
+          "tag": "#UV0PJ0LRQ",
+          "name": "Wrenwing",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7096
+        },
+        {
+          "tag": "#0YGCVLQ9R",
+          "name": "Umberfall",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7232
+        }
+      ]
+    },
+    {
+      "state": "ended",
+      "startTime": "20261030T070000.000Z",
+      "endTime": "20261102T070000.000Z",
+      "capitalTotalLoot": 277828,
+      "raidsCompleted": 5,
+      "totalAttacks": 74,
+      "enemyDistrictsDestroyed": 31,
+      "offensiveReward": 1326,
+      "defensiveReward": 358,
+      "members": [
+        {
+          "tag": "#Y9QQJC9RR",
+          "name": "Jadelight",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 12903
+        },
+        {
+          "tag": "#02UP8JQVU",
+          "name": "Frostbrand65",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 13803
+        },
+        {
+          "tag": "#99JLGPY0Y",
+          "name": "Mossfall25",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 17212
+        },
+        {
+          "tag": "#PRU0LUY9J",
+          "name": "Sagewood",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 9966
+        },
+        {
+          "tag": "#P8J0GLP9V",
+          "name": "Ashwing",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 6358
+        },
+        {
+          "tag": "#V92LGRQ8Q",
+          "name": "Kitelight",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 23640
+        },
+        {
+          "tag": "#UCRYCVYUY",
+          "name": "Quillfall",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7875
+        },
+        {
+          "tag": "#2GVV9JJUR",
+          "name": "Kitewood58",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 3301
+        },
+        {
+          "tag": "#Q02YRCYRC",
+          "name": "Valewood",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 10020
+        },
+        {
+          "tag": "#8RRJ9UVUL",
+          "name": "Cinderbrand27",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 23290
+        },
+        {
+          "tag": "#08JCQYY0P",
+          "name": "Frostshade",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7628
+        },
+        {
+          "tag": "#99JC892PV",
+          "name": "Frostsong",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 13227
+        },
+        {
+          "tag": "#QQLY0U0PP",
+          "name": "Onyxstorm",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 23310
+        },
+        {
+          "tag": "#L899VGLVY",
+          "name": "Ashwood",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 18735
+        },
+        {
+          "tag": "#9Q0929VGU",
+          "name": "Dusklight",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 13148
+        },
+        {
+          "tag": "#0C90P8YPG",
+          "name": "Frostcrest",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 3816
+        },
+        {
+          "tag": "#0VRRLY2CY",
+          "name": "Mosssong",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 10065
+        },
+        {
+          "tag": "#R89PL98PG",
+          "name": "Jadewood",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 6834
+        },
+        {
+          "tag": "#YYRQUJ29J",
+          "name": "Duskstone",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 12969
+        },
+        {
+          "tag": "#GJQPL0LC2",
+          "name": "Quillwing",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 16356
+        },
+        {
+          "tag": "#QRUJ999C9",
+          "name": "Zephyrwing",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 3548
+        },
+        {
+          "tag": "#2YJGJ9QLL",
+          "name": "Irisstorm45",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 19824
+        }
+      ]
+    },
+    {
+      "state": "ended",
+      "startTime": "20261023T070000.000Z",
+      "endTime": "20261026T070000.000Z",
+      "capitalTotalLoot": 395564,
+      "raidsCompleted": 4,
+      "totalAttacks": 111,
+      "enemyDistrictsDestroyed": 38,
+      "offensiveReward": 1296,
+      "defensiveReward": 350,
+      "members": [
+        {
+          "tag": "#Y9QQJC9RR",
+          "name": "Jadelight",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 10588
+        },
+        {
+          "tag": "#02UP8JQVU",
+          "name": "Frostbrand65",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 5482
+        },
+        {
+          "tag": "#99JLGPY0Y",
+          "name": "Mossfall25",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 11796
+        },
+        {
+          "tag": "#PRU0LUY9J",
+          "name": "Sagewood",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 17545
+        },
+        {
+          "tag": "#P8J0GLP9V",
+          "name": "Ashwing",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 16904
+        },
+        {
+          "tag": "#V92LGRQ8Q",
+          "name": "Kitelight",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 24492
+        },
+        {
+          "tag": "#UCRYCVYUY",
+          "name": "Quillfall",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 21915
+        },
+        {
+          "tag": "#2GVV9JJUR",
+          "name": "Kitewood58",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 28422
+        },
+        {
+          "tag": "#Q02YRCYRC",
+          "name": "Valewood",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 11372
+        },
+        {
+          "tag": "#8RRJ9UVUL",
+          "name": "Cinderbrand27",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 16968
+        },
+        {
+          "tag": "#08JCQYY0P",
+          "name": "Frostshade",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 15010
+        },
+        {
+          "tag": "#99JC892PV",
+          "name": "Frostsong",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 18365
+        },
+        {
+          "tag": "#QQLY0U0PP",
+          "name": "Onyxstorm",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 13540
+        },
+        {
+          "tag": "#L899VGLVY",
+          "name": "Ashwood",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 8184
+        },
+        {
+          "tag": "#9Q0929VGU",
+          "name": "Dusklight",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 2886
+        },
+        {
+          "tag": "#0C90P8YPG",
+          "name": "Frostcrest",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 25764
+        },
+        {
+          "tag": "#0VRRLY2CY",
+          "name": "Mosssong",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 15240
+        },
+        {
+          "tag": "#R89PL98PG",
+          "name": "Jadewood",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 15605
+        },
+        {
+          "tag": "#YYRQUJ29J",
+          "name": "Duskstone",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 12552
+        },
+        {
+          "tag": "#GJQPL0LC2",
+          "name": "Quillwing",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7174
+        },
+        {
+          "tag": "#QRUJ999C9",
+          "name": "Zephyrwing",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 15732
+        },
+        {
+          "tag": "#2YJGJ9QLL",
+          "name": "Irisstorm45",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 3298
+        },
+        {
+          "tag": "#9GP2Q800V",
+          "name": "Emberwood",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 8016
+        },
+        {
+          "tag": "#UR89G8QGP",
+          "name": "Onyxstone",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 28332
+        },
+        {
+          "tag": "#JRYL9R2GP",
+          "name": "Tidefall",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 15536
+        },
+        {
+          "tag": "#UV0PJ0LRQ",
+          "name": "Wrenwing",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7932
+        },
+        {
+          "tag": "#0YGCVLQ9R",
+          "name": "Umberfall",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 16914
+        }
+      ]
+    },
+    {
+      "state": "ended",
+      "startTime": "20261016T070000.000Z",
+      "endTime": "20261019T070000.000Z",
+      "capitalTotalLoot": 270821,
+      "raidsCompleted": 5,
+      "totalAttacks": 74,
+      "enemyDistrictsDestroyed": 49,
+      "offensiveReward": 1164,
+      "defensiveReward": 304,
+      "members": [
+        {
+          "tag": "#Y9QQJC9RR",
+          "name": "Jadelight",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 18115
+        },
+        {
+          "tag": "#02UP8JQVU",
+          "name": "Frostbrand65",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 13194
+        },
+        {
+          "tag": "#99JLGPY0Y",
+          "name": "Mossfall25",
+          "attacks": 6,
+          "attackLimit": 5,
+          "bonusAttackLimit": 1,
+          "capitalResourcesLooted": 15414
+        },
+        {
+          "tag": "#PRU0LUY9J",
+          "name": "Sagewood",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 12912
+        },
+        {
+          "tag": "#P8J0GLP9V",
+          "name": "Ashwing",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 9264
+        },
+        {
+          "tag": "#V92LGRQ8Q",
+          "name": "Kitelight",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 9070
+        },
+        {
+          "tag": "#UCRYCVYUY",
+          "name": "Quillfall",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 8055
+        },
+        {
+          "tag": "#2GVV9JJUR",
+          "name": "Kitewood58",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 13590
+        },
+        {
+          "tag": "#Q02YRCYRC",
+          "name": "Valewood",
+          "attacks": 1,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 4350
+        },
+        {
+          "tag": "#8RRJ9UVUL",
+          "name": "Cinderbrand27",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 15410
+        },
+        {
+          "tag": "#08JCQYY0P",
+          "name": "Frostshade",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 15972
+        },
+        {
+          "tag": "#99JC892PV",
+          "name": "Frostsong",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 6574
+        },
+        {
+          "tag": "#QQLY0U0PP",
+          "name": "Onyxstorm",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 13992
+        },
+        {
+          "tag": "#L899VGLVY",
+          "name": "Ashwood",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7320
+        },
+        {
+          "tag": "#9Q0929VGU",
+          "name": "Dusklight",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 5714
+        },
+        {
+          "tag": "#0C90P8YPG",
+          "name": "Frostcrest",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 7533
+        },
+        {
+          "tag": "#0VRRLY2CY",
+          "name": "Mosssong",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 18655
+        },
+        {
+          "tag": "#R89PL98PG",
+          "name": "Jadewood",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 8196
+        },
+        {
+          "tag": "#YYRQUJ29J",
+          "name": "Duskstone",
+          "attacks": 5,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 19155
+        },
+        {
+          "tag": "#GJQPL0LC2",
+          "name": "Quillwing",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 16672
+        },
+        {
+          "tag": "#QRUJ999C9",
+          "name": "Zephyrwing",
+          "attacks": 3,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 9528
+        },
+        {
+          "tag": "#2YJGJ9QLL",
+          "name": "Irisstorm45",
+          "attacks": 2,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 8768
+        },
+        {
+          "tag": "#9GP2Q800V",
+          "name": "Emberwood",
+          "attacks": 4,
+          "attackLimit": 5,
+          "bonusAttackLimit": 0,
+          "capitalResourcesLooted": 13368
+        }
+      ]
+    }
+  ],
+  "paging": {
+    "cursors": {}
+  }
+}

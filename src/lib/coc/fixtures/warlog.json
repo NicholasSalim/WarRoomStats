@@ -1,0 +1,462 @@
+{
+  "items": [
+    {
+      "result": "lose",
+      "endTime": "20261104T120000.000Z",
+      "teamSize": 20,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 30,
+        "stars": 40,
+        "destructionPercentage": 70.67,
+        "expEarned": 298
+      },
+      "opponent": {
+        "tag": "#UGCC02JVR",
+        "name": "Iron Lanterns",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 29,
+        "stars": 57,
+        "destructionPercentage": 100
+      }
+    },
+    {
+      "result": "lose",
+      "endTime": "20261102T120000.000Z",
+      "teamSize": 30,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 58,
+        "stars": 84,
+        "destructionPercentage": 92.33,
+        "expEarned": 515
+      },
+      "opponent": {
+        "tag": "#8G2C9YGCY",
+        "name": "Salt & Ember",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 22,
+        "stars": 85,
+        "destructionPercentage": 89.44
+      }
+    },
+    {
+      "result": "win",
+      "endTime": "20261031T120000.000Z",
+      "teamSize": 30,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 54,
+        "stars": 79,
+        "destructionPercentage": 88.78,
+        "expEarned": 201
+      },
+      "opponent": {
+        "tag": "#809PQPCJY",
+        "name": "The Quiet Ones",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 12,
+        "stars": 70,
+        "destructionPercentage": 77.78
+      }
+    },
+    {
+      "result": null,
+      "endTime": "20261029T120000.000Z",
+      "teamSize": 15,
+      "attacksPerMember": 1,
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 98,
+        "stars": 280,
+        "destructionPercentage": 89.5,
+        "expEarned": 0
+      },
+      "opponent": {
+        "badgeUrls": {},
+        "clanLevel": 0,
+        "stars": 0,
+        "destructionPercentage": 0
+      }
+    },
+    {
+      "result": "lose",
+      "endTime": "20261027T120000.000Z",
+      "teamSize": 20,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 40,
+        "stars": 47,
+        "destructionPercentage": 81.33,
+        "expEarned": 214
+      },
+      "opponent": {
+        "tag": "#LGVCVRRLG",
+        "name": "Moonhollow",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 10,
+        "stars": 54,
+        "destructionPercentage": 85
+      }
+    },
+    {
+      "result": "lose",
+      "endTime": "20261025T120000.000Z",
+      "teamSize": 25,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 30,
+        "stars": 63,
+        "destructionPercentage": 91,
+        "expEarned": 549
+      },
+      "opponent": {
+        "tag": "#G0UGL822G",
+        "name": "Grey Harbor",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 10,
+        "stars": 74,
+        "destructionPercentage": 100
+      }
+    },
+    {
+      "result": "lose",
+      "endTime": "20261023T120000.000Z",
+      "teamSize": 20,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 36,
+        "stars": 55,
+        "destructionPercentage": 98.67,
+        "expEarned": 401
+      },
+      "opponent": {
+        "tag": "#J2C2GCGQ0",
+        "name": "Velvet Storm",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 29,
+        "stars": 56,
+        "destructionPercentage": 100
+      }
+    },
+    {
+      "result": "lose",
+      "endTime": "20261021T120000.000Z",
+      "teamSize": 15,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 25,
+        "stars": 29,
+        "destructionPercentage": 69.44,
+        "expEarned": 414
+      },
+      "opponent": {
+        "tag": "#L8QRGLCC2",
+        "name": "Northbound",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 29,
+        "stars": 31,
+        "destructionPercentage": 68.89
+      }
+    },
+    {
+      "result": "lose",
+      "endTime": "20261019T120000.000Z",
+      "teamSize": 15,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 22,
+        "stars": 30,
+        "destructionPercentage": 64.67,
+        "expEarned": 320
+      },
+      "opponent": {
+        "tag": "#U8L9JJYVV",
+        "name": "Paper Tigers",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 26,
+        "stars": 45,
+        "destructionPercentage": 100
+      }
+    },
+    {
+      "result": "win",
+      "endTime": "20261017T120000.000Z",
+      "teamSize": 20,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 25,
+        "stars": 56,
+        "destructionPercentage": 91.33,
+        "expEarned": 381
+      },
+      "opponent": {
+        "tag": "#JJC2V8L09",
+        "name": "Static Bloom",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 27,
+        "stars": 46,
+        "destructionPercentage": 82.67
+      }
+    },
+    {
+      "result": "lose",
+      "endTime": "20261015T120000.000Z",
+      "teamSize": 30,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 60,
+        "stars": 51,
+        "destructionPercentage": 60.67,
+        "expEarned": 315
+      },
+      "opponent": {
+        "tag": "#LCJVJ92LJ",
+        "name": "Red Thread",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 21,
+        "stars": 80,
+        "destructionPercentage": 94.89
+      }
+    },
+    {
+      "result": "win",
+      "endTime": "20261013T120000.000Z",
+      "teamSize": 15,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 29,
+        "stars": 33,
+        "destructionPercentage": 74.33,
+        "expEarned": 435
+      },
+      "opponent": {
+        "tag": "#QGP9Y28GJ",
+        "name": "Last Light",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 20,
+        "stars": 33,
+        "destructionPercentage": 70.33
+      }
+    },
+    {
+      "result": "win",
+      "endTime": "20261011T120000.000Z",
+      "teamSize": 25,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 37,
+        "stars": 60,
+        "destructionPercentage": 79,
+        "expEarned": 326
+      },
+      "opponent": {
+        "tag": "#Q88888V0R",
+        "name": "Iron Lanterns",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 16,
+        "stars": 46,
+        "destructionPercentage": 63.33
+      }
+    },
+    {
+      "result": "win",
+      "endTime": "20261009T120000.000Z",
+      "teamSize": 25,
+      "attacksPerMember": 2,
+      "battleModifier": "none",
+      "clan": {
+        "tag": "#2PRGP0L22",
+        "name": "Night Owls",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 24,
+        "attacks": 49,
+        "stars": 69,
+        "destructionPercentage": 95,
+        "expEarned": 240
+      },
+      "opponent": {
+        "tag": "#2RPRL2YCC",
+        "name": "Salt & Ember",
+        "badgeUrls": {
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg",
+          "large": "/mock-badge.svg"
+        },
+        "clanLevel": 28,
+        "stars": 51,
+        "destructionPercentage": 69
+      }
+    }
+  ],
+  "paging": {
+    "cursors": {}
+  }
+}

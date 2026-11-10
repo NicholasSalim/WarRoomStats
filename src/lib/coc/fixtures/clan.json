@@ -1,0 +1,727 @@
+{
+  "tag": "#2PRGP0L22",
+  "name": "Night Owls",
+  "type": "inviteOnly",
+  "description": "Active war clan. Two attacks every war, donate what you get. Weekend raids are mandatory.",
+  "location": {
+    "id": 32000006,
+    "name": "International",
+    "isCountry": false
+  },
+  "chatLanguage": {
+    "id": 75000000,
+    "name": "English"
+  },
+  "isFamilyFriendly": true,
+  "badgeUrls": {
+    "small": "/mock-badge.svg",
+    "medium": "/mock-badge.svg",
+    "large": "/mock-badge.svg"
+  },
+  "clanLevel": 24,
+  "clanPoints": 48210,
+  "clanBuilderBasePoints": 41022,
+  "clanCapitalPoints": 3610,
+  "capitalLeague": {
+    "id": 85000015,
+    "name": "Master League II"
+  },
+  "requiredTrophies": 2600,
+  "requiredTownhallLevel": 12,
+  "warFrequency": "always",
+  "warWinStreak": 4,
+  "warWins": 612,
+  "warTies": 21,
+  "warLosses": 188,
+  "isWarLogPublic": true,
+  "warLeague": {
+    "id": 48000015,
+    "name": "Champion League II"
+  },
+  "members": 30,
+  "memberList": [
+    {
+      "tag": "#Y9QQJC9RR",
+      "name": "Jadelight",
+      "role": "leader",
+      "townHallLevel": 14,
+      "expLevel": 166,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 5498,
+      "builderBaseTrophies": 4177,
+      "clanRank": 1,
+      "previousClanRank": 1,
+      "donations": 1771,
+      "donationsReceived": 1126
+    },
+    {
+      "tag": "#02UP8JQVU",
+      "name": "Frostbrand65",
+      "role": "member",
+      "townHallLevel": 11,
+      "expLevel": 251,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 5368,
+      "builderBaseTrophies": 2305,
+      "clanRank": 2,
+      "previousClanRank": 1,
+      "donations": 334,
+      "donationsReceived": 1073
+    },
+    {
+      "tag": "#99JLGPY0Y",
+      "name": "Mossfall25",
+      "role": "member",
+      "townHallLevel": 12,
+      "expLevel": 120,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 5250,
+      "builderBaseTrophies": 2624,
+      "clanRank": 3,
+      "previousClanRank": 3,
+      "donations": 2340,
+      "donationsReceived": 1861
+    },
+    {
+      "tag": "#PRU0LUY9J",
+      "name": "Sagewood",
+      "role": "member",
+      "townHallLevel": 17,
+      "expLevel": 168,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 5241,
+      "builderBaseTrophies": 3132,
+      "clanRank": 4,
+      "previousClanRank": 2,
+      "donations": 461,
+      "donationsReceived": 936
+    },
+    {
+      "tag": "#P8J0GLP9V",
+      "name": "Ashwing",
+      "role": "member",
+      "townHallLevel": 13,
+      "expLevel": 203,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 5192,
+      "builderBaseTrophies": 3066,
+      "clanRank": 5,
+      "previousClanRank": 6,
+      "donations": 511,
+      "donationsReceived": 1671
+    },
+    {
+      "tag": "#V92LGRQ8Q",
+      "name": "Kitelight",
+      "role": "member",
+      "townHallLevel": 16,
+      "expLevel": 167,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 5154,
+      "builderBaseTrophies": 3418,
+      "clanRank": 6,
+      "previousClanRank": 4,
+      "donations": 356,
+      "donationsReceived": 638
+    },
+    {
+      "tag": "#UCRYCVYUY",
+      "name": "Quillfall",
+      "role": "coLeader",
+      "townHallLevel": 11,
+      "expLevel": 183,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 5117,
+      "builderBaseTrophies": 4237,
+      "clanRank": 7,
+      "previousClanRank": 9,
+      "donations": 2109,
+      "donationsReceived": 1975
+    },
+    {
+      "tag": "#2GVV9JJUR",
+      "name": "Kitewood58",
+      "role": "member",
+      "townHallLevel": 12,
+      "expLevel": 201,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 5029,
+      "builderBaseTrophies": 2718,
+      "clanRank": 8,
+      "previousClanRank": 6,
+      "donations": 1227,
+      "donationsReceived": 616
+    },
+    {
+      "tag": "#Q02YRCYRC",
+      "name": "Valewood",
+      "role": "member",
+      "townHallLevel": 15,
+      "expLevel": 146,
+      "league": {
+        "id": 29000022,
+        "name": "Legend League",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 5007,
+      "builderBaseTrophies": 4105,
+      "clanRank": 9,
+      "previousClanRank": 7,
+      "donations": 1410,
+      "donationsReceived": 1670
+    },
+    {
+      "tag": "#8RRJ9UVUL",
+      "name": "Cinderbrand27",
+      "role": "member",
+      "townHallLevel": 13,
+      "expLevel": 146,
+      "league": {
+        "id": 29000021,
+        "name": "Titan League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 4958,
+      "builderBaseTrophies": 2714,
+      "clanRank": 10,
+      "previousClanRank": 10,
+      "donations": 2025,
+      "donationsReceived": 1675
+    },
+    {
+      "tag": "#08JCQYY0P",
+      "name": "Frostshade",
+      "role": "admin",
+      "townHallLevel": 13,
+      "expLevel": 267,
+      "league": {
+        "id": 29000021,
+        "name": "Titan League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 4928,
+      "builderBaseTrophies": 2494,
+      "clanRank": 11,
+      "previousClanRank": 10,
+      "donations": 2552,
+      "donationsReceived": 100
+    },
+    {
+      "tag": "#99JC892PV",
+      "name": "Frostsong",
+      "role": "admin",
+      "townHallLevel": 13,
+      "expLevel": 206,
+      "league": {
+        "id": 29000021,
+        "name": "Titan League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 4755,
+      "builderBaseTrophies": 2933,
+      "clanRank": 12,
+      "previousClanRank": 14,
+      "donations": 1084,
+      "donationsReceived": 130
+    },
+    {
+      "tag": "#QQLY0U0PP",
+      "name": "Onyxstorm",
+      "role": "coLeader",
+      "townHallLevel": 17,
+      "expLevel": 160,
+      "league": {
+        "id": 29000021,
+        "name": "Titan League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 4622,
+      "builderBaseTrophies": 4733,
+      "clanRank": 13,
+      "previousClanRank": 11,
+      "donations": 2032,
+      "donationsReceived": 13
+    },
+    {
+      "tag": "#L899VGLVY",
+      "name": "Ashwood",
+      "role": "member",
+      "townHallLevel": 15,
+      "expLevel": 172,
+      "league": {
+        "id": 29000021,
+        "name": "Titan League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 4528,
+      "builderBaseTrophies": 3580,
+      "clanRank": 14,
+      "previousClanRank": 16,
+      "donations": 2435,
+      "donationsReceived": 2034
+    },
+    {
+      "tag": "#9Q0929VGU",
+      "name": "Dusklight",
+      "role": "admin",
+      "townHallLevel": 14,
+      "expLevel": 126,
+      "league": {
+        "id": 29000021,
+        "name": "Titan League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 4526,
+      "builderBaseTrophies": 4519,
+      "clanRank": 15,
+      "previousClanRank": 17,
+      "donations": 2274,
+      "donationsReceived": 609
+    },
+    {
+      "tag": "#0C90P8YPG",
+      "name": "Frostcrest",
+      "role": "coLeader",
+      "townHallLevel": 11,
+      "expLevel": 259,
+      "league": {
+        "id": 29000021,
+        "name": "Titan League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 4256,
+      "builderBaseTrophies": 4287,
+      "clanRank": 16,
+      "previousClanRank": 14,
+      "donations": 1562,
+      "donationsReceived": 1301
+    },
+    {
+      "tag": "#0VRRLY2CY",
+      "name": "Mosssong",
+      "role": "member",
+      "townHallLevel": 12,
+      "expLevel": 185,
+      "league": {
+        "id": 29000018,
+        "name": "Champion League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 4082,
+      "builderBaseTrophies": 3378,
+      "clanRank": 17,
+      "previousClanRank": 19,
+      "donations": 1399,
+      "donationsReceived": 1136
+    },
+    {
+      "tag": "#R89PL98PG",
+      "name": "Jadewood",
+      "role": "member",
+      "townHallLevel": 11,
+      "expLevel": 177,
+      "league": {
+        "id": 29000018,
+        "name": "Champion League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 3843,
+      "builderBaseTrophies": 4999,
+      "clanRank": 18,
+      "previousClanRank": 20,
+      "donations": 714,
+      "donationsReceived": 1381
+    },
+    {
+      "tag": "#YYRQUJ29J",
+      "name": "Duskstone",
+      "role": "member",
+      "townHallLevel": 11,
+      "expLevel": 138,
+      "league": {
+        "id": 29000018,
+        "name": "Champion League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 3520,
+      "builderBaseTrophies": 3190,
+      "clanRank": 19,
+      "previousClanRank": 18,
+      "donations": 895,
+      "donationsReceived": 244
+    },
+    {
+      "tag": "#GJQPL0LC2",
+      "name": "Quillwing",
+      "role": "member",
+      "townHallLevel": 16,
+      "expLevel": 240,
+      "league": {
+        "id": 29000018,
+        "name": "Champion League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 3440,
+      "builderBaseTrophies": 2358,
+      "clanRank": 20,
+      "previousClanRank": 18,
+      "donations": 1685,
+      "donationsReceived": 2499
+    },
+    {
+      "tag": "#QRUJ999C9",
+      "name": "Zephyrwing",
+      "role": "admin",
+      "townHallLevel": 11,
+      "expLevel": 221,
+      "league": {
+        "id": 29000018,
+        "name": "Champion League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 3344,
+      "builderBaseTrophies": 2356,
+      "clanRank": 21,
+      "previousClanRank": 19,
+      "donations": 2152,
+      "donationsReceived": 424
+    },
+    {
+      "tag": "#2YJGJ9QLL",
+      "name": "Irisstorm45",
+      "role": "admin",
+      "townHallLevel": 14,
+      "expLevel": 135,
+      "league": {
+        "id": 29000015,
+        "name": "Master League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 3065,
+      "builderBaseTrophies": 3899,
+      "clanRank": 22,
+      "previousClanRank": 23,
+      "donations": 1689,
+      "donationsReceived": 2177
+    },
+    {
+      "tag": "#9GP2Q800V",
+      "name": "Emberwood",
+      "role": "member",
+      "townHallLevel": 13,
+      "expLevel": 166,
+      "league": {
+        "id": 29000015,
+        "name": "Master League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 2838,
+      "builderBaseTrophies": 2634,
+      "clanRank": 23,
+      "previousClanRank": 23,
+      "donations": 203,
+      "donationsReceived": 1398
+    },
+    {
+      "tag": "#UR89G8QGP",
+      "name": "Onyxstone",
+      "role": "member",
+      "townHallLevel": 14,
+      "expLevel": 218,
+      "league": {
+        "id": 29000015,
+        "name": "Master League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 2733,
+      "builderBaseTrophies": 3148,
+      "clanRank": 24,
+      "previousClanRank": 23,
+      "donations": 803,
+      "donationsReceived": 263
+    },
+    {
+      "tag": "#JRYL9R2GP",
+      "name": "Tidefall",
+      "role": "member",
+      "townHallLevel": 11,
+      "expLevel": 194,
+      "league": {
+        "id": 29000015,
+        "name": "Master League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 2635,
+      "builderBaseTrophies": 3477,
+      "clanRank": 25,
+      "previousClanRank": 25,
+      "donations": 195,
+      "donationsReceived": 1658
+    },
+    {
+      "tag": "#UV0PJ0LRQ",
+      "name": "Wrenwing",
+      "role": "member",
+      "townHallLevel": 13,
+      "expLevel": 199,
+      "league": {
+        "id": 29000015,
+        "name": "Master League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 2625,
+      "builderBaseTrophies": 2565,
+      "clanRank": 26,
+      "previousClanRank": 27,
+      "donations": 611,
+      "donationsReceived": 96
+    },
+    {
+      "tag": "#0YGCVLQ9R",
+      "name": "Umberfall",
+      "role": "member",
+      "townHallLevel": 14,
+      "expLevel": 134,
+      "league": {
+        "id": 29000012,
+        "name": "Crystal League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 2519,
+      "builderBaseTrophies": 2683,
+      "clanRank": 27,
+      "previousClanRank": 27,
+      "donations": 1052,
+      "donationsReceived": 1989
+    },
+    {
+      "tag": "#LUV0888UU",
+      "name": "Umberstone76",
+      "role": "member",
+      "townHallLevel": 17,
+      "expLevel": 228,
+      "league": {
+        "id": 29000012,
+        "name": "Crystal League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 2430,
+      "builderBaseTrophies": 3367,
+      "clanRank": 28,
+      "previousClanRank": 30,
+      "donations": 2042,
+      "donationsReceived": 262
+    },
+    {
+      "tag": "#JRP8UC2PP",
+      "name": "Cindercrest",
+      "role": "member",
+      "townHallLevel": 12,
+      "expLevel": 227,
+      "league": {
+        "id": 29000012,
+        "name": "Crystal League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 2314,
+      "builderBaseTrophies": 4570,
+      "clanRank": 29,
+      "previousClanRank": 31,
+      "donations": 2472,
+      "donationsReceived": 1969
+    },
+    {
+      "tag": "#9CQUJLGPV",
+      "name": "Irissong",
+      "role": "admin",
+      "townHallLevel": 17,
+      "expLevel": 232,
+      "league": {
+        "id": 29000012,
+        "name": "Crystal League I",
+        "iconUrls": {
+          "tiny": "/mock-badge.svg",
+          "small": "/mock-badge.svg",
+          "medium": "/mock-badge.svg"
+        }
+      },
+      "trophies": 2313,
+      "builderBaseTrophies": 4449,
+      "clanRank": 30,
+      "previousClanRank": 30,
+      "donations": 2316,
+      "donationsReceived": 607
+    }
+  ],
+  "labels": [
+    {
+      "id": 56000000,
+      "name": "Clan Wars",
+      "iconUrls": {
+        "tiny": "/mock-badge.svg",
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg"
+      }
+    },
+    {
+      "id": 56000004,
+      "name": "Clan Capital",
+      "iconUrls": {
+        "tiny": "/mock-badge.svg",
+        "small": "/mock-badge.svg",
+        "medium": "/mock-badge.svg"
+      }
+    }
+  ],
+  "clanCapital": {
+    "capitalHallLevel": 9
+  }
+}

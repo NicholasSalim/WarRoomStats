@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "leagueSeasonId": 1791781200,
+      "leagueTrophies": 1569,
+      "leagueTierId": 105000026,
+      "placement": 66,
+      "attackWins": 25,
+      "attackLosses": 0,
+      "attackStars": 61,
+      "defenseWins": 2,
+      "defenseLosses": 25,
+      "defenseStars": 70,
+      "maxBattles": 30
+    },
+    {
+      "leagueSeasonId": 1792386000,
+      "leagueTrophies": 1194,
+      "leagueTierId": 105000024,
+      "placement": 16,
+      "attackWins": 29,
+      "attackLosses": 0,
+      "attackStars": 68,
+      "defenseWins": 3,
+      "defenseLosses": 23,
+      "defenseStars": 56,
+      "maxBattles": 30
+    },
+    {
+      "leagueSeasonId": 1792990800,
+      "leagueTrophies": 1280,
+      "leagueTierId": 105000024,
+      "placement": 33,
+      "attackWins": 30,
+      "attackLosses": 1,
+      "attackStars": 88,
+      "defenseWins": 2,
+      "defenseLosses": 21,
+      "defenseStars": 70,
+      "maxBattles": 30
+    }
+  ]
+}

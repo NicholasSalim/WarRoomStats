@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WarRoomStats
 
-## Getting Started
+A free, non-commercial stats viewer for clans, wars, Clan War League, raid weekends, players and leaderboards. It uses live data from the official game API. Scope, architecture and policy constraints are in [docs/DECISIONS.md](docs/DECISIONS.md).
 
-First, run the development server:
+## Setup
 
 ```bash
+npm install
+cp .env.example .env.local   # then fill in COC_API_TOKEN
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+No API token yet? Use the fixture data:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+COC_API_MOCK=1 npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Dev server |
+| `npm run build` | Production build |
+| `npm test` | Vitest unit tests (client, schemas, stats) |
+| `npm run test:e2e` | Playwright smoke tests in fixture mode (first run: `npx playwright install chromium`) |
+| `npm run typecheck` | TypeScript |
+| `npm run lint` | ESLint |
+| `npm run fixtures` | Regenerate the API fixtures |
+| `node scripts/build-army-ids.mjs` | Refresh the unit id → name table used to decode battle log armies |
+| `node scripts/build-unit-icons.mjs` | Link the unit images in `public/{troops,siege-machines,spells,heroes,hero-pets,hero-equipments}` to unit names (run after adding images) |
 
-To learn more about Next.js, take a look at the following resources:
+## Layout
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/lib/coc/`: the server-only CoC API client (`client.ts`), plus transport, zod schemas, tag handling, stats and fixtures.
+- `src/app/`: pages. Home `/`, `/search`, `/clan/[tag]` (+ `/war`, `/cwl`), `/player/[tag]`, `/leaderboards`.
+- `src/proxy.ts`: per-IP rate limiting.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This material is unofficial and is not endorsed by Supercell. For more information see Supercell's Fan Content Policy: www.supercell.com/fan-content-policy.

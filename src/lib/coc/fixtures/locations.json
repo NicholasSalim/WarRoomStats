@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": 32000000,
+      "name": "Europe",
+      "isCountry": false
+    },
+    {
+      "id": 32000001,
+      "name": "North America",
+      "isCountry": false
+    },
+    {
+      "id": 32000006,
+      "name": "International",
+      "isCountry": false
+    },
+    {
+      "id": 32000022,
+      "name": "Australia",
+      "isCountry": true,
+      "countryCode": "AU"
+    },
+    {
+      "id": 32000038,
+      "name": "Brazil",
+      "isCountry": true,
+      "countryCode": "BR"
+    },
+    {
+      "id": 32000094,
+      "name": "Germany",
+      "isCountry": true,
+      "countryCode": "DE"
+    },
+    {
+      "id": 32000113,
+      "name": "India",
+      "isCountry": true,
+      "countryCode": "IN"
+    },
+    {
+      "id": 32000114,
+      "name": "Indonesia",
+      "isCountry": true,
+      "countryCode": "ID"
+    },
+    {
+      "id": 32000122,
+      "name": "Japan",
+      "isCountry": true,
+      "countryCode": "JP"
+    },
+    {
+      "id": 32000249,
+      "name": "United States",
+      "isCountry": true,
+      "countryCode": "US"
+    }
+  ],
+  "paging": {
+    "cursors": {}
+  }
+}
