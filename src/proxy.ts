@@ -10,7 +10,7 @@ import { LIMITS, decide, hasRedisEnv, type Budget, type Limiters } from "@/lib/r
 // configured, e.g. in local development; production builds on Vercel refuse
 // to build without it (see next.config.ts).
 
-const PREFIXES: Record<Budget, string> = { pages: "wrs:rl", prefetches: "wrs:rl:pf", searches: "wrs:rl:search" };
+const PREFIXES: Record<Budget, string> = { pages: "wrs:rl", searches: "wrs:rl:search" };
 
 function upstashLimiters(): Limiters | null {
   if (!hasRedisEnv(process.env)) return null;
@@ -25,7 +25,7 @@ function upstashLimiters(): Limiters | null {
       analytics: false,
       timeout: 1000, // Fail open if Redis is slow.
     });
-  return { pages: limiter("pages"), prefetches: limiter("prefetches"), searches: limiter("searches") };
+  return { pages: limiter("pages"), searches: limiter("searches") };
 }
 
 const limiters = upstashLimiters();
@@ -43,24 +43,46 @@ export async function proxy(request: NextRequest, event: NextFetchEvent) {
   );
   event.waitUntil(pending);
 
-  switch (decision.action) {
-    case "allow": {
-      const res = NextResponse.next();
-      if (decision.limit != null) res.headers.set("X-RateLimit-Limit", String(decision.limit));
-      if (decision.remaining != null) res.headers.set("X-RateLimit-Remaining", String(decision.remaining));
-      return res;
-    }
-    case "refusePrefetch":
-      return new NextResponse(null, { status: 429 });
-    case "refusePage":
-      return NextResponse.rewrite(new URL("/rate-limited", request.url), {
-        status: 429,
-        headers: { "Retry-After": String(decision.retryAfter) },
-      });
+  if (decision.action === "allow") {
+    const res = NextResponse.next();
+    res.headers.set("X-RateLimit-Limit", String(decision.limit));
+    res.headers.set("X-RateLimit-Remaining", String(decision.remaining));
+    return res;
   }
+  return NextResponse.rewrite(new URL("/rate-limited", request.url), {
+    status: 429,
+    headers: { "Retry-After": String(decision.retryAfter) },
+  });
 }
 
+// Which requests are rate-limited. Pages that call the API, each listed twice
+// so that only *static link prefetches* skip the proxy: an RSC request
+// (`rsc: 1`) whose `next-router-prefetch` is 1 or 3. Those return the route's
+// prerendered shell (served from the CDN, no API calls; checked on a
+// production build, 2026-11-10), and a page full of player links makes dozens
+// of them. Everything else runs the proxy and counts as a page view:
+// - the first entry of a pair: not an RSC request (`rsc` isn't "1"), e.g. a
+//   document load, or a forged prefetch header, which renders the full page;
+// - the second: an RSC request that isn't a static prefetch, e.g. a click
+//   (no prefetch header) or a runtime prefetch (`2`), which renders URL data.
+// The check has to live here: Next.js strips these headers from the request
+// the proxy function sees (docs: proxy.md, "Flight headers"). Values are
+// anchored regular expressions (`^value$`, so "1|3" would also match "11";
+// hence "[13]"); entries are alternatives. Must stay literal
+// so Next can read it at build time.
 export const config = {
-  // Pages that call the API. Static assets, images and the 429 page itself are excluded.
-  matcher: ["/", "/search", "/search/players", "/leaderboards", "/clan/:path*", "/player/:path*"],
+  matcher: [
+    { source: "/", missing: [{ type: "header", key: "rsc", value: "1" }] },
+    { source: "/", missing: [{ type: "header", key: "next-router-prefetch", value: "[13]" }] },
+    { source: "/search", missing: [{ type: "header", key: "rsc", value: "1" }] },
+    { source: "/search", missing: [{ type: "header", key: "next-router-prefetch", value: "[13]" }] },
+    { source: "/search/players", missing: [{ type: "header", key: "rsc", value: "1" }] },
+    { source: "/search/players", missing: [{ type: "header", key: "next-router-prefetch", value: "[13]" }] },
+    { source: "/leaderboards", missing: [{ type: "header", key: "rsc", value: "1" }] },
+    { source: "/leaderboards", missing: [{ type: "header", key: "next-router-prefetch", value: "[13]" }] },
+    { source: "/clan/:path*", missing: [{ type: "header", key: "rsc", value: "1" }] },
+    { source: "/clan/:path*", missing: [{ type: "header", key: "next-router-prefetch", value: "[13]" }] },
+    { source: "/player/:path*", missing: [{ type: "header", key: "rsc", value: "1" }] },
+    { source: "/player/:path*", missing: [{ type: "header", key: "next-router-prefetch", value: "[13]" }] },
+  ],
 };
