@@ -11,7 +11,7 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "fixtures": "node scripts/generate-fixtures.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
