@@ -1,6 +1,7 @@
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
 import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
+import { isImpossibleTagPath } from "@/lib/coc/tag";
 import { LIMITS, decide, hasRedisEnv, type Budget, type Limiters } from "@/lib/rate-limit";
 
 // Per-IP rate limits for pages that call the game API (docs/DECISIONS.md >
@@ -35,6 +36,11 @@ if (!limiters && process.env.NODE_ENV === "production") {
 }
 
 export async function proxy(request: NextRequest, event: NextFetchEvent) {
+  // A clan or player page for a tag that can't exist: a real 404, and no API
+  // call or rate-limit spend. Pages stream, so they can't set it themselves.
+  if (isImpossibleTagPath(request.nextUrl.pathname)) {
+    return NextResponse.rewrite(new URL("/invalid-tag", request.url), { status: 404 });
+  }
   if (!limiters) return NextResponse.next();
   const { decision, pending } = await decide(
     { headers: request.headers, pathname: request.nextUrl.pathname },

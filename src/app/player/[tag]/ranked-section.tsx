@@ -8,7 +8,6 @@ import { loadRankedGroup } from "@/lib/coc/loaders";
 import type { LeagueTier, Player } from "@/lib/coc/schemas";
 import { legendSeasonLabel } from "@/lib/coc/rankings";
 import { rankedMode } from "@/lib/coc/ranked-season";
-import { playerHref } from "@/lib/coc/tag";
 import { fmtDate, fmtInt } from "@/lib/format";
 
 /**
@@ -16,7 +15,7 @@ import { fmtDate, fmtInt } from "@/lib/format";
  * and finished seasons. The current season's battles, day by day, are on the
  * season page (/player/[tag]/season), linked from here.
  */
-export async function RankedSection({ player }: { player: Player }) {
+export async function RankedSection({ player, seasonHref }: { player: Player; seasonHref: string }) {
   const tier = player.leagueTier;
   const mode = rankedMode(player);
   const allowance = mode.kind === "unranked" ? null : mode.allowance;
@@ -28,7 +27,6 @@ export async function RankedSection({ player }: { player: Player }) {
   ]);
   const tierById = new Map<number, LeagueTier>(tiers.ok ? tiers.data.map((t) => [t.id, t]) : []);
 
-  const seasonHref = `${playerHref(player.tag)}/season`;
   const me = group?.ok ? group.data.members.findIndex((m) => m.playerTag === player.tag) : -1;
   const member = group?.ok && me >= 0 ? group.data.members[me] : undefined;
 

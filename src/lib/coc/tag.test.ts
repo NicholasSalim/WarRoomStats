@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { clanHref, normalizeTag, playerHref, tagToSlug } from "./tag";
+import { clanHref, isImpossibleTagPath, normalizeTag, playerHref, tagToSlug } from "./tag";
 
 describe("normalizeTag", () => {
   it.each([
@@ -31,5 +31,21 @@ describe("hrefs", () => {
     expect(tagToSlug("#2PP")).toBe("2PP");
     expect(clanHref("#2PP")).toBe("/clan/2PP");
     expect(playerHref("#9YC")).toBe("/player/9YC");
+  });
+});
+
+describe("isImpossibleTagPath", () => {
+  it.each([
+    ["/clan/notatag", true],
+    ["/player/hello!/battles", true],
+    ["/clan/%ZZ", true],
+    ["/clan/2PRGP0L22", false],
+    ["/clan/2prgp0l22/warlog", false],
+    ["/player/%232PP", false],
+    ["/clan/2PPO", false], // O is read as 0
+    ["/leaderboards", false],
+    ["/", false],
+  ])("%s -> %s", (path, expected) => {
+    expect(isImpossibleTagPath(path)).toBe(expected);
   });
 });

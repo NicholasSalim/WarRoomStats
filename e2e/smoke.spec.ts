@@ -231,6 +231,7 @@ test("leaderboards: Builder Base and Clan Capital boards", async ({ page }) => {
   await expect(page).toHaveURL(/scope=capital/);
   await expect(page.getByRole("columnheader", { name: "Capital trophies" })).toBeVisible();
   await page.getByRole("link", { name: "Players", exact: true }).click();
+  await expect(page).toHaveURL(/kind=players/);
   await page.getByRole("link", { name: "Builder Base" }).click();
   await expect(page).toHaveURL(/kind=players.*scope=builder/);
   await expect(page.getByRole("columnheader", { name: "Builder Base" })).toBeVisible();
@@ -245,7 +246,7 @@ test("clan raid weekend details and capital districts", async ({ page }) => {
   await page.goto(`/clan/${CLAN}/raids`);
   await expect(page.getByRole("heading", { name: /^Weekend of / })).toBeVisible();
   await expect(page.getByRole("heading", { name: /^Raiders \(\d+\)$/ }).first()).toBeVisible();
-  await expect(page.getByText("Raid Target")).toBeVisible();
+  await expect(page.getByText("Raid Target").first()).toBeVisible();
   await page.goto(`/clan/${CLAN}`);
   await expect(page.getByText(/Season ends/)).toBeVisible();
 });
@@ -272,10 +273,21 @@ test("player: wars and raids tabs", async ({ page }) => {
   await page.goto("/player/9YCQ2L0P/wars");
   await expect(page.getByRole("heading", { name: "Current war" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Clan War League" })).toBeVisible();
-  await expect(page.getByText(/war log only keeps clan totals/)).toBeVisible();
+  await expect(page.getByText(/attacks and defenses in .+'s current war and this Clan War League season/)).toBeVisible();
 
   await page.getByRole("navigation", { name: "Player sections" }).getByRole("link", { name: "Raids" }).click();
   await expect(page).toHaveURL(/\/raids$/);
   await expect(page.getByRole("heading", { name: "Raid weekends" })).toBeVisible();
-  await expect(page.getByText(/only keeps each player.s raid attacks/)).toBeVisible();
+  await expect(page.getByText(/Earlier weekends are on/)).toBeVisible();
+});
+
+test("impossible tags get a real 404", async ({ page }) => {
+  for (const path of ["/clan/notatag", "/player/hello!/battles"]) {
+    const res = await page.goto(path);
+    expect(res?.status()).toBe(404);
+    await expect(page.getByText(/That tag doesn.t look right/)).toBeVisible();
+  }
+  // Well-formed tags still render (unknown ones show "not found" in the page).
+  const ok = await page.goto(`/clan/${CLAN}`);
+  expect(ok?.status()).toBe(200);
 });

@@ -6,7 +6,7 @@ import { ErrorState } from "@/components/error-state";
 import { RecordVisit } from "@/components/recent-searches";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getClan } from "@/lib/coc/client";
-import { clanHref, tagToSlug } from "@/lib/coc/tag";
+import { clanHref, normalizeTag, tagToSlug } from "@/lib/coc/tag";
 import { fmtInt } from "@/lib/format";
 import { ClanNav } from "./clan-nav";
 
@@ -53,7 +53,8 @@ async function ClanShell({ params, children }: { params: LayoutProps<"/clan/[tag
   const result = await getClan(slug);
   if (!result.ok) return <ErrorState error={result.error} />;
   const clan = result.data;
-  const urlSlug = tagToSlug(clan.tag);
+  // Tabs keep the tag the visitor asked for (the same as clan.tag with the real API).
+  const urlSlug = tagToSlug(normalizeTag(slug) ?? clan.tag);
   return (
     <div className="space-y-8">
       <RecordVisit kind="clan" keyValue={clan.tag} label={clan.name} />

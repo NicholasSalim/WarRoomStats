@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { TabSkeleton, loadPlayer, tabMetadata } from "@/components/entity-tab";
+import { normalizeTag, playerHref } from "@/lib/coc/tag";
 import { RankedSection } from "../ranked-section";
 
 export function generateMetadata({ params }: PageProps<"/player/[tag]/ranked">) {
@@ -15,7 +16,8 @@ export default function PlayerRankedPage({ params }: PageProps<"/player/[tag]/ra
 }
 
 async function Ranked({ params }: Pick<PageProps<"/player/[tag]/ranked">, "params">) {
-  const p = await loadPlayer(params);
+  const [p, { tag }] = await Promise.all([loadPlayer(params), params]);
   if (!p) return null;
-  return <RankedSection player={p} />;
+  // Links keep the tag the visitor asked for, like the tabs (see the layout).
+  return <RankedSection player={p} seasonHref={`${playerHref(normalizeTag(tag) ?? p.tag)}/season`} />;
 }

@@ -21,6 +21,16 @@ export function normalizeTag(input: string | null | undefined): string | null {
   return raw.startsWith("#") ? raw : `#${raw}`;
 }
 
+/**
+ * Whether a path is a clan or player page whose tag can't exist, e.g.
+ * /clan/notatag or /player/hello/battles. Checked by the proxy, without an
+ * API call, so those URLs get a real 404 status.
+ */
+export function isImpossibleTagPath(pathname: string): boolean {
+  const m = /^\/(?:clan|player)\/([^/]+)/.exec(pathname);
+  return m !== null && normalizeTag(m[1]) === null;
+}
+
 /** "#2PP" -> "2PP", for use in app URLs such as /clan/2PP. */
 export function tagToSlug(tag: string): string {
   return tag.replace(/^#/, "");

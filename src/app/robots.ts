@@ -15,9 +15,12 @@ export default function robots(): MetadataRoute.Robots {
         // Tabs: /clan/TAG/warlog, /player/TAG/battles, ...
         "/clan/*/",
         "/player/*/",
-        // Leaderboard pages past the first, and past seasons (12,000 players each).
+        // Leaderboard pages past the first, past seasons (12,000 players
+        // each), and the other boards (Past Seasons, Builder Base, Capital).
+        // The default board and ?kind=clans stay crawlable.
         "/leaderboards?*page=",
         "/leaderboards?*season=",
+        "/leaderboards?*scope=",
       ],
     },
     sitemap: new URL("/sitemap.xml", SITE_URL).toString(),

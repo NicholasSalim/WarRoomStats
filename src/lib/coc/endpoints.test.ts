@@ -29,6 +29,12 @@ describe("endpoints: lifetimes", () => {
     expect(life).toBe("apiError");
   });
 
+  it("caches 'not found' like a profile, so made-up tags don't cost a call each time", async () => {
+    const { result, life } = await endpoints.player(request, "#888PP");
+    expect(result).toMatchObject({ ok: false, error: { kind: "notFound" } });
+    expect(life).toBe("profile");
+  });
+
   it("caches invalid input for good, without a request", async () => {
     const { req, paths } = spy();
     const { result, life } = await endpoints.player(req, "not a tag!");
@@ -96,8 +102,8 @@ describe("endpoints: paths and shaping", () => {
   });
 
   it("fails the Legend snapshot when either half fails", async () => {
-    const { result, life } = await endpoints.legendSnapshot(request, "#888PP");
-    expect(result).toMatchObject({ ok: false, error: { kind: "notFound" } });
+    const { result, life } = await endpoints.legendSnapshot(request, "#999PP");
+    expect(result).toMatchObject({ ok: false, error: { kind: "maintenance" } });
     expect(life).toBe("apiError");
   });
 });

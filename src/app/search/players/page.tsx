@@ -53,7 +53,7 @@ async function Result({ searchParams }: { searchParams: SearchParams }) {
   const tag = normalizeTag(query);
   if (!tag) return <Note>Tags only use 0 2 8 9 P Y L Q G R J C U V, for example #2PP.</Note>;
   const player = await getPlayer(tag);
-  if (player.ok) redirect(playerHref(player.data.tag));
+  if (player.ok) redirect(playerHref(tag));
   if (player.error.kind !== "notFound") return <ErrorState error={player.error} />;
   return <Note>No player has the tag {tag}. Check it in-game under the player&apos;s name.</Note>;
 }

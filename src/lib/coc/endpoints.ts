@@ -84,10 +84,19 @@ interface Spec<S, T> {
   onError?: (error: ApiError) => Fetched<T> | undefined;
 }
 
+/**
+ * Failures are kept briefly so a recovery shows up quickly. "Not found" is
+ * kept as long as a profile: it won't change in minutes, and bots requesting
+ * made-up tags would otherwise cost an API call every 30 seconds each.
+ */
+function failureLife(error: ApiError): CacheProfile {
+  return error.kind === "notFound" ? "profile" : "apiError";
+}
+
 async function fetchOne<S, T = S>(request: Requester, spec: Spec<S, T>): Promise<Fetched<T>> {
   if (spec.path === null) return { result: { ok: false, error: spec.invalid ?? INVALID_TAG }, life: "max" };
   const res = await request(spec.path, spec.schema);
-  if (!res.ok) return spec.onError?.(res.error) ?? { result: res, life: "apiError" };
+  if (!res.ok) return spec.onError?.(res.error) ?? { result: res, life: failureLife(res.error) };
   return { result: spec.map ? spec.map(res.data) : { ok: true, data: res.data as unknown as T }, life: spec.life };
 }
 
