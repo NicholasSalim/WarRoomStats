@@ -9,13 +9,13 @@
 /** Requests per 60 s per IP, by budget. */
 export const LIMITS = {
   /** Page views and client-side navigations: every one can call the API. */
-  pages: 30,
+  pages: 60,
   /**
    * Searches, on top of the page budget. A new clan search downloads up to
    * 832 clans, so it's the most expensive request; paging through one search
    * is served from the cache but still counts here.
    */
-  searches: 15,
+  searches: 30,
 } as const;
 
 export type Budget = keyof typeof LIMITS;
