@@ -12,6 +12,12 @@ if (process.env.VERCEL_ENV === "production" && !hasRedisEnv(process.env)) {
   );
 }
 
+// Fixture mode serves made-up data. It's for local runs and CI only; the
+// client ignores it on Vercel, and a Vercel build with it set fails loudly.
+if (process.env.VERCEL && process.env.COC_API_MOCK === "1") {
+  throw new Error("COC_API_MOCK=1 is set on Vercel: remove it. Fixture data must never be deployed.");
+}
+
 // Clan badges, league icons etc. are loaded straight from Supercell's asset CDN.
 const COC_ASSET_HOST = "https://api-assets.clashofclans.com";
 

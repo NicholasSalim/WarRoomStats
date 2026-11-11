@@ -81,10 +81,7 @@ test("CWL: standings, rounds and player stats", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Group standings" })).toBeVisible();
   await expect(page.getByText("Not started")).toHaveCount(4);
   await page.getByRole("link", { name: /Round 1/ }).click();
-  // The URL changes once the round's page has fully loaded. On `next dev`,
-  // with tests running in parallel, that took 6 to 13 s locally and over 30 s
-  // once on CI (the live site: about 1 s).
-  await expect(page).toHaveURL(/round=1/, { timeout: 90_000 });
+  await expect(page).toHaveURL(/round=1/);
   await expect(page.getByRole("heading", { name: "Round 1" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Player stats" })).toBeVisible();
 });

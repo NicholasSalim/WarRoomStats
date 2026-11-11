@@ -1,4 +1,4 @@
-// fetch-compatible fixture server used when COC_API_MOCK=1 (dev and tests only).
+// fetch-compatible fixture server used when COC_API_MOCK=1 (local runs and CI, never on Vercel).
 // Fixtures come from scripts/generate-fixtures.mjs.
 //
 // Any valid tag returns the fixture data, except these reserved prefixes,

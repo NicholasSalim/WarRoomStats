@@ -31,9 +31,10 @@ export type { RankingPage } from "./endpoints";
 const DEFAULT_BASE_URL = "https://cocproxy.royaleapi.dev/v1";
 
 function transportConfig(): TransportConfig | null {
-  // Fixture mode for local development and tests without an API token.
-  // Never honoured in production builds.
-  if (process.env.COC_API_MOCK === "1" && process.env.NODE_ENV !== "production") {
+  // Fixture mode for local development and tests without an API token. Also
+  // works in a local production build (the smoke tests run against one), but
+  // never on Vercel; next.config.ts refuses to build there with it set.
+  if (process.env.COC_API_MOCK === "1" && !process.env.VERCEL) {
     return { baseUrl: "mock://coc", token: "mock", fetchImpl: fixtureFetch };
   }
   const token = process.env.COC_API_TOKEN;
