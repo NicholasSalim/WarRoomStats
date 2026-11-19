@@ -121,7 +121,7 @@ describe("playerRaids", () => {
 
   it("picks out the player's totals and their own district attacks", () => {
     const [w] = playerRaids([season], ME);
-    expect(w).toMatchObject({ known: true, attacks: 6, attackLimit: 6, looted: 25000 });
+    expect(w).toMatchObject({ attacks: 6, attackLimit: 6, looted: 25000 });
     expect(w.districtAttacks).toEqual([{ clan: "Defender", district: "Capital Peak", hallLevel: 10, stars: 2, destruction: 70 }]);
   });
 
@@ -131,24 +131,15 @@ describe("playerRaids", () => {
     expect(w.districtAttacks).toEqual([]);
   });
 
-  // Only the latest weekend has a member list; older ones only have district attacks.
+  // Only the latest weekend has a member list; older ones have clan totals only.
   const older = { ...season, members: undefined } as CapitalRaidSeason;
 
-  it("marks weekends without a member list as unknown (counting any district attacks)", () => {
-    const [w] = playerRaids([older], ME);
-    expect(w).toMatchObject({ known: false, attacks: 1, attackLimit: null, looted: null });
-    expect(playerRaids([older], "#SOMEONE")[0].attacks).toBeNull();
-    // What older weekends really look like: no attacker per district at all.
-    const bare = { ...older, attackLog: older.attackLog.map((r) => ({ ...r, districts: r.districts.map((d) => ({ ...d, attacks: undefined })) })) };
-    expect(playerRaids([bare], ME)[0]).toMatchObject({ known: false, attacks: null, districtAttacks: [] });
-    expect(weekendRaiders(bare)).toEqual([]);
+  it("leaves out weekends without a member list", () => {
+    expect(playerRaids([season, older], ME)).toHaveLength(1);
+    expect(weekendRaiders(older)).toEqual([]);
   });
 
-  it("lists raiders from the member list, or rebuilds them from district attacks", () => {
+  it("lists raiders from the member list", () => {
     expect(weekendRaiders(season)).toEqual([{ tag: ME, name: "Me", attacks: 6, attackLimit: 6, looted: 25000 }]);
-    expect(weekendRaiders(older)).toEqual([
-      { tag: ME, name: "Me", attacks: 1, attackLimit: null, looted: null },
-      { tag: "#OTHER", name: "Other", attacks: 1, attackLimit: null, looted: null },
-    ]);
   });
 });

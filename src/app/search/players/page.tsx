@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { EmptyState } from "@/components/empty-state";
 import { Suspense } from "react";
 import { PlayerSearchBar } from "@/components/clan-search-bar";
 import { ErrorState } from "@/components/error-state";
@@ -41,19 +42,13 @@ async function BarWithQuery({ searchParams }: { searchParams: SearchParams }) {
   return <PlayerSearchBar defaultValue={await readQuery(searchParams)} />;
 }
 
-function Note({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="rounded-lg border border-dashed border-border px-6 py-12 text-center text-sm text-muted-foreground">{children}</p>
-  );
-}
-
 async function Result({ searchParams }: { searchParams: SearchParams }) {
   const query = await readQuery(searchParams);
-  if (!query) return <Note>Enter a player tag above. It&apos;s under the player&apos;s name on their in-game profile.</Note>;
+  if (!query) return <EmptyState>Enter a player tag above. It&apos;s under the player&apos;s name on their in-game profile.</EmptyState>;
   const tag = normalizeTag(query);
-  if (!tag) return <Note>Tags only use 0 2 8 9 P Y L Q G R J C U V, for example #2PP.</Note>;
+  if (!tag) return <EmptyState>Tags only use 0 2 8 9 P Y L Q G R J C U V, for example #2PP.</EmptyState>;
   const player = await getPlayer(tag);
   if (player.ok) redirect(playerHref(tag));
   if (player.error.kind !== "notFound") return <ErrorState error={player.error} />;
-  return <Note>No player has the tag {tag}. Check it in-game under the player&apos;s name.</Note>;
+  return <EmptyState>No player has the tag {tag}. Check it in-game under the player&apos;s name.</EmptyState>;
 }

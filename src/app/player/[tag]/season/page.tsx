@@ -1,4 +1,5 @@
 import { connection } from "next/server";
+import { EmptyState } from "@/components/empty-state";
 import { Suspense } from "react";
 import { BadgeImage } from "@/components/badge-image";
 import { Stars } from "@/components/stars";
@@ -10,13 +11,14 @@ import { loadPlayer, tabMetadata } from "@/components/entity-tab";
 import { loadRankedSeason } from "@/lib/coc/loaders";
 import type { Player } from "@/lib/coc/schemas";
 import {
+  DAY_MS,
   LEGEND_SEASON_DAYS,
   summarizeBattles,
   type RankedSeason,
   type SeasonBattle,
   type SeasonDay,
 } from "@/lib/coc/season";
-import { fmtDate, fmtInt, fmtPct } from "@/lib/format";
+import { fmtDate, fmtInt, fmtPct, fmtSigned } from "@/lib/format";
 import { BattleTiles, type TileBattle } from "./battle-tiles";
 import { TrophyChart, type TrophyPoint } from "./trophy-chart";
 
@@ -39,10 +41,6 @@ export default function SeasonPage({ params }: PageProps<"/player/[tag]/season">
 
 const DAY_FMT = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
 
-function signed(n: number): string {
-  return n > 0 ? `+${fmtInt(n)}` : n < 0 ? `−${fmtInt(Math.abs(n))}` : "0";
-}
-
 /** The request time. "Today" decides which days exist, so the page renders per request. */
 async function requestTime(): Promise<number> {
   await connection();
@@ -63,9 +61,9 @@ async function Season({ params }: Pick<PageProps<"/player/[tag]/season">, "param
       <Header player={p} season={season} />
       {error && <ErrorState error={error} />}
       {!error && !season && (
-        <p className="rounded-lg border border-dashed border-border px-4 py-8 text-center text-sm text-muted-foreground">
+        <EmptyState>
           {allowance ? "Not in this week's tournament group yet." : "Not in a ranked league right now."}
-        </p>
+        </EmptyState>
       )}
       {season && <SeasonBody season={season} perDay={allowance?.period === "day" ? allowance.attacks : null} weekly={allowance?.period === "week" ? allowance.attacks : null} />}
     </div>
@@ -75,7 +73,7 @@ async function Season({ params }: Pick<PageProps<"/player/[tag]/season">, "param
 function Header({ player, season }: { player: Player; season: RankedSeason | null }) {
   const tier = player.leagueTier;
   const today = season?.days.at(-1);
-  const totalDays = season ? Math.round((season.endMs - season.startMs) / 86_400_000) : null;
+  const totalDays = season ? Math.round((season.endMs - season.startMs) / DAY_MS) : null;
   return (
     <header className="space-y-3">
       <div className="flex flex-wrap items-center gap-3">
@@ -124,18 +122,18 @@ function SeasonBody({ season, perDay, weekly }: { season: RankedSeason; perDay: 
           <Stat label="League trophies" value={current == null ? "–" : fmtInt(current)} hint={today?.isToday ? "now" : "end of the season"} />
           <Stat
             label="Change"
-            value={current != null && firstKnown?.trophiesStart != null ? approx + signed(current - firstKnown.trophiesStart) : "–"}
+            value={current != null && firstKnown?.trophiesStart != null ? approx + fmtSigned(current - firstKnown.trophiesStart) : "–"}
             hint={firstKnown ? `since the start of day ${firstKnown.number}` : undefined}
           />
           <Stat
             label="Attacks"
             value={fmtInt(attacks.count)}
-            hint={`${attacks.avgStars.toFixed(2)} ★ avg · ${approx}${signed(attacks.trophies)}${weekly ? ` · ${attacks.count}/${weekly} used` : ""}`}
+            hint={`${attacks.avgStars.toFixed(2)} ★ avg · ${approx}${fmtSigned(attacks.trophies)}${weekly ? ` · ${attacks.count}/${weekly} used` : ""}`}
           />
           <Stat
             label="Defenses"
             value={fmtInt(defenses.count)}
-            hint={`${defenses.avgStars.toFixed(2)} ★ conceded · ${approx}${signed(defenses.trophies)}`}
+            hint={`${defenses.avgStars.toFixed(2)} ★ conceded · ${approx}${fmtSigned(defenses.trophies)}`}
           />
         </StatGrid>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -246,7 +244,7 @@ function DayCard({ day, perDay, estimated }: { day: SeasonDay; perDay: number | 
               <span className="sr-only">at end of day: </span>
               {day.trophiesEnd == null ? "?" : fmtInt(day.trophiesEnd)}
             </span>
-            {change != null && <span className="w-12 text-right text-sm font-medium text-foreground">{signed(change)}</span>}
+            {change != null && <span className="w-12 text-right text-sm font-medium text-foreground">{fmtSigned(change)}</span>}
           </span>
         )}
       </div>

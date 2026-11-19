@@ -4,9 +4,9 @@ import { RelativeTime } from "@/components/relative-time";
 import { Stars } from "@/components/stars";
 import type { War, WarClan } from "@/lib/coc/schemas";
 import { parseApiTime, warMemberRows, warSideSummary, type WarMemberRow } from "@/lib/coc/stats";
-import { RESULT_STYLE, warOutcome } from "@/lib/coc/war-outcome";
+import { RESULT_STYLE, endedWarOutcome } from "@/lib/coc/war-outcome";
 import { clanHref, playerHref } from "@/lib/coc/tag";
-import { fmtPct, warStateLabel } from "@/lib/format";
+import { fmtAvg, fmtPct, warStateLabel } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 /** Scoreboard + both line-ups for a regular or CWL war. `war.clan` is "our" side. */
@@ -15,7 +15,7 @@ export function WarView({ war, linkClans = true }: { war: War; linkClans?: boole
   const end = parseApiTime(war.endTime);
   const ours = warSideSummary(war, "clan");
   const theirs = warSideSummary(war, "opponent");
-  const outcome = war.state === "warEnded" ? warOutcome(war.clan, war.opponent) : null;
+  const outcome = endedWarOutcome(war);
   // Map position of every base, to show attack targets as "#5".
   const positions = new Map(
     [...(war.clan?.members ?? []), ...(war.opponent?.members ?? [])].map((m) => [m.tag, m.mapPosition]),
@@ -65,8 +65,8 @@ export function WarView({ war, linkClans = true }: { war: War; linkClans?: boole
           <CompareRow label="Three stars" left={String(ours.triples)} right={String(theirs.triples)} />
           <CompareRow
             label="Avg. stars"
-            left={ours.attacksUsed ? (ours.attackStars / ours.attacksUsed).toFixed(2) : "–"}
-            right={theirs.attacksUsed ? (theirs.attackStars / theirs.attacksUsed).toFixed(2) : "–"}
+            left={fmtAvg(ours.attackStars, ours.attacksUsed)}
+            right={fmtAvg(theirs.attackStars, theirs.attacksUsed)}
           />
         </dl>
       </div>
@@ -135,7 +135,7 @@ function Lineup({ title, rows, positions }: { title: string; rows: WarMemberRow[
                 )}
               </span>
             </div>
-            <AttackList row={r} positions={positions} />
+            <LineupAttacks row={r} positions={positions} />
           </li>
         ))}
       </ol>
@@ -143,7 +143,8 @@ function Lineup({ title, rows, positions }: { title: string; rows: WarMemberRow[
   );
 }
 
-function AttackList({ row, positions }: { row: WarMemberRow; positions: Map<string, number> }) {
+/** A line-up member's attacks as compact "→ #5 ★★ 87%" rows, padded with unused attacks. */
+function LineupAttacks({ row, positions }: { row: WarMemberRow; positions: Map<string, number> }) {
   const attacks = row.attacks;
   const missing = Math.max(0, row.attacksAllowed - attacks.length);
   return (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EmptyState } from "@/components/empty-state";
 import { Suspense } from "react";
 import { BadgeImage } from "@/components/badge-image";
 import { Section, Stat, StatGrid } from "@/components/stat";
@@ -10,7 +11,7 @@ import { playerWar, warTotals, type PlayerWar, type PlayerWarAttack } from "@/li
 import { parseApiTime } from "@/lib/coc/stats";
 import { clanHref, playerHref } from "@/lib/coc/tag";
 import { RESULT_STYLE } from "@/lib/coc/war-outcome";
-import { fmtDate, fmtPct, seasonLabel, warStateLabel } from "@/lib/format";
+import { fmtAvg, fmtDate, fmtPct, plural, seasonLabel, warStateLabel } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import { ErrorState } from "@/components/error-state";
 import { TabSkeleton, loadPlayer, tabMetadata } from "@/components/entity-tab";
@@ -33,13 +34,9 @@ export default function PlayerWarsPage({ params }: PageProps<"/player/[tag]/wars
 
 function cwlDescription(season: CwlSeason): string {
   const { group, missingWars } = season;
-  const state = group.state === "ended" ? "ended" : warStateLabel(group.state);
-  const missing = missingWars > 0 ? ` · ${missingWars} war${missingWars === 1 ? "" : "s"} couldn't be loaded, so this list may be incomplete` : "";
+  const state = warStateLabel(group.state);
+  const missing = missingWars > 0 ? ` · ${missingWars} ${plural(missingWars, "war")} couldn't be loaded, so this list may be incomplete` : "";
   return `${seasonLabel(group.season)} season · ${state}${missing}`;
-}
-
-function Note({ children }: { children: React.ReactNode }) {
-  return <p className="rounded-lg border border-dashed border-border px-6 py-10 text-center text-sm text-muted-foreground">{children}</p>;
 }
 
 async function Wars({ params }: Pick<PageProps<"/player/[tag]/wars">, "params">) {
@@ -48,7 +45,7 @@ async function Wars({ params }: Pick<PageProps<"/player/[tag]/wars">, "params">)
   if (!p.clan) {
     return (
       <Section title="Wars">
-        <Note>Not in a clan, so there are no clan wars to show.</Note>
+        <EmptyState>Not in a clan, so there are no clan wars to show.</EmptyState>
       </Section>
     );
   }
@@ -80,17 +77,17 @@ async function Wars({ params }: Pick<PageProps<"/player/[tag]/wars">, "params">)
       >
         {all.length > 0 ? (
           <StatGrid>
-            <Stat label="Attacks used" value={`${totals.attacks}/${totals.attacksAllowed}`} hint={`in ${totals.wars} war${totals.wars === 1 ? "" : "s"}`} />
+            <Stat label="Attacks used" value={`${totals.attacks}/${totals.attacksAllowed}`} hint={`in ${totals.wars} ${plural(totals.wars, "war")}`} />
             <Stat
               label="Stars"
               value={totals.stars}
-              hint={totals.attacks ? `${(totals.stars / totals.attacks).toFixed(2)} per attack · ${totals.threeStars} three-star` : undefined}
+              hint={totals.attacks ? `${fmtAvg(totals.stars, totals.attacks)} per attack · ${totals.threeStars} three-star` : undefined}
             />
             <Stat label="Avg. destruction" value={totals.attacks ? fmtPct(totals.avgDestruction) : "–"} />
             <Stat
               label="Defenses"
               value={totals.defenses}
-              hint={totals.defenses ? `${(totals.starsConceded / totals.defenses).toFixed(2)} stars conceded on average` : "Not attacked yet"}
+              hint={totals.defenses ? `${fmtAvg(totals.starsConceded, totals.defenses)} stars conceded on average` : "Not attacked yet"}
             />
           </StatGrid>
         ) : null}
@@ -99,18 +96,18 @@ async function Wars({ params }: Pick<PageProps<"/player/[tag]/wars">, "params">)
       <Section title="Current war">
         {!current.ok ? (
           current.error.kind === "notInWar" ? (
-            <Note>{p.clan.name} isn&apos;t in a war right now.</Note>
+            <EmptyState>{p.clan.name} isn&apos;t in a war right now.</EmptyState>
           ) : current.error.kind === "privateWarLog" ? (
-            <Note>{p.clan.name}&apos;s war log is private, so its current war can&apos;t be shown.</Note>
+            <EmptyState>{p.clan.name}&apos;s war log is private, so its current war can&apos;t be shown.</EmptyState>
           ) : (
             <ErrorState error={current.error} compact />
           )
         ) : inCurrentRound ? (
-          <Note>The current war is Clan War League round {currentRound}, shown under Clan War League below.</Note>
+          <EmptyState>The current war is Clan War League round {currentRound}, shown under Clan War League below.</EmptyState>
         ) : currentWar ? (
           <WarCard war={currentWar} />
         ) : (
-          <Note>{p.name} isn&apos;t in the line-up of {p.clan.name}&apos;s current war.</Note>
+          <EmptyState>{p.name} isn&apos;t in the line-up of {p.clan.name}&apos;s current war.</EmptyState>
         )}
       </Section>
 
@@ -127,12 +124,12 @@ async function Wars({ params }: Pick<PageProps<"/player/[tag]/wars">, "params">)
       >
         {!season.ok ? (
           season.error.kind === "cwlNotActive" ? (
-            <Note>{p.clan.name} has no Clan War League season right now.</Note>
+            <EmptyState>{p.clan.name} has no Clan War League season right now.</EmptyState>
           ) : (
             <ErrorState error={season.error} compact />
           )
         ) : cwl.length === 0 ? (
-          <Note>{p.name} wasn&apos;t in {p.clan.name}&apos;s line-up for any round this season.</Note>
+          <EmptyState>{p.name} wasn&apos;t in {p.clan.name}&apos;s line-up for any round this season.</EmptyState>
         ) : (
           <div className="space-y-4">
             {cwl.map((w) => (

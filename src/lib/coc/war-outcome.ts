@@ -2,7 +2,7 @@
 // API's war log or computed from the score, and how it's labelled and
 // coloured. Safe to import from client code.
 
-import type { WarClan, WarLogEntry } from "./schemas";
+import type { War, WarClan, WarLogEntry } from "./schemas";
 
 /** A decided war, from one clan's point of view. */
 export type WarOutcome = "win" | "lose" | "tie";
@@ -41,6 +41,15 @@ export function warOutcome(side: WarClan | undefined, other: WarClan | undefined
   const db = other?.destructionPercentage ?? 0;
   if (da !== db) return da > db ? "win" : "lose";
   return "tie";
+}
+
+/** A war's outcome for one side once it has ended; null in preparation or on battle day. */
+export function endedWarOutcome(
+  war: Pick<War, "state" | "clan" | "opponent">,
+  side: "clan" | "opponent" = "clan",
+): WarOutcome | null {
+  if (war.state !== "warEnded") return null;
+  return side === "clan" ? warOutcome(war.clan, war.opponent) : warOutcome(war.opponent, war.clan);
 }
 
 /** War log rows for a CWL season have no opponent. */

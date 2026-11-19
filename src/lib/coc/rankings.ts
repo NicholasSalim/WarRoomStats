@@ -1,5 +1,8 @@
-// Pure helpers for the leaderboards: page maths, the Legend season archive's
+// Pure helpers for the leaderboards: page size, the Legend season archive's
 // season ids and its paging cursors. No API calls here, so it is easy to test.
+
+import { fmtDate, seasonLabel } from "../format";
+import { DAY_MS } from "./season";
 
 export const PAGE_SIZE = 100;
 
@@ -9,22 +12,6 @@ export const LIVE_RANKINGS_LIMIT = 200;
 /** The old "Legend League" id still serves the Legend I season archive. */
 export const LEGEND_LEAGUE_ID = 29000022;
 
-const DAY_MS = 86_400_000;
-
-/** Reads a `page` search param: a whole number from 1, anything else is page 1. */
-export function parsePage(raw: unknown): number {
-  if (typeof raw !== "string" || !/^\d{1,5}$/.test(raw)) return 1;
-  return Math.max(1, Number(raw));
-}
-
-export function pageCount(total: number, size = PAGE_SIZE): number {
-  return Math.max(1, Math.ceil(total / size));
-}
-
-/** One page of an in-memory list (the live top 200). Pages past the end are empty. */
-export function pageSlice<T>(items: readonly T[], page: number, size = PAGE_SIZE): T[] {
-  return items.slice((page - 1) * size, page * size);
-}
 
 /**
  * The archive pages with opaque `after` cursors, which are base64 of
@@ -67,14 +54,11 @@ export function legendSeasonEnd(id: string): Date | null {
   return Number.isNaN(start) ? null : new Date(start + 7 * DAY_MS);
 }
 
-const DATE_FMT = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
-const MONTH_FMT = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric", timeZone: "UTC" });
-
-/** "Ended 2 Nov 2026" for v2 seasons, "July 2015" for monthly ones. */
+/** "Ended Nov 2, 2026" for v2 seasons, "July 2015" for monthly ones. */
 export function legendSeasonLabel(id: string): string {
   const end = legendSeasonEnd(id);
-  if (end) return `Ended ${DATE_FMT.format(end)}`;
-  if (/^\d{4}-\d{2}$/.test(id)) return MONTH_FMT.format(new Date(`${id}-01T00:00:00Z`));
-  if (/^\d{4}-\d{2}-\d{2}$/.test(id)) return DATE_FMT.format(new Date(`${id}T00:00:00Z`));
+  if (end) return `Ended ${fmtDate(end)}`;
+  if (/^\d{4}-\d{2}$/.test(id)) return seasonLabel(id);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(id)) return fmtDate(new Date(`${id}T00:00:00Z`));
   return id;
 }

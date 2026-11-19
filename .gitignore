@@ -65,3 +65,8 @@ next-env.d.ts
 /.idea/
 Thumbs.db
 desktop.ini
+
+# Local-only docs: agent instructions (next dev rewrites AGENTS.md) and the
+# design decisions record. Kept on the dev machine, not in the repo.
+/AGENTS.md
+/docs/DECISIONS.md

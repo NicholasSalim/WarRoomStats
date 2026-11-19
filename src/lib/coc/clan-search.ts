@@ -3,7 +3,8 @@
 // that, so all matches can be cached once and paged locally. Also reads a
 // search from the URL. Pure: safe to import from client code.
 
-import { parsePage } from "./rankings";
+import { WAR_FREQUENCY_FILTERS } from "../format";
+import { parsePage } from "../paging";
 import { normalizeTag } from "./tag";
 
 /**
@@ -95,13 +96,7 @@ export function toClanSearchItem(c: ClanLike): ClanSearchItem {
 
 // ---------- Reading a search from the URL ----------
 
-const WAR_FREQUENCIES = new Set([
-  "always",
-  "moreThanOncePerWeek",
-  "oncePerWeek",
-  "lessThanOncePerWeek",
-  "never",
-]);
+const WAR_FREQUENCIES = new Set<string>(WAR_FREQUENCY_FILTERS);
 
 function intParam(
   v: string | string[] | undefined,

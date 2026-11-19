@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { Section } from "@/components/stat";
 import { getCapitalRaids } from "@/lib/coc/client";
 import { parseApiTime } from "@/lib/coc/stats";
-import { normalizeTag } from "@/lib/coc/tag";
+import { clanHref } from "@/lib/coc/tag";
 import { cn } from "@/lib/utils";
 import { fmtDate, fmtInt } from "@/lib/format";
 import { RaidDetails } from "../raid-details";
@@ -26,8 +26,6 @@ export default function ClanRaidsPage({
     </Suspense>
   );
 }
-
-// ---------- Capital raids ----------
 
 async function RaidsSection({
   params,
@@ -53,7 +51,6 @@ async function RaidsSection({
       ? seasons.find((s) => s.startTime.startsWith(sp.weekend as string))
       : undefined;
   const selected = picked ?? seasons[0];
-  const slug = (normalizeTag(tag) ?? tag).replace(/^#/, "");
   return (
     <Section
       id="raids"
@@ -99,7 +96,7 @@ async function RaidsSection({
               >
                 <td className="px-3 py-2">
                   <Link
-                    href={`/clan/${slug}/raids?weekend=${s.startTime.slice(0, 8)}#weekend`}
+                    href={`${clanHref(tag)}/raids?weekend=${s.startTime.slice(0, 8)}#weekend`}
                     className={cn(
                       "hover:underline",
                       s === selected && "font-medium",

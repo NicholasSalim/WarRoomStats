@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { battleTypeLabel, fmtDuration, fmtPct, fmtRatio, roleLabel, seasonLabel } from "./format";
+import { battleTypeLabel, fmtAvg, fmtDuration, fmtPct, fmtRatio, fmtSigned, plural, roleLabel, seasonLabel } from "./format";
 
 describe("seasonLabel", () => {
   it.each([
@@ -21,6 +21,23 @@ describe("small formatters", () => {
     expect(fmtPct(100)).toBe("100%");
     expect(fmtPct(41.38, 2)).toBe("41.38%");
     expect(fmtPct(null)).toBe("–");
+  });
+
+  it("formats signed trophy changes with thousands separators", () => {
+    expect(fmtSigned(1234)).toBe("+1,234");
+    expect(fmtSigned(-56)).toBe("−56");
+    expect(fmtSigned(0)).toBe("0");
+  });
+
+  it("averages, and shows a dash for nothing to average", () => {
+    expect(fmtAvg(7, 3)).toBe("2.33");
+    expect(fmtAvg(0, 0)).toBe("–");
+  });
+
+  it("pluralises", () => {
+    expect(plural(1, "war")).toBe("war");
+    expect(plural(2, "war")).toBe("wars");
+    expect(plural(0, "war")).toBe("wars");
   });
 
   it("formats ratios", () => {

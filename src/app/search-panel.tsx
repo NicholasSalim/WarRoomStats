@@ -1,6 +1,9 @@
 "use client";
 
 import Form from "next/form";
+import { LocationOptgroups } from "@/components/location-optgroups";
+import { WAR_FREQUENCY_FILTERS, warFrequencyLabel } from "@/lib/format";
+import { SEGMENTED, segmentClass } from "@/components/segmented";
 import { Suspense, use, useState } from "react";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,7 +27,7 @@ export function SearchPanel({
   const [mode, setMode] = useState<Mode>("clan");
   return (
     <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
-      <div role="tablist" aria-label="Search type" className="mb-5 inline-flex rounded-lg bg-muted p-1 text-sm">
+      <div role="tablist" aria-label="Search type" className={cn("mb-5", SEGMENTED)}>
         {(
           [
             ["clan", "Find a clan"],
@@ -37,10 +40,7 @@ export function SearchPanel({
             role="tab"
             aria-selected={mode === value}
             onClick={() => setMode(value)}
-            className={cn(
-              "rounded-md px-3 py-1.5 transition-colors",
-              mode === value ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground",
-            )}
+            className={segmentClass(mode === value)}
           >
             {label}
           </button>
@@ -89,11 +89,11 @@ function ClanSearchForm({
         <Field label="War frequency" htmlFor="warFrequency">
           <NativeSelect id="warFrequency" name="warFrequency" defaultValue="">
             <option value="">Any</option>
-            <option value="always">Always</option>
-            <option value="moreThanOncePerWeek">Twice a week</option>
-            <option value="oncePerWeek">Once a week</option>
-            <option value="lessThanOncePerWeek">Rarely</option>
-            <option value="never">Never</option>
+            {WAR_FREQUENCY_FILTERS.map((v) => (
+              <option key={v} value={v}>
+                {warFrequencyLabel(v)}
+              </option>
+            ))}
           </NativeSelect>
         </Field>
         <Field label="Location" htmlFor="locationId">
@@ -123,30 +123,10 @@ function ClanSearchForm({
 
 function LocationOptions({ locations }: { locations: Promise<ApiResult<Location[]>> }) {
   const result = use(locations);
-  const items = result.ok ? result.data : [];
-  const countries = items.filter((l) => l.isCountry);
-  const regions = items.filter((l) => !l.isCountry);
   return (
     <NativeSelect id="locationId" name="locationId" defaultValue="">
       <option value="">Any</option>
-      {regions.length > 0 && (
-        <optgroup label="Regions">
-          {regions.map((l) => (
-            <option key={l.id} value={l.id}>
-              {l.name}
-            </option>
-          ))}
-        </optgroup>
-      )}
-      {countries.length > 0 && (
-        <optgroup label="Countries">
-          {countries.map((l) => (
-            <option key={l.id} value={l.id}>
-              {l.name}
-            </option>
-          ))}
-        </optgroup>
-      )}
+      <LocationOptgroups locations={result.ok ? result.data : []} />
     </NativeSelect>
   );
 }

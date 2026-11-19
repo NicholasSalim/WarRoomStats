@@ -147,7 +147,7 @@ function DistrictTable({
             <tr key={d.id} className="align-top">
               <td className="py-1.5 pr-2">
                 <span className="flex items-center gap-1.5">
-                  {d.name}
+                  {d.name.replace(/\s+/g, " ")}
                   {d.stars != null && d.stars > 0 && (
                     <Stars count={d.stars} className="text-[10px]" />
                   )}
@@ -193,7 +193,6 @@ function Raiders({ season }: { season: CapitalRaidSeason }) {
       </p>
     );
   }
-  const withLoot = raiders.some((r) => r.looted != null);
   return (
     <div className="space-y-2">
       <h4 className="text-xs font-medium text-muted-foreground">
@@ -215,16 +214,11 @@ function Raiders({ season }: { season: CapitalRaidSeason }) {
               {m.name}
             </Link>
             <span className="tabular text-xs text-muted-foreground">
-              {m.attackLimit != null
-                ? `${m.attacks}/${m.attackLimit}`
-                : m.attacks}{" "}
-              attack{m.attacks === 1 && m.attackLimit == null ? "" : "s"}
+              {m.attacks}/{m.attackLimit} attacks
             </span>
-            {withLoot && (
-              <span className="tabular w-16 text-right">
-                {fmtCompact(m.looted)}
-              </span>
-            )}
+            <span className="tabular w-16 text-right">
+              {fmtCompact(m.looted)}
+            </span>
           </li>
         ))}
       </ol>

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowDown, ArrowUp } from "lucide-react";
+import { EmptyState } from "@/components/empty-state";
+import { RankChange } from "@/components/rank-change";
 import { BadgeImage } from "@/components/badge-image";
 import type { ClanRanking, PlayerRanking } from "@/lib/coc/schemas";
 import { clanHref, playerHref } from "@/lib/coc/tag";
@@ -8,25 +9,6 @@ import { cn } from "@/lib/utils";
 
 // Player and clan ranking tables, shared by the leaderboards page and the
 // home page's top-20 lists. `compact` drops the secondary columns.
-
-function RankChange({ rank, previous }: { rank: number; previous?: number }) {
-  if (!previous || previous <= 0 || previous === rank) return <span className="sr-only">no change</span>;
-  const up = previous > rank;
-  return (
-    <span className="inline-flex items-center text-xs text-muted-foreground" title={`Previously #${previous}`}>
-      {up ? <ArrowUp className="size-3" aria-label="up" /> : <ArrowDown className="size-3" aria-label="down" />}
-      {Math.abs(previous - rank)}
-    </span>
-  );
-}
-
-function Empty({ children = "No rankings for this location yet." }: { children?: React.ReactNode }) {
-  return (
-    <p className="rounded-lg border border-dashed border-border px-6 py-12 text-center text-sm text-muted-foreground">
-      {children}
-    </p>
-  );
-}
 
 function Th({ className, children }: { className?: string; children: React.ReactNode }) {
   return (
@@ -58,7 +40,7 @@ export function PlayerRankingTable({
   empty?: React.ReactNode;
   pointsLabel?: string;
 }) {
-  if (rows.length === 0) return <Empty>{empty}</Empty>;
+  if (rows.length === 0) return <EmptyState>{empty ?? "No rankings for this location yet."}</EmptyState>;
   // Builder Base rankings have no attack wins.
   const attacks = !compact && rows.some((r) => r.attackWins !== undefined);
   return (
@@ -125,7 +107,7 @@ export function ClanRankingTable({
   empty?: React.ReactNode;
   pointsLabel?: string;
 }) {
-  if (rows.length === 0) return <Empty>{empty}</Empty>;
+  if (rows.length === 0) return <EmptyState>{empty ?? "No rankings for this location yet."}</EmptyState>;
   return (
     <div className="overflow-hidden rounded-lg border border-border">
       <table className="w-full text-sm">

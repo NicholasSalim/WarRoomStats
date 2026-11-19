@@ -1,6 +1,7 @@
 "use client";
 
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { fmtInt } from "@/lib/format";
 
 export interface TrophyPoint {
   day: number;
@@ -14,7 +15,7 @@ function ChartTooltip({ active, payload }: { active?: boolean; payload?: { paylo
   if (!p) return null;
   return (
     <div className="rounded-md border border-border bg-popover px-3 py-2 text-xs shadow-lg">
-      <p className="tabular text-sm font-semibold text-foreground">{p.trophies == null ? "Not available" : p.trophies.toLocaleString("en-US")}</p>
+      <p className="tabular text-sm font-semibold text-foreground">{p.trophies == null ? "Not available" : fmtInt(p.trophies)}</p>
       <p className="text-muted-foreground">
         Day {p.day} · {p.label}
       </p>
@@ -53,7 +54,7 @@ export function TrophyChart({ data, estimated }: { data: TrophyPoint[]; estimate
               axisLine={false}
               tick={{ fill: "#a1a1a1", fontSize: 11 }}
               width={52}
-              tickFormatter={(v: number) => v.toLocaleString("en-US")}
+              tickFormatter={(v: number) => fmtInt(v)}
             />
             <Tooltip content={<ChartTooltip />} cursor={{ stroke: "#525252" }} />
             <Line

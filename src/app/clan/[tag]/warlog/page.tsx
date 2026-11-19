@@ -5,10 +5,10 @@ import { Pager } from "@/components/pager";
 import { Section, Stat, StatGrid } from "@/components/stat";
 import { getWarLog } from "@/lib/coc/client";
 import type { WarLogEntry } from "@/lib/coc/schemas";
-import { pageCount, pageSlice, parsePage } from "@/lib/coc/rankings";
+import { paginate, parsePage } from "@/lib/paging";
 import { parseApiTime, summarizeWarLog } from "@/lib/coc/stats";
 import { RESULT_STYLE, isCwlLogEntry, isOutcome, warLogResult } from "@/lib/coc/war-outcome";
-import { clanHref, normalizeTag } from "@/lib/coc/tag";
+import { clanHref } from "@/lib/coc/tag";
 import { fmtDate, fmtInt, fmtPct } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import { WarLogChart, type WarMarginPoint } from "../war-log-chart";
@@ -35,8 +35,6 @@ export default function ClanWarLogPage({
   );
 }
 
-// ---------- War log ----------
-
 async function WarLogSection({
   params,
   searchParams,
@@ -49,14 +47,10 @@ async function WarLogSection({
   if (!result.ok) return <TabError error={result.error} section={{ id: "war-log", title: "War log" }} />;
   const items = result.data.items;
   const summary = summarizeWarLog(items);
-  const totalPages = pageCount(items.length, WARS_PER_PAGE);
-  const page = Math.min(parsePage(sp.page), totalPages);
-  const shown = pageSlice(items, page, WARS_PER_PAGE);
-  const from = (page - 1) * WARS_PER_PAGE + 1;
-  const slug = (normalizeTag(tag) ?? tag).replace(/^#/, "");
+  const { page, totalPages, shown, from } = paginate(items, parsePage(sp.page), WARS_PER_PAGE);
   const pager = (
     <Pager
-      path={`/clan/${slug}/warlog`}
+      path={`${clanHref(tag)}/warlog`}
       params={{}}
       page={page}
       totalPages={totalPages}

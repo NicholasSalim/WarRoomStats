@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EmptyState } from "@/components/empty-state";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
 import { Lock, Users } from "lucide-react";
@@ -19,9 +20,9 @@ import {
   toClanSearchItem,
   type ClanSearchItem,
 } from "@/lib/coc/clan-search";
-import { pageCount, pageSlice } from "@/lib/coc/rankings";
+import { paginate } from "@/lib/paging";
 import { Pager } from "@/components/pager";
-import { fmtInt, warFrequencyLabel } from "@/lib/format";
+import { fmtInt, plural, warFrequencyLabel } from "@/lib/format";
 import { clanHref } from "@/lib/coc/tag";
 
 export const metadata = { title: "Clan search", robots: { index: false } };
@@ -59,28 +60,27 @@ async function Results({
   const parsed = parseClanSearch(await searchParams);
   if (!parsed) {
     return (
-      <p className="rounded-lg border border-dashed border-border px-6 py-12 text-center text-sm text-muted-foreground">
+      <EmptyState>
         Enter a clan name (at least 3 characters) or a clan tag above, or pick
         labels on the{" "}
         <Link href="/" className="underline underline-offset-4">
           home page
         </Link>
         .
-      </p>
+      </EmptyState>
     );
   }
 
-  // "#TAG": go straight to the clan.
   if (parsed.tagOnly && parsed.tag) {
     const clan = await getClan(parsed.tag);
     if (clan.ok) redirect(clanHref(clan.data.tag));
     if (clan.error.kind !== "notFound")
       return <ErrorState error={clan.error} />;
     return (
-      <p className="rounded-lg border border-dashed border-border px-6 py-12 text-center text-sm text-muted-foreground">
+      <EmptyState>
         No clan has the tag {parsed.tag}. Check it in-game under the clan
         profile.
-      </p>
+      </EmptyState>
     );
   }
 
@@ -104,10 +104,7 @@ async function Results({
     .filter(Boolean)
     .join(", ");
 
-  const totalPages = pageCount(clans.length, CLAN_SEARCH_PAGE_SIZE);
-  const page = Math.min(parsed.page, totalPages);
-  const shown = pageSlice(clans, page, CLAN_SEARCH_PAGE_SIZE);
-  const from = (page - 1) * CLAN_SEARCH_PAGE_SIZE + 1;
+  const { page, totalPages, shown, from } = paginate(clans, parsed.page, CLAN_SEARCH_PAGE_SIZE);
   const pager = <Pager path="/search" params={parsed.pagerParams} page={page} totalPages={totalPages} />;
 
   return (
@@ -127,7 +124,7 @@ async function Results({
             ? exactClan
               ? `No other clans ${what}.`
               : `No clans ${what} match these filters.`
-            : `${fmtInt(clans.length)} clan${clans.length === 1 ? "" : "s"} ${what}` +
+            : `${fmtInt(clans.length)} ${plural(clans.length, "clan")} ${what}` +
               (totalPages > 1 ? `, showing ${fmtInt(from)}–${fmtInt(from + shown.length - 1)}` : "")}
         </p>
       )}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { RESULT_STYLE, isOutcome, warLogResult, warOutcome } from "./war-outcome";
+import { RESULT_STYLE, endedWarOutcome, isOutcome, warLogResult, warOutcome } from "./war-outcome";
 
 const opponent = { tag: "#2PP" };
 
@@ -18,6 +18,20 @@ describe("warLogResult", () => {
 
   it("reads a row without an opponent as a CWL season", () => {
     expect(warLogResult({ opponent: {}, result: "win" })).toBe("cwl");
+  });
+});
+
+describe("endedWarOutcome", () => {
+  const war = { clan: { stars: 30 }, opponent: { stars: 29 } };
+
+  it("is null until the war has ended", () => {
+    expect(endedWarOutcome({ ...war, state: "inWar" })).toBeNull();
+    expect(endedWarOutcome({ ...war, state: "preparation" })).toBeNull();
+  });
+
+  it("decides from either side's point of view", () => {
+    expect(endedWarOutcome({ ...war, state: "warEnded" })).toBe("win");
+    expect(endedWarOutcome({ ...war, state: "warEnded" }, "opponent")).toBe("lose");
   });
 });
 

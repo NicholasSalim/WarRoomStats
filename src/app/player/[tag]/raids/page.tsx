@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EmptyState } from "@/components/empty-state";
 import { Suspense } from "react";
 import { ErrorState } from "@/components/error-state";
 import { Section, Stat, StatGrid } from "@/components/stat";
@@ -28,17 +29,13 @@ export default function PlayerRaidsPage({ params }: PageProps<"/player/[tag]/rai
   );
 }
 
-function Note({ children }: { children: React.ReactNode }) {
-  return <p className="rounded-lg border border-dashed border-border px-6 py-10 text-center text-sm text-muted-foreground">{children}</p>;
-}
-
 async function Raids({ params }: Pick<PageProps<"/player/[tag]/raids">, "params">) {
   const p = await loadPlayer(params);
   if (!p) return null;
   if (!p.clan) {
     return (
       <Section title="Raid weekends">
-        <Note>Not in a clan, so there are no raid weekends to show.</Note>
+        <EmptyState>Not in a clan, so there are no raid weekends to show.</EmptyState>
       </Section>
     );
   }
@@ -50,7 +47,7 @@ async function Raids({ params }: Pick<PageProps<"/player/[tag]/raids">, "params"
       </Section>
     );
   }
-  const weekends = playerRaids(result.data, p.tag).filter((w) => w.known);
+  const weekends = playerRaids(result.data, p.tag);
   const clanRaids = `${clanHref(p.clan.tag)}/raids`;
 
   return (
@@ -67,7 +64,7 @@ async function Raids({ params }: Pick<PageProps<"/player/[tag]/raids">, "params"
       }
     >
       {weekends.length === 0 ? (
-        <Note>{p.clan.name} has no raid weekend with player details yet.</Note>
+        <EmptyState>{p.clan.name} has no raid weekend with player details yet.</EmptyState>
       ) : (
         weekends.map((w) => <Weekend key={w.startTime} w={w} name={p.name} />)
       )}
@@ -91,7 +88,7 @@ function Weekend({ w, name }: { w: PlayerRaidWeekend; name: string }) {
         {w.state === "ongoing" && <span className="ml-2 rounded bg-muted px-1.5 py-0.5 text-xs text-muted-foreground">Live</span>}
       </h3>
       {!raided ? (
-        <Note>{name} didn&apos;t raid this weekend.</Note>
+        <EmptyState>{name} didn&apos;t raid this weekend.</EmptyState>
       ) : (
         <>
           <StatGrid>

@@ -40,7 +40,13 @@ export type Limiters = Record<Budget, Limiter>;
 export type Decision =
   | { action: "allow"; limit: number; remaining: number }
   /** Show the rate-limited page with a 429 and Retry-After. */
-  | { action: "refuse"; retryAfter: number };
+  | { action: "refuse"; retryAfter: number }
+  /**
+   * The limiter failed (Redis down, out of quota, bad token): let the request
+   * through unchecked. A rate limiter that can't count must not take the
+   * whole site down with it.
+   */
+  | { action: "unchecked"; error: unknown };
 
 /** Whether Upstash Redis is configured, under either name pair Vercel's integration may use. */
 export function hasRedisEnv(env: Record<string, string | undefined>): boolean {
@@ -66,10 +72,13 @@ export async function decide(
 ): Promise<{ decision: Decision; pending: Promise<unknown> }> {
   const ip = clientIp(request.headers);
   const isSearch = request.pathname.startsWith("/search");
-  const [page, search] = await Promise.all([
-    limiters.pages.limit(ip),
-    isSearch ? limiters.searches.limit(ip) : null,
-  ]);
+  let page: LimitResult;
+  let search: LimitResult | null;
+  try {
+    [page, search] = await Promise.all([limiters.pages.limit(ip), isSearch ? limiters.searches.limit(ip) : null]);
+  } catch (error) {
+    return { decision: { action: "unchecked", error }, pending: Promise.resolve() };
+  }
   const pending = Promise.all([page.pending, search?.pending]);
 
   // The page budget is reported first; a search refusal applies on top.

@@ -6,6 +6,7 @@ import { ArmyView } from "@/components/army-view";
 import { Stars } from "@/components/stars";
 import type { Army } from "@/lib/coc/army";
 import { playerHref } from "@/lib/coc/tag";
+import { fmtAvg, fmtSigned } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 /** One battle on the season page, prepared on the server (army already decoded). */
@@ -24,10 +25,6 @@ export interface TileBattle {
 }
 
 const TIME_FMT = new Intl.DateTimeFormat("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit", timeZone: "UTC" });
-
-function signed(n: number): string {
-  return n > 0 ? `+${n}` : n < 0 ? `−${Math.abs(n)}` : "0";
-}
 
 /**
  * A day's attacks or defenses as tiles (trophies + stars), with dashed empty
@@ -50,7 +47,7 @@ export function BattleTiles({
   const selected = battles.find((b) => b.key === open) ?? null;
   const empty = slots != null ? Math.max(0, slots - battles.length) : 0;
   const total = battles.reduce((s, b) => s + b.trophies, 0);
-  const avg = battles.length ? battles.reduce((s, b) => s + b.stars, 0) / battles.length : 0;
+  const stars = battles.reduce((s, b) => s + b.stars, 0);
 
   return (
     <div className="space-y-2">
@@ -64,7 +61,7 @@ export function BattleTiles({
         </span>
         {battles.length > 0 && (
           <span className="tabular">
-            {avg.toFixed(2)} ★ · <span className="text-foreground">{signed(total)}</span>
+            {fmtAvg(stars, battles.length)} ★ · <span className="text-foreground">{fmtSigned(total)}</span>
           </span>
         )}
       </h3>
@@ -87,7 +84,7 @@ export function BattleTiles({
                     isOpen ? "border-foreground/60 bg-muted" : "border-border bg-card hover:bg-muted",
                   )}
                 >
-                  <span className={cn("tabular text-xs font-semibold", b.trophies <= 0 && "text-muted-foreground")}>{signed(b.trophies)}</span>
+                  <span className={cn("tabular text-xs font-semibold", b.trophies <= 0 && "text-muted-foreground")}>{fmtSigned(b.trophies)}</span>
                   <Stars count={b.stars} className="text-[10px]" />
                   <span className="sr-only">
                     {b.attack ? "against" : "by"} {b.opponentName}, {b.destruction}% destruction. Show the army.
@@ -124,7 +121,7 @@ export function BattleTiles({
             <dt className="text-muted-foreground">Trophies</dt>
             <dd className="tabular">
               {estimated ? "≈" : ""}
-              {signed(selected.trophies)}
+              {fmtSigned(selected.trophies)}
             </dd>
             <dt className="text-muted-foreground">Time</dt>
             <dd>{TIME_FMT.format(new Date(selected.whenIso))} UTC</dd>

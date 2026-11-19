@@ -5,31 +5,9 @@ import {
   isLegendSeasonId,
   legendSeasonEnd,
   legendSeasonLabel,
-  pageCount,
-  pageSlice,
-  parsePage,
 } from "./rankings";
 
-describe("paging", () => {
-  it("parses the page param defensively", () => {
-    expect(parsePage("3")).toBe(3);
-    expect(parsePage(undefined)).toBe(1);
-    expect(parsePage("0")).toBe(1);
-    expect(parsePage("-2")).toBe(1);
-    expect(parsePage("2.5")).toBe(1);
-    expect(parsePage(["2"])).toBe(1);
-  });
-
-  it("counts and slices pages of 100", () => {
-    expect(pageCount(200)).toBe(2);
-    expect(pageCount(201)).toBe(3);
-    expect(pageCount(0)).toBe(1);
-    const rows = Array.from({ length: 200 }, (_, i) => i + 1);
-    expect(pageSlice(rows, 2)[0]).toBe(101);
-    expect(pageSlice(rows, 2)).toHaveLength(100);
-    expect(pageSlice(rows, 3)).toEqual([]);
-  });
-
+describe("archive paging", () => {
   it("builds the archive's cursors (base64 of {pos})", () => {
     expect(archiveCursor(1)).toBeNull();
     // The exact cursor the live API returned after the first 100 rows.
@@ -56,8 +34,8 @@ describe("Legend season ids", () => {
   });
 
   it("labels seasons", () => {
-    expect(legendSeasonLabel("v2-2026-10-26T05:00:00Z")).toBe("Ended 2 Nov 2026");
+    expect(legendSeasonLabel("v2-2026-10-26T05:00:00Z")).toBe("Ended Nov 2, 2026");
     expect(legendSeasonLabel("2015-07")).toBe("July 2015");
-    expect(legendSeasonLabel("2026-04-20")).toBe("20 Apr 2026");
+    expect(legendSeasonLabel("2026-04-20")).toBe("Apr 20, 2026");
   });
 });

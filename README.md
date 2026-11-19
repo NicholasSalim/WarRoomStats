@@ -1,6 +1,6 @@
 # WarRoomStats
 
-A free, non-commercial stats viewer for clans, wars, Clan War League, raid weekends, players and leaderboards. It uses live data from the official game API. Scope, architecture and policy constraints are in [docs/DECISIONS.md](docs/DECISIONS.md).
+A free, non-commercial stats viewer for clans, wars, Clan War League, raid weekends, players and leaderboards. It uses live data from the official game API.
 
 ## Setup
 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowDown, ArrowUp } from "lucide-react";
+import { RankChange } from "@/components/rank-change";
 import { BadgeImage } from "@/components/badge-image";
 import type { ClanMember } from "@/lib/coc/schemas";
 import { donationRatio } from "@/lib/coc/stats";
@@ -99,56 +100,44 @@ export function MembersTable({ members }: { members: ClanMember[] }) {
           </tr>
         </thead>
         <tbody className="divide-y divide-border">
-          {rows.map((m) => (
-            <tr key={m.tag} className="transition-colors hover:bg-muted/60">
-              <td className="tabular px-3 py-2 text-right text-muted-foreground">
-                <span className="inline-flex items-center justify-end gap-1">
-                  <RankMove rank={m.clanRank} previous={m.previousClanRank} />
-                  {m.clanRank}
-                </span>
-              </td>
-              <td className="px-3 py-2">
-                <Link href={playerHref(m.tag)} className="flex items-center gap-2 hover:underline">
-                  {(m.leagueTier ?? m.league)?.iconUrls?.small && (
-                    <BadgeImage
-                      src={(m.leagueTier ?? m.league)!.iconUrls!.small}
-                      alt={(m.leagueTier ?? m.league)!.name}
-                      size={20}
-                    />
-                  )}
-                  <span className="font-medium break-all sm:break-normal">{m.name}</span>
-                </Link>
-                <span className="text-xs text-muted-foreground md:hidden">{roleLabel(m.role)}</span>
-              </td>
-              <td className="hidden px-3 py-2 text-muted-foreground md:table-cell">{roleLabel(m.role)}</td>
-              <td className="tabular px-3 py-2 text-right">{m.townHallLevel ?? "–"}</td>
-              <td className="tabular px-3 py-2 text-right">{fmtInt(m.trophies)}</td>
-              <td className="tabular hidden px-3 py-2 text-right sm:table-cell">{fmtInt(m.donations)}</td>
-              <td className="tabular hidden px-3 py-2 text-right text-muted-foreground sm:table-cell">
-                {fmtInt(m.donationsReceived)}
-              </td>
-              <td className="tabular hidden px-3 py-2 text-right text-muted-foreground lg:table-cell">
-                {fmtRatio(donationRatio(m.donations, m.donationsReceived))}
-              </td>
-            </tr>
-          ))}
+          {rows.map((m) => {
+            const league = m.leagueTier ?? m.league;
+            return (
+              <tr key={m.tag} className="transition-colors hover:bg-muted/60">
+                <td className="tabular px-3 py-2 text-right text-muted-foreground">
+                  <span className="inline-flex items-center justify-end gap-1">
+                    <RankChange rank={m.clanRank} previous={m.previousClanRank} className="text-[10px]" />
+                    {m.clanRank}
+                  </span>
+                </td>
+                <td className="px-3 py-2">
+                  <Link href={playerHref(m.tag)} className="flex items-center gap-2 hover:underline">
+                    {league?.iconUrls?.small && (
+                      <BadgeImage
+                        src={league.iconUrls.small}
+                        alt={league.name}
+                        size={20}
+                      />
+                    )}
+                    <span className="font-medium break-all sm:break-normal">{m.name}</span>
+                  </Link>
+                  <span className="text-xs text-muted-foreground md:hidden">{roleLabel(m.role)}</span>
+                </td>
+                <td className="hidden px-3 py-2 text-muted-foreground md:table-cell">{roleLabel(m.role)}</td>
+                <td className="tabular px-3 py-2 text-right">{m.townHallLevel ?? "–"}</td>
+                <td className="tabular px-3 py-2 text-right">{fmtInt(m.trophies)}</td>
+                <td className="tabular hidden px-3 py-2 text-right sm:table-cell">{fmtInt(m.donations)}</td>
+                <td className="tabular hidden px-3 py-2 text-right text-muted-foreground sm:table-cell">
+                  {fmtInt(m.donationsReceived)}
+                </td>
+                <td className="tabular hidden px-3 py-2 text-right text-muted-foreground lg:table-cell">
+                  {fmtRatio(donationRatio(m.donations, m.donationsReceived))}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
-  );
-}
-
-/** Movement in the clan's trophy order since the API's previous snapshot. */
-function RankMove({ rank, previous }: { rank: number; previous?: number }) {
-  if (!previous || previous <= 0 || previous === rank) return null;
-  const up = previous > rank;
-  return (
-    <span
-      className={cn("inline-flex items-center text-[10px]", up ? "text-win-foreground" : "text-loss-foreground")}
-      title={`Previously #${previous}`}
-    >
-      {up ? <ArrowUp className="size-3" aria-label="up" /> : <ArrowDown className="size-3" aria-label="down" />}
-      {Math.abs(previous - rank)}
-    </span>
   );
 }

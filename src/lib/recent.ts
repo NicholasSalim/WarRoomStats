@@ -73,12 +73,7 @@ export function removeRecent(kind: RecentKind, key: string): void {
 }
 
 export function clearRecent(): void {
-  try {
-    window.localStorage.removeItem(STORAGE_KEY);
-    window.dispatchEvent(new Event(EVENT));
-  } catch {
-    // ignore
-  }
+  write([]);
 }
 
 function subscribe(onChange: () => void): () => void {

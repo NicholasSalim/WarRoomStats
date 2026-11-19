@@ -8,6 +8,21 @@ export function fmtInt(n: number | null | undefined): string {
   return n == null ? "–" : intFmt.format(n);
 }
 
+/** Trophy changes: "+1,234", "−56" (a real minus sign), "0". */
+export function fmtSigned(n: number): string {
+  return n > 0 ? `+${intFmt.format(n)}` : n < 0 ? `−${intFmt.format(-n)}` : "0";
+}
+
+/** An average to 2 decimals, e.g. stars per attack; "–" when there is nothing to average. */
+export function fmtAvg(sum: number, count: number): string {
+  return count ? (sum / count).toFixed(2) : "–";
+}
+
+/** plural(3, "war") -> "wars"; plural(1, "war") -> "war". */
+export function plural(n: number, word: string): string {
+  return n === 1 ? word : `${word}s`;
+}
+
 export function fmtCompact(n: number | null | undefined): string {
   return n == null ? "–" : compactFmt.format(n);
 }
@@ -49,6 +64,9 @@ const WAR_FREQUENCY: Record<string, string> = {
   unknown: "Not set",
   any: "Any",
 };
+
+/** The war frequencies a clan search can filter by (the API's other values aren't filters). */
+export const WAR_FREQUENCY_FILTERS = ["always", "moreThanOncePerWeek", "oncePerWeek", "lessThanOncePerWeek", "never"] as const;
 
 export function warFrequencyLabel(v: string | undefined): string {
   return (v && WAR_FREQUENCY[v]) || "Not set";

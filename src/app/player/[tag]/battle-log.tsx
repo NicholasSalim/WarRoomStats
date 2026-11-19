@@ -1,6 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { SEGMENTED, segmentClass } from "@/components/segmented";
+import { EmptyState } from "@/components/empty-state";
+import { Stat } from "@/components/stat";
 import { useId, useState } from "react";
 import { ChevronDown, Shield, Swords } from "lucide-react";
 import { RelativeTime } from "@/components/relative-time";
@@ -8,8 +11,9 @@ import { Stars } from "@/components/stars";
 import { ArmyView } from "@/components/army-view";
 import type { Army } from "@/lib/coc/army";
 import type { BattleLogEntry } from "@/lib/coc/schemas";
+import { summarizeBattleLog } from "@/lib/coc/stats";
 import { playerHref } from "@/lib/coc/tag";
-import { battleTypeLabel, fmtDuration, fmtInt, fmtPct } from "@/lib/format";
+import { battleTypeLabel, fmtAvg, fmtDuration, fmtInt, fmtPct, fmtSigned } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 export interface BattleRow {
@@ -40,10 +44,6 @@ function groupOf(battleType: string): Group {
   return "other";
 }
 
-function signed(n: number): string {
-  return n > 0 ? `+${n}` : n < 0 ? `−${Math.abs(n)}` : "0";
-}
-
 /** Recent battles, split by type (ranked vs regular) with expandable rows. */
 export function BattleLog({ rows }: { rows: BattleRow[] }) {
   const groups = (["ranked", "regular", "other"] as const).filter((g) => rows.some((r) => groupOf(r.entry.battleType) === g));
@@ -53,9 +53,7 @@ export function BattleLog({ rows }: { rows: BattleRow[] }) {
 
   const inGroup = rows.filter((r) => groupOf(r.entry.battleType) === group);
   const shown = inGroup.filter((r) => (side === "all" ? true : side === "attacks" ? r.entry.attack : !r.entry.attack));
-  const atk = inGroup.filter((r) => r.entry.attack);
-  const def = inGroup.filter((r) => !r.entry.attack);
-  const avg = (list: BattleRow[]) => (list.length ? (list.reduce((s, r) => s + r.entry.stars, 0) / list.length).toFixed(2) : "–");
+  const summary = summarizeBattleLog(inGroup.map((r) => r.entry));
   const known = inGroup.filter((r) => r.trophies != null);
   const sum = (list: BattleRow[]) => list.reduce((s, r) => s + (r.trophies ?? 0), 0);
   const fromAttacks = sum(known.filter((r) => r.entry.attack));
@@ -65,7 +63,7 @@ export function BattleLog({ rows }: { rows: BattleRow[] }) {
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <div role="tablist" aria-label="Battle type" className="inline-flex rounded-lg bg-muted p-1 text-sm">
+        <div role="tablist" aria-label="Battle type" className={SEGMENTED}>
           {groups.map((g) => (
             <button
               key={g}
@@ -76,10 +74,7 @@ export function BattleLog({ rows }: { rows: BattleRow[] }) {
                 setGroup(g);
                 setOpen(null);
               }}
-              className={cn(
-                "rounded-md px-3 py-1 transition-colors",
-                group === g ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground",
-              )}
+              className={segmentClass(group === g)}
             >
               {GROUP_LABEL[g]}{" "}
               <span className="tabular text-xs text-muted-foreground">
@@ -109,26 +104,26 @@ export function BattleLog({ rows }: { rows: BattleRow[] }) {
         </div>
       </div>
 
-      <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <Tile label="Attacks" value={String(atk.length)} hint={`avg ${avg(atk)} ★`} />
-        <Tile label="Defenses" value={String(def.length)} hint={`avg ${avg(def)} ★ conceded`} />
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <Stat label="Attacks" value={String(summary.attacks)} hint={`avg ${fmtAvg(summary.attackStars, summary.attacks)} ★`} />
+        <Stat label="Defenses" value={String(summary.defenses)} hint={`avg ${fmtAvg(summary.defenseStars, summary.defenses)} ★ conceded`} />
         {group === "ranked" && known.length > 0 ? (
           <>
-            <Tile label="From attacks" value={approx + signed(fromAttacks)} hint={`${known.filter((r) => r.entry.attack).length} attacks`} />
-            <Tile label="Net trophies" value={approx + signed(fromAttacks + fromDefenses)} hint={`${signed(fromDefenses)} from defenses`} />
+            <Stat label="From attacks" value={approx + fmtSigned(fromAttacks)} hint={`${known.filter((r) => r.entry.attack).length} attacks`} />
+            <Stat label="Net trophies" value={approx + fmtSigned(fromAttacks + fromDefenses)} hint={`${fmtSigned(fromDefenses)} from defenses`} />
           </>
         ) : (
           <>
-            <Tile label="Three-star attacks" value={String(atk.filter((r) => r.entry.stars === 3).length)} />
-            <Tile label="Three-starred" value={String(def.filter((r) => r.entry.stars === 3).length)} hint="on defense" />
+            <Stat label="Three-star attacks" value={String(summary.attackTriples)} />
+            <Stat label="Three-starred" value={String(summary.defenseTriples)} hint="on defense" />
           </>
         )}
-      </dl>
+      </div>
 
       {shown.length === 0 ? (
-        <p className="rounded-lg border border-dashed border-border px-4 py-8 text-center text-sm text-muted-foreground">
+        <EmptyState>
           No {side === "all" ? "" : side} {GROUP_LABEL[group].toLowerCase()} battles in the recent log.
-        </p>
+        </EmptyState>
       ) : (
         <ul className="divide-y divide-border overflow-hidden rounded-lg border border-border">
           {shown.map((r) => {
@@ -141,15 +136,6 @@ export function BattleLog({ rows }: { rows: BattleRow[] }) {
   );
 }
 
-function Tile({ label, value, hint }: { label: string; value: string; hint?: string }) {
-  return (
-    <div className="rounded-lg border border-border bg-card px-4 py-3">
-      <dt className="text-xs text-muted-foreground">{label}</dt>
-      <dd className="tabular mt-1 text-xl font-semibold tracking-tight">{value}</dd>
-      {hint && <dd className="mt-0.5 text-xs text-muted-foreground">{hint}</dd>}
-    </div>
-  );
-}
 
 function BattleItem({ row, open, onToggle, showTrophies }: { row: BattleRow; open: boolean; onToggle: () => void; showTrophies: boolean }) {
   const panelId = useId();
@@ -180,7 +166,7 @@ function BattleItem({ row, open, onToggle, showTrophies }: { row: BattleRow; ope
         <span className="tabular w-10 shrink-0 text-right">{fmtPct(e.destructionPercentage, 0)}</span>
         {showTrophies && (
           <span className={cn("tabular w-10 shrink-0 text-right", row.trophies != null && row.trophies < 0 && "text-muted-foreground")}>
-            {row.trophies == null ? "–" : (row.estimated ? "≈" : "") + signed(row.trophies)}
+            {row.trophies == null ? "–" : (row.estimated ? "≈" : "") + fmtSigned(row.trophies)}
           </span>
         )}
         <ChevronDown className={cn("size-4 shrink-0 text-muted-foreground transition-transform", open && "rotate-180")} aria-hidden />
@@ -220,7 +206,7 @@ function BattleFacts({ row }: { row: BattleRow }) {
             <dt className="text-muted-foreground">Trophies</dt>
             <dd className="tabular">
               {row.estimated ? "≈" : ""}
-              {signed(row.trophies)}
+              {fmtSigned(row.trophies)}
               {row.estimated && <span className="text-muted-foreground"> (estimated)</span>}
             </dd>
           </>

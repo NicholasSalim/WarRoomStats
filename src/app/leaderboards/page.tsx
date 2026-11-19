@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { LocationOptgroups } from "@/components/location-optgroups";
+import { SEGMENTED, segmentClass } from "@/components/segmented";
 import { Suspense } from "react";
 import { ErrorState } from "@/components/error-state";
 import { Pager } from "@/components/pager";
@@ -15,8 +17,8 @@ import {
   getPlayerRankings,
 } from "@/lib/coc/client";
 import { SeasonCountdown } from "@/components/season-countdown";
-import { isLegendSeasonId, legendSeasonLabel, pageCount, pageSlice, parsePage } from "@/lib/coc/rankings";
-import { cn } from "@/lib/utils";
+import { PAGE_SIZE, isLegendSeasonId, legendSeasonLabel } from "@/lib/coc/rankings";
+import { paginate, parsePage } from "@/lib/paging";
 import { NavSelect } from "./nav-select";
 
 export const metadata = {
@@ -111,16 +113,13 @@ function Segmented<T extends string>({
   href: (value: T) => string;
 }) {
   return (
-    <nav aria-label={label} className="inline-flex rounded-lg bg-muted p-1 text-sm">
+    <nav aria-label={label} className={SEGMENTED}>
       {items.map(([value, text]) => (
         <Link
           key={value}
           href={href(value)}
           aria-current={current === value ? "page" : undefined}
-          className={cn(
-            "rounded-md px-3 py-1.5 transition-colors",
-            current === value ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground",
-          )}
+          className={segmentClass(current === value)}
         >
           {text}
         </Link>
@@ -158,8 +157,6 @@ async function Controls({ searchParams }: { searchParams: SearchParams }) {
 async function LocationSelect({ p }: { p: BoardParams }) {
   const locations = await getLocations();
   if (!locations.ok) return null;
-  const countries = locations.data.filter((l) => l.isCountry);
-  const regions = locations.data.filter((l) => !l.isCountry);
   return (
     <NavSelect
       key={`${p.kind}:${p.scope}:${p.location}`}
@@ -170,22 +167,7 @@ async function LocationSelect({ p }: { p: BoardParams }) {
       params={p.scope === "live" ? { kind: p.kind } : { kind: p.kind, scope: p.scope }}
     >
       <option value="global">Global</option>
-      {regions.length > 0 && (
-        <optgroup label="Regions">
-          {regions.map((l) => (
-            <option key={l.id} value={l.id}>
-              {l.name}
-            </option>
-          ))}
-        </optgroup>
-      )}
-      <optgroup label="Countries">
-        {countries.map((l) => (
-          <option key={l.id} value={l.id}>
-            {l.name}
-          </option>
-        ))}
-      </optgroup>
+      <LocationOptgroups locations={locations.data} />
     </NavSelect>
   );
 }
@@ -234,33 +216,24 @@ async function Board({ searchParams }: { searchParams: SearchParams }) {
           : await getClanRankings(p.location);
     if (!result.ok) return <ErrorState error={result.error} />;
     return (
-      <LivePages
-        p={p}
-        total={result.data.length}
-        table={(page) => <ClanRankingTable rows={pageSlice(result.data, page)} pointsLabel={points} />}
-      />
+      <LivePages p={p} items={result.data} table={(rows) => <ClanRankingTable rows={rows} pointsLabel={points} />} />
     );
   }
   const result = p.scope === "builder" ? await getBuilderBasePlayerRankings(p.location) : await getPlayerRankings(p.location);
   if (!result.ok) return <ErrorState error={result.error} />;
   return (
-    <LivePages
-      p={p}
-      total={result.data.length}
-      table={(page) => <PlayerRankingTable rows={pageSlice(result.data, page)} pointsLabel={points} />}
-    />
+    <LivePages p={p} items={result.data} table={(rows) => <PlayerRankingTable rows={rows} pointsLabel={points} />} />
   );
 }
 
 /** The live top 200, cut into pages of 100 here (one API call covers all pages). */
-function LivePages({ p, total, table }: { p: BoardParams; total: number; table: (page: number) => React.ReactNode }) {
-  const totalPages = pageCount(total);
-  const page = Math.min(p.page, totalPages);
+function LivePages<T>({ p, items, table }: { p: BoardParams; items: T[]; table: (rows: T[]) => React.ReactNode }) {
+  const { page, totalPages, shown } = paginate(items, p.page, PAGE_SIZE);
   const pager = <Pager path="/leaderboards" params={boardParams(p)} page={page} totalPages={totalPages} />;
   return (
     <div className="space-y-3">
       {pager}
-      {table(page)}
+      {table(shown)}
       {pager}
     </div>
   );

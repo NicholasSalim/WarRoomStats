@@ -49,6 +49,10 @@ export async function proxy(request: NextRequest, event: NextFetchEvent) {
   );
   event.waitUntil(pending);
 
+  if (decision.action === "unchecked") {
+    console.error("[proxy] rate limiter failed, letting the request through:", decision.error);
+    return NextResponse.next();
+  }
   if (decision.action === "allow") {
     const res = NextResponse.next();
     res.headers.set("X-RateLimit-Limit", String(decision.limit));

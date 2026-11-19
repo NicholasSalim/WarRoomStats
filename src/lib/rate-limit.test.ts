@@ -62,6 +62,23 @@ describe("decide", () => {
 
 });
 
+describe("decide when the limiter fails", () => {
+  it("lets the request through unchecked instead of throwing", async () => {
+    const broken: Limiter = {
+      limit: () => Promise.reject(new Error("ERR max requests limit exceeded")),
+    };
+    const { decision, pending } = await decide(page("/"), { pages: broken, searches: broken }, 0);
+    expect(decision).toMatchObject({ action: "unchecked" });
+    await expect(pending).resolves.toBeUndefined();
+  });
+
+  it("also fails open when only the search budget errors", async () => {
+    const broken: Limiter = { limit: () => Promise.reject(new Error("down")) };
+    const { decision } = await decide(page("/search"), { pages: limiters().pages, searches: broken }, 0);
+    expect(decision.action).toBe("unchecked");
+  });
+});
+
 describe("hasRedisEnv", () => {
   it("accepts either name pair, only when complete", () => {
     expect(hasRedisEnv({ UPSTASH_REDIS_REST_URL: "u", UPSTASH_REDIS_REST_TOKEN: "t" })).toBe(true);

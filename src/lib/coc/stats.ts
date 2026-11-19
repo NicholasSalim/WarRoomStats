@@ -10,7 +10,7 @@ import type {
   WarAttack,
   WarLogEntry,
 } from "./schemas";
-import { warOutcome } from "./war-outcome";
+import { isOutcome, warLogResult, warOutcome } from "./war-outcome";
 
 /** Parses the API's compact timestamp format, e.g. "20261107T120000.000Z". */
 export function parseApiTime(value: string | undefined): Date | null {
@@ -21,8 +21,6 @@ export function parseApiTime(value: string | undefined): Date | null {
   return new Date(Date.UTC(+y, +mo - 1, +d, +h, +mi, +s, ms ? +ms : 0));
 }
 
-
-
 // ---------- Current war ----------
 
 export interface WarMemberRow {
@@ -30,13 +28,7 @@ export interface WarMemberRow {
   name: string;
   townhallLevel: number;
   mapPosition: number;
-  attacksUsed: number;
   attacksAllowed: number;
-  stars: number;
-  /** Stars that improved on the best earlier attack against the same base. */
-  newStars: number;
-  avgDestruction: number;
-  triples: number;
   /** Best attack against this member's base, if any. */
   defenseStars: number | null;
   defenseDestruction: number | null;
@@ -44,44 +36,19 @@ export interface WarMemberRow {
   attacks: WarAttack[];
 }
 
-/** Stars each attack added on top of earlier attacks on the same base, keyed by "attacker|order". */
-export function newStarsByAttack(war: War): Map<string, number> {
-  const all = [...(war.clan?.members ?? []), ...(war.opponent?.members ?? [])].flatMap((m) => m.attacks ?? []);
-  all.sort((a, b) => a.order - b.order);
-  const best = new Map<string, number>();
-  const out = new Map<string, number>();
-  for (const atk of all) {
-    const prev = best.get(atk.defenderTag) ?? 0;
-    out.set(`${atk.attackerTag}|${atk.order}`, Math.max(0, atk.stars - prev));
-    best.set(atk.defenderTag, Math.max(prev, atk.stars));
-  }
-  return out;
-}
-
 export function warMemberRows(war: War, side: "clan" | "opponent"): WarMemberRow[] {
-  const members = war[side]?.members ?? [];
   const perMember = war.attacksPerMember ?? 2;
-  const fresh = newStarsByAttack(war);
-  return members
-    .map((m) => {
-      const attacks = m.attacks ?? [];
-      const stars = attacks.reduce((s, a) => s + a.stars, 0);
-      return {
-        tag: m.tag,
-        name: m.name,
-        townhallLevel: m.townhallLevel,
-        mapPosition: m.mapPosition,
-        attacksUsed: attacks.length,
-        attacksAllowed: perMember,
-        stars,
-        newStars: attacks.reduce((s, a) => s + (fresh.get(`${a.attackerTag}|${a.order}`) ?? 0), 0),
-        avgDestruction: attacks.length ? attacks.reduce((s, a) => s + a.destructionPercentage, 0) / attacks.length : 0,
-        triples: attacks.filter((a) => a.stars === 3).length,
-        defenseStars: m.bestOpponentAttack?.stars ?? null,
-        defenseDestruction: m.bestOpponentAttack?.destructionPercentage ?? null,
-        attacks: [...attacks].sort((a, b) => a.order - b.order),
-      };
-    })
+  return (war[side]?.members ?? [])
+    .map((m) => ({
+      tag: m.tag,
+      name: m.name,
+      townhallLevel: m.townhallLevel,
+      mapPosition: m.mapPosition,
+      attacksAllowed: perMember,
+      defenseStars: m.bestOpponentAttack?.stars ?? null,
+      defenseDestruction: m.bestOpponentAttack?.destructionPercentage ?? null,
+      attacks: [...(m.attacks ?? [])].sort((a, b) => a.order - b.order),
+    }))
     .sort((a, b) => a.mapPosition - b.mapPosition);
 }
 
@@ -91,21 +58,16 @@ export interface WarSideSummary {
   triples: number;
   /** Sum of stars over all attacks (not the war score, which counts each base once). */
   attackStars: number;
-  /** Stars by star count: index 0..3 = number of attacks with that many stars. */
-  starSpread: [number, number, number, number];
 }
 
 export function warSideSummary(war: War, side: "clan" | "opponent"): WarSideSummary {
   const members = war[side]?.members ?? [];
   const attacks = members.flatMap((m) => m.attacks ?? []);
-  const spread: [number, number, number, number] = [0, 0, 0, 0];
-  for (const a of attacks) spread[Math.max(0, Math.min(3, a.stars))] += 1;
   return {
     attacksUsed: attacks.length,
     attacksAllowed: (war.teamSize ?? members.length) * (war.attacksPerMember ?? 2),
-    triples: spread[3],
+    triples: attacks.filter((a) => a.stars === 3).length,
     attackStars: attacks.reduce((s, a) => s + a.stars, 0),
-    starSpread: spread,
   };
 }
 
@@ -121,12 +83,14 @@ export interface WarLogSummary {
   avgDestruction: number;
 }
 
-/** Regular wars only. CWL entries (no result, no opponent tag) are skipped. */
+/** Decided wars only: CWL rows and results the API didn't give are skipped. */
 export function summarizeWarLog(items: WarLogEntry[]): WarLogSummary {
-  const regular = items.filter((w) => w.result && w.opponent.tag);
-  const wins = regular.filter((w) => w.result === "win").length;
-  const losses = regular.filter((w) => w.result === "lose").length;
-  const ties = regular.filter((w) => w.result === "tie").length;
+  const decided = items.map((w) => ({ w, result: warLogResult(w) })).filter(({ result }) => isOutcome(result));
+  const regular = decided.map(({ w }) => w);
+  const count = (r: string) => decided.filter(({ result }) => result === r).length;
+  const wins = count("win");
+  const losses = count("lose");
+  const ties = count("tie");
   const n = regular.length;
   return {
     wars: n,
@@ -349,9 +313,9 @@ export function legendTrophies(stars: number, destruction: number): number {
 export interface BattleLogSummary {
   attacks: number;
   defenses: number;
-  /** Average stars per attack / conceded per defense. */
-  avgAttackStars: number;
-  avgDefenseStars: number;
+  /** Stars won on attack / conceded on defense. */
+  attackStars: number;
+  defenseStars: number;
   attackTriples: number;
   defenseTriples: number;
 }
@@ -359,12 +323,12 @@ export interface BattleLogSummary {
 export function summarizeBattleLog(entries: BattleLogEntry[]): BattleLogSummary {
   const atk = entries.filter((e) => e.attack);
   const def = entries.filter((e) => !e.attack);
-  const avg = (list: BattleLogEntry[]) => (list.length ? list.reduce((s, e) => s + e.stars, 0) / list.length : 0);
+  const stars = (list: BattleLogEntry[]) => list.reduce((s, e) => s + e.stars, 0);
   return {
     attacks: atk.length,
     defenses: def.length,
-    avgAttackStars: avg(atk),
-    avgDefenseStars: avg(def),
+    attackStars: stars(atk),
+    defenseStars: stars(def),
     attackTriples: atk.filter((e) => e.stars === 3).length,
     defenseTriples: def.filter((e) => e.stars === 3).length,
   };
@@ -378,8 +342,6 @@ export function donationRatio(donations: number, received: number): number | nul
 }
 
 export interface UnitProgress {
-  done: number;
-  total: number;
   /** 0..1 share of total levels unlocked. */
   ratio: number;
   maxed: number;
@@ -390,15 +352,13 @@ export function unitProgress(units: PlayerUnit[]): UnitProgress {
   const done = units.reduce((s, u) => s + u.level, 0);
   const total = units.reduce((s, u) => s + u.maxLevel, 0);
   return {
-    done,
-    total,
     ratio: total ? done / total : 0,
     maxed: units.filter((u) => u.level >= u.maxLevel).length,
     count: units.length,
   };
 }
 
-/** Home-village units only; builder base and capital units are listed apart. */
+/** The units of one village: home or Builder Base. */
 export function byVillage(units: PlayerUnit[], village: "home" | "builderBase"): PlayerUnit[] {
   return units.filter((u) => u.village === village);
 }

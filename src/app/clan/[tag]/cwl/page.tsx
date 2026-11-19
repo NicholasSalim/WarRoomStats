@@ -7,9 +7,9 @@ import { WarView } from "@/components/war-view";
 import { loadCwlSeason } from "@/lib/coc/loaders";
 import type { War } from "@/lib/coc/schemas";
 import { cwlPlayerStats, cwlStandings } from "@/lib/coc/stats";
-import { RESULT_STYLE, warOutcome } from "@/lib/coc/war-outcome";
+import { RESULT_STYLE, endedWarOutcome } from "@/lib/coc/war-outcome";
 import { clanHref, playerHref } from "@/lib/coc/tag";
-import { fmtInt, fmtPct, seasonLabel, warStateLabel } from "@/lib/format";
+import { fmtInt, fmtPct, plural, seasonLabel, warStateLabel } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import { TabError, tabMetadata } from "@/components/entity-tab";
 
@@ -52,7 +52,7 @@ async function Cwl({ params, searchParams }: { params: Params; searchParams: Pag
       <Section
         title="Group standings"
         description={`Stars plus 10 for each war won. Ties go to total destruction.${
-          missingWars > 0 ? ` ${missingWars} war${missingWars === 1 ? "" : "s"} couldn't be loaded, so these totals are incomplete.` : ""
+          missingWars > 0 ? ` ${missingWars} ${plural(missingWars, "war")} couldn't be loaded, so these totals are incomplete.` : ""
         }`}
       >
         <div className="overflow-x-auto rounded-lg border border-border">
@@ -94,7 +94,7 @@ async function Cwl({ params, searchParams }: { params: Params; searchParams: Pag
         <ol className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
           {ourWars.map(({ round, war }) => (
             <li key={round}>
-              <RoundCard round={round} war={war} slug={clanTag.slice(1)} selected={selected?.round === round} />
+              <RoundCard round={round} war={war} href={clanHref(clanTag)} selected={selected?.round === round} />
             </li>
           ))}
         </ol>
@@ -158,12 +158,12 @@ async function Cwl({ params, searchParams }: { params: Params; searchParams: Pag
   );
 }
 
-function RoundCard({ round, war, slug, selected }: { round: number; war: War | null; slug: string; selected: boolean }) {
+function RoundCard({ round, war, href, selected }: { round: number; war: War | null; href: string; selected: boolean }) {
   const body = (
     <>
       <div className="flex items-center justify-between text-xs text-muted-foreground">
         <span>Round {round}</span>
-        {war && <span>{war.state === "warEnded" ? resultLabel(war) : warStateLabel(war.state)}</span>}
+        {war && <span>{resultLabel(war)}</span>}
       </div>
       {war ? (
         <>
@@ -184,14 +184,15 @@ function RoundCard({ round, war, slug, selected }: { round: number; war: War | n
   );
   if (!war) return <div className={className}>{body}</div>;
   return (
-    <Link href={`/clan/${slug}/cwl?round=${round}`} scroll={false} aria-current={selected ? "true" : undefined} className={className}>
+    <Link href={`${href}/cwl?round=${round}`} scroll={false} aria-current={selected ? "true" : undefined} className={className}>
       {body}
     </Link>
   );
 }
 
 function resultLabel(war: War): string {
-  return RESULT_STYLE[warOutcome(war.clan, war.opponent)].label;
+  const outcome = endedWarOutcome(war);
+  return outcome ? RESULT_STYLE[outcome].label : warStateLabel(war.state);
 }
 
 function CwlSkeleton() {

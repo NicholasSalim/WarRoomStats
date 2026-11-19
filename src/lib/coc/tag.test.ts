@@ -29,6 +29,8 @@ describe("normalizeTag", () => {
 describe("hrefs", () => {
   it("builds app URLs without the #", () => {
     expect(tagToSlug("#2PP")).toBe("2PP");
+    expect(tagToSlug("2pp")).toBe("2PP");
+    expect(clanHref("%232pp")).toBe("/clan/2PP");
     expect(clanHref("#2PP")).toBe("/clan/2PP");
     expect(playerHref("#9YC")).toBe("/player/9YC");
   });

@@ -13,7 +13,6 @@ import {
   WarSchema,
   type BattleLogEntry,
   type RankedLogEntry,
-  type War,
 } from "./schemas";
 import {
   legendTrophies,
@@ -23,7 +22,6 @@ import {
   cwlPlayerStats,
   cwlStandings,
   donationRatio,
-  newStarsByAttack,
   parseApiTime,
   summarizeWarLog,
   unitProgress,
@@ -43,10 +41,6 @@ const rounds: CwlRound[] = group.rounds.map((r, i) => ({
 }));
 const CLAN = "#2PRGP0L22";
 
-function makeWar(partial: Partial<War>): War {
-  return { state: "warEnded", teamSize: 1, attacksPerMember: 2, ...partial };
-}
-
 describe("parseApiTime", () => {
   it("parses the API's compact format", () => {
     expect(parseApiTime("20261107T120000.000Z")?.toISOString()).toBe("2026-11-07T12:00:00.000Z");
@@ -62,32 +56,13 @@ describe("current war rows", () => {
     const rows = warMemberRows(war, "clan");
     expect(rows).toHaveLength(15);
     expect(rows.map((r) => r.mapPosition)).toEqual([...rows.map((r) => r.mapPosition)].sort((a, b) => a - b));
-    expect(rows.reduce((s, r) => s + r.attacksUsed, 0)).toBe(war.clan?.attacks);
+    expect(rows.reduce((s, r) => s + r.attacks.length, 0)).toBe(war.clan?.attacks);
   });
 
-  it("new stars across the side equal the clan's war stars", () => {
-    const rows = warMemberRows(war, "clan");
-    expect(rows.reduce((s, r) => s + r.newStars, 0)).toBe(war.clan?.stars);
-  });
-
-  it("only counts stars that improve on earlier attacks", () => {
-    const w = makeWar({
-      clan: {
-        members: [
-          { tag: "#A", name: "a", townhallLevel: 16, mapPosition: 1, attacks: [{ attackerTag: "#A", defenderTag: "#X", stars: 2, destructionPercentage: 80, order: 1 }] },
-          { tag: "#B", name: "b", townhallLevel: 16, mapPosition: 2, attacks: [{ attackerTag: "#B", defenderTag: "#X", stars: 3, destructionPercentage: 100, order: 2 }] },
-        ],
-      },
-      opponent: { members: [] },
-    });
-    const fresh = newStarsByAttack(w);
-    expect(fresh.get("#A|1")).toBe(2);
-    expect(fresh.get("#B|2")).toBe(1);
-  });
-
-  it("summarises the star spread", () => {
+  it("summarises a side's attacks", () => {
     const s = warSideSummary(war, "clan");
-    expect(s.starSpread.reduce((a, b) => a + b, 0)).toBe(s.attacksUsed);
+    expect(s.attacksUsed).toBe(war.clan?.attacks);
+    expect(s.triples).toBeLessThanOrEqual(s.attacksUsed);
     expect(s.attacksAllowed).toBe(30);
   });
 });
@@ -226,9 +201,9 @@ describe("battle log summary", () => {
     const log = BattleLogSchema.parse(battleLogJson).items;
     const s = summarizeBattleLog(log);
     expect(s.attacks + s.defenses).toBe(log.length);
-    expect(s.avgAttackStars).toBeGreaterThanOrEqual(0);
-    expect(s.avgAttackStars).toBeLessThanOrEqual(3);
-    expect(summarizeBattleLog([])).toMatchObject({ attacks: 0, defenses: 0, avgAttackStars: 0 });
+    expect(s.attackStars).toBeLessThanOrEqual(s.attacks * 3);
+    expect(s.attackTriples).toBe(log.filter((e) => e.attack && e.stars === 3).length);
+    expect(summarizeBattleLog([])).toMatchObject({ attacks: 0, defenses: 0, attackStars: 0 });
   });
 });
 

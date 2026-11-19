@@ -12,7 +12,7 @@
 import type { BattleLogEntry, LeagueSeasonResult, RankedLogEntry } from "./schemas";
 import { legendTrophies, parseApiTime } from "./stats";
 
-const DAY_MS = 86_400_000;
+export const DAY_MS = 86_400_000;
 const LEGEND_I = 105_000_036;
 export const LEGEND_SEASON_DAYS = 28;
 /** A Legend I season ended here (from live league history); seasons repeat every 28 days. */

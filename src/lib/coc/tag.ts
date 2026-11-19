@@ -31,9 +31,12 @@ export function isImpossibleTagPath(pathname: string): boolean {
   return m !== null && normalizeTag(m[1]) === null;
 }
 
-/** "#2PP" -> "2PP", for use in app URLs such as /clan/2PP. */
+/**
+ * "#2PP", "2pp" or "%232PP" -> "2PP", for use in app URLs such as /clan/2PP.
+ * Takes an API tag or a raw URL slug, so every link to an entity is spelled the same.
+ */
 export function tagToSlug(tag: string): string {
-  return tag.replace(/^#/, "");
+  return (normalizeTag(tag) ?? tag).replace(/^#/, "");
 }
 
 export function clanHref(tag: string): string {
